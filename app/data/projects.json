@@ -1,0 +1,77 @@
+{
+    "hero": {
+        "image": "/bg-img-2.png",
+        "title": "Our projects"
+    },
+    "intro": {
+        "badge": "Work in action",
+        "title": "Small acts. Lasting change.",
+        "description": "Explore the projects your support makes possible, from daily meals and classrooms to healthcare that reaches the people who need it most."
+    },
+    "cardLinkLabel": "Explore project",
+    "featuredLabel": "Featured project",
+    "projects": [
+        {
+            "slug": "village-learning-center",
+            "title": "Village learning center",
+            "description": "A safe space with teachers, computers and a small library for 200 children.",
+            "image": "/img-2.jpg",
+            "imageAlt": "Children studying at the village learning center",
+            "category": "Education",
+            "impact": "200 children supported",
+            "tint": "#dcebdd",
+            "featured": true,
+            "detail": {
+                "lead": "A bright, welcoming place where children can learn after school, discover new interests and imagine more possibilities for their future.",
+                "quote": "When a child has a safe place to learn, the whole village starts to see what is possible.",
+                "sections": [
+                    { "title": "A room made for curiosity", "description": "Local teachers lead reading, computer and homework sessions in a space designed around the way children learn best.", "image": "/img-2.jpg" },
+                    { "title": "Built with the community", "description": "Parents and local leaders helped shape the center, from the library shelves to the daily timetable, so it belongs to everyone.", "image": "/img-1.jpg" }
+                ]
+            }
+        },
+        {
+            "slug": "community-kitchen",
+            "title": "Community kitchen",
+            "description": "Hot meals served daily to 300 families through a team of local volunteers.",
+            "image": "/img-1.jpg",
+            "imageAlt": "Volunteers serving meals at the community kitchen",
+            "category": "Food",
+            "impact": "300 families reached",
+            "tint": "#cfe4e0",
+            "detail": {
+                "lead": "Every morning, volunteers turn donated ingredients into nutritious meals that bring families together around one shared table.",
+                "quote": "A warm meal is practical support, but it is also dignity, welcome and a reason to feel hopeful.",
+                "sections": [
+                    { "title": "From ingredients to plates", "description": "Local suppliers and careful planning keep the kitchen stocked, while volunteers prepare fresh food for the day ahead.", "image": "/img-1.jpg" },
+                    { "title": "A table for everyone", "description": "The kitchen serves children, parents and older neighbours without barriers, creating a dependable place to eat and connect.", "image": "/img-2.jpg" }
+                ]
+            }
+        },
+        {
+            "slug": "mobile-health-clinic",
+            "title": "Mobile health clinic",
+            "description": "Check-ups, medicine and a friendly face delivered to remote villages.",
+            "image": "/img-2.jpg",
+            "imageAlt": "A health worker examining a patient in a village",
+            "category": "Health",
+            "impact": "12 villages visited",
+            "tint": "#e9f2d9",
+            "detail": {
+                "lead": "The clinic travels beyond the nearest hospital so families can receive check-ups, medicine and trusted health advice close to home.",
+                "quote": "The first step toward better health is making care reachable.",
+                "sections": [
+                    { "title": "Care on the road", "description": "A small medical team follows a regular route through remote communities, bringing essential equipment and supplies with them.", "image": "/img-2.jpg" },
+                    { "title": "More than a check-up", "description": "Alongside treatment, the team shares practical guidance that helps families prevent illness and make confident decisions about their health.", "image": "/img-1.jpg" }
+                ]
+            }
+        }
+    ],
+    "cta": {
+        "eyebrow": "Your support travels far",
+        "title": "Help the next project reach further.",
+        "description": "Every contribution helps local teams turn a good idea into practical support for a whole community.",
+        "buttonLabel": "Get involved",
+        "buttonHref": "/contact"
+    }
+}

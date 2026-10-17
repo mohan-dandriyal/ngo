@@ -1,0 +1,13 @@
+{
+    "hero": { "image": "/home-hero.jpg", "title": "Our work" },
+    "intro": {
+        "badge": "See the bigger picture",
+        "title": "People, projects and moments of change.",
+        "description": "Explore the work behind the mission, from practical projects in local communities to the everyday moments that make the impact real."
+    },
+    "cards": [
+        { "label": "Projects", "title": "Ideas turned into action.", "description": "Discover the classrooms, kitchens and clinics your support helps build and sustain.", "image": "/img-2.jpg", "imageAlt": "Children learning together", "href": "/projects", "buttonLabel": "Explore projects", "tint": "#dcebdd" },
+        { "label": "Gallery", "title": "The moments behind the work.", "description": "Meet the people, places and small moments that make every project matter.", "image": "/img-1.jpg", "imageAlt": "Community volunteers at work", "href": "/gallery", "buttonLabel": "View gallery", "tint": "#cfe4e0" }
+    ],
+    "cta": { "eyebrow": "Keep building with us", "title": "Good work grows when we do it together.", "buttonLabel": "Get involved", "buttonHref": "/contact" }
+}

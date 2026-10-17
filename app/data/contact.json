@@ -1,0 +1,37 @@
+{
+    "hero": {
+        "image": "/bg-image.png",
+        "title": "Let's connect"
+    },
+    "intro": {
+        "badge": "We'd love to hear from you",
+        "title": "Let's make good things happen.",
+        "description": "Whether you want to support the work, partner with us, or simply ask a question, our team is here and ready to listen."
+    },
+    "contactDetails": [
+        { "icon": "mail", "label": "Email us", "value": "hello@together.org", "href": "mailto:hello@together.org" },
+        { "icon": "phone", "label": "Call the team", "value": "+1 00000 00000", "href": "tel:+1 00000 00000" },
+        { "icon": "location", "label": "Visit our office", "value": "20 Cooper Square, New York, NY 10003, USA", "href": "#visit" }
+    ],
+    "form": {
+        "eyebrow": "Start a conversation",
+        "title": "Tell us what's on your mind.",
+        "nameLabel": "Your name",
+        "namePlaceholder": "Jane Smith",
+        "emailLabel": "Email address",
+        "emailPlaceholder": "jane@example.com",
+        "reasonLabel": "How can we help?",
+        "reasons": [
+            { "value": "partnership", "label": "I'd like to partner with you" },
+            { "value": "support", "label": "I'd like to support the work" },
+            { "value": "question", "label": "I have a question" },
+            { "value": "other", "label": "Something else" }
+        ],
+        "messageLabel": "Your message",
+        "messagePlaceholder": "Write your message here...",
+        "submitLabel": "Send message",
+        "successTitle": "Message received.",
+        "successDescription": "Thank you for reaching out. Someone from our team will get back to you soon.",
+        "resetLabel": "Send another message"
+    }
+}

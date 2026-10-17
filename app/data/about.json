@@ -1,0 +1,47 @@
+[
+    {
+        "aboutBannerTitle": "About Us",
+        "aboutBannerImage": "/home-hero.jpg"
+    },
+    {
+        "image": "/img-2.jpg",
+        "badge": "About us",
+        "title": "Growing together to create lasting impact",
+        "description": "From grassroots initiatives to large scale community programs, we continue to grow with one purpose: to serve those in need with integrity and compassion.",
+        "buttonText": "More about us",
+        "profileImage": "/img-1.jpg",
+        "name": "Kathryn Murphy",
+        "role": "CEO & Founder"
+    },
+
+    {
+        "badge": "Where it began",
+        "title": "Good things grow when we grow them together.",
+        "description": [
+            "Kindred started with one simple belief: no one should have to face a hard season alone. Today, we work alongside local leaders to turn small acts of support into lasting change.",
+            "We listen first, show up consistently, and invest in the people who know their communities best."
+        ],
+        "image_1": "/bg-image.png",
+        "image_2": "/bg-img-2.png",
+        "image_left_alt": "Children learning together in a classroom",
+        "image_left_title": "Learning through opportunity",
+        "image_left_description": "Creating safe spaces where young people can learn, build confidence, and imagine what is possible.",
+        "image_right_alt": "Children reading and learning outdoors together",
+        "image_right_title": "Growing together",
+        "image_right_description": "Working alongside communities to turn shared care into lasting change.",
+        "missionVision": {
+            "image": "/bg-img-2.png",
+            "imageAlt": "Community members working together",
+            "mission": {
+                "badge": "Our mission",
+                "title": "Turning care into lasting change.",
+                "description": "We partner with communities to make support more accessible, practical, and rooted in dignity."
+            },
+            "vision": {
+                "badge": "Our vision",
+                "title": "Stronger communities, together.",
+                "description": "We imagine a future where every person has the support, opportunity, and confidence to shape a better life for themselves and their community."
+            }
+        }
+    }
+]

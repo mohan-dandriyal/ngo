@@ -1,0 +1,122 @@
+{
+    "hero": {
+        "image": "/home-hero.jpg",
+        "title": "Our Programs"
+    },
+    "campaignsSection": {
+        "badge": "Active campaigns",
+        "title": "Causes that need you right now",
+        "description": "Pick a campaign, see exactly how far it has come, and help it reach its goal.",
+        "buttonLabel": "View all campaigns",
+        "buttonHref": "/campaigns"
+    },
+    "campaigns": [
+        {
+            "id": 1,
+            "title": "School supplies for 500 children",
+            "category": "Education",
+            "image": "/img-1.jpg",
+            "imageAlt": "Children learning together in a classroom",
+            "description": "Books, bags and uniforms so children in rural villages can start the school year ready to learn.",
+            "raised": 18400,
+            "goal": 25000,
+            "donors": 312,
+            "daysLeft": 18
+        },
+        {
+            "id": 2,
+            "title": "Daily hot meals for families",
+            "category": "Food",
+            "image": "/img-2.jpg",
+            "imageAlt": "Community members sharing a meal",
+            "description": "Fund nutritious hot meals served every day at our community kitchens.",
+            "raised": 9200,
+            "goal": 12000,
+            "donors": 204,
+            "daysLeft": 9
+        },
+        {
+            "id": 3,
+            "title": "Vaccination drive for children",
+            "category": "Health",
+            "image": "/img-2.jpg",
+            "imageAlt": "Child receiving healthcare support",
+            "description": "Protect children under five with free vaccinations in underserved districts.",
+            "raised": 11800,
+            "goal": 15000,
+            "donors": 187,
+            "daysLeft": 14
+        }
+    ],
+    "howWeWork": {
+        "badge": "How we work",
+        "title": "From listening to lasting impact.",
+        "description": "Every program is built around trust, shared ownership, and a clear path from immediate support to long-term change.",
+        "steps": [
+            {
+                "number": "01",
+                "title": "Listen first",
+                "description": "We learn from the people closest to the challenge and understand what support will make the greatest difference."
+            },
+            {
+                "number": "02",
+                "title": "Build together",
+                "description": "We work with local leaders, volunteers, and partners to shape practical solutions with the community."
+            },
+            {
+                "number": "03",
+                "title": "Grow what works",
+                "description": "We measure progress, learn as we go, and invest in the ideas that create lasting opportunity."
+            }
+        ]
+    },
+    "faqs": [
+        {
+            "question": "Who can participate in a program?",
+            "answer": "Our programs are open to people, families, local organizations, and volunteers who want to create positive change in their communities."
+        },
+        {
+            "question": "How do you choose the programs you support?",
+            "answer": "We listen to local leaders, understand the need, and focus on practical ideas that can create meaningful and lasting impact."
+        },
+        {
+            "question": "Can I volunteer or contribute my skills?",
+            "answer": "Yes. You can share your time, professional skills, or local knowledge through our volunteer page and we will help find the right opportunity."
+        },
+        {
+            "question": "How can I follow the impact of my support?",
+            "answer": "We share updates from the communities and programs you support so you can see the progress your contribution helps make possible."
+        }
+    ],
+    "successStories": {
+        "badge": "Success stories",
+        "title": "Small steps. Real change.",
+        "description": "Every story begins with people choosing to show up for one another.",
+        "stories": [
+            {
+                "image": "/img-1.jpg",
+                "imageAlt": "Children learning together in a classroom",
+                "category": "Education",
+                "title": "A brighter start for 500 children",
+                "description": "School supplies and local support helped children return to class ready to learn.",
+                "result": "500 children supported"
+            },
+            {
+                "image": "/img-2.jpg",
+                "imageAlt": "Community members sharing a meal",
+                "category": "Food security",
+                "title": "A table where everyone belongs",
+                "description": "Community kitchens are helping families access nutritious meals with dignity.",
+                "result": "2,300 meals served"
+            },
+            {
+                "image": "/bg-img-2.png",
+                "imageAlt": "Young people working together outdoors",
+                "category": "Community",
+                "title": "Growing confidence together",
+                "description": "Local mentors created a safe place for young people to build skills and confidence.",
+                "result": "120 young people reached"
+            }
+        ]
+    }
+}

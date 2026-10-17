@@ -1,0 +1,26 @@
+{
+    "hero": {
+        "image": "/home-hero.jpg",
+        "title": "Our gallery"
+    },
+    "intro": {
+        "badge": "Moments that matter",
+        "title": "A closer look at the work.",
+        "description": "From classrooms and community kitchens to care on the road, these are the people and moments behind every project."
+    },
+    "allFilterLabel": "All moments",
+    "items": [
+        { "id": 1, "category": "Education", "title": "Learning together", "description": "Children discovering new possibilities at the village learning center.", "image": "/img-2.jpg", "imageAlt": "Children learning together" },
+        { "id": 2, "category": "Community", "title": "Made with care", "description": "Local volunteers preparing a day of support for their neighbors.", "image": "/img-1.jpg", "imageAlt": "Community volunteers at work" },
+        { "id": 3, "category": "Health", "title": "Care on the road", "description": "The mobile clinic brings trusted healthcare closer to remote families.", "image": "/home-hero.jpg", "imageAlt": "A healthcare worker supporting a family" },
+        { "id": 4, "category": "Food", "title": "Around one table", "description": "A warm meal creates space for connection and dignity.", "image": "/bg-image.png", "imageAlt": "A community gathering" },
+        { "id": 5, "category": "Education", "title": "Room to grow", "description": "A bright, welcoming corner made for reading, questions and ideas.", "image": "/bg-img-2.png", "imageAlt": "A bright community learning space" },
+        { "id": 6, "category": "Community", "title": "Showing up", "description": "Small acts of consistency become lasting change over time.", "image": "/img-1.jpg", "imageAlt": "A volunteer showing up for the community" }
+    ],
+    "cta": {
+        "eyebrow": "Be part of the story",
+        "title": "There is always room for one more helping hand.",
+        "buttonLabel": "Get involved",
+        "buttonHref": "/contact"
+    }
+}

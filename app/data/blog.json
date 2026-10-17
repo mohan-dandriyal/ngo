@@ -1,0 +1,180 @@
+{
+    "hero": {
+        "image": "/bg-img-2.png",
+        "heroTitle": "Our Blog's"
+    },
+
+    "blogDetailsHero": {
+        "image": "/bg-img-2.png",
+        "heroTitle": "Blog Details"
+    },
+
+    "blog": [
+        {
+            "id": 1,
+            "slug": "how-a-village-kitchen-feeds-300-families",
+            "title": "How one village kitchen feeds 300 families every day",
+            "excerpt": "Meet the volunteers who start cooking at 5am, and see how your donations turn into hot meals for children and their parents.",
+            "category": "Field stories",
+            "author": "Kathryn Murphy",
+            "publishedAt": "2026-10-08",
+            "readTime": "6 min read",
+            "image": "/img-2.jpg",
+            "featured": true
+        },
+        {
+            "id": 2,
+            "slug": "back-to-school-supplies-update",
+            "title": "Back to school: 500 children now have what they need",
+            "excerpt": "A look at how the school supplies campaign reached its first milestone.",
+            "category": "Education",
+            "author": "Team Editorial",
+            "publishedAt": "2026-10-02",
+            "readTime": "4 min read",
+            "image": "/img-1.jpg"
+        },
+        {
+            "id": 3,
+            "slug": "volunteer-spotlight",
+            "title": "Volunteer spotlight: why Anil gives every weekend",
+            "excerpt": "Three years, 140 weekends and one simple reason to keep showing up.",
+            "category": "Community",
+            "author": "Team Editorial",
+            "publishedAt": "2026-09-24",
+            "readTime": "5 min read",
+            "image": "/img-2.jpg"
+        },
+        {
+            "id": 4,
+            "slug": "where-your-donation-goes",
+            "title": "Where your donation goes: our 2026 transparency report",
+            "excerpt": "A clear breakdown of how every contribution was spent this year.",
+            "category": "Transparency",
+            "author": "Finance Team",
+            "publishedAt": "2026-09-12",
+            "readTime": "7 min read",
+            "image": "/img-1.jpg"
+        },
+        {
+            "id": 5,
+            "slug": "mobile-health-clinic-reaches-remote-villages",
+            "title": "The mobile health clinic reaches its first remote villages",
+            "excerpt": "Check-ups, medicine and a friendly face: how a clinic on wheels is changing care for families far from the nearest hospital.",
+            "category": "Health",
+            "author": "Team Editorial",
+            "publishedAt": "2026-09-05",
+            "readTime": "5 min read",
+            "image": "/img-2.jpg"
+        },
+        {
+            "id": 6,
+            "slug": "winter-food-packs-for-families",
+            "title": "Winter food packs are on their way to 400 families",
+            "excerpt": "Dry rations and warm supplies are being packed and delivered before the cold season sets in.",
+            "category": "Food",
+            "author": "Kathryn Murphy",
+            "publishedAt": "2026-08-28",
+            "readTime": "4 min read",
+            "image": "/img-1.jpg"
+        }
+    ],
+
+    "blogDetail": {
+        "how-a-village-kitchen-feeds-300-families": {
+            "lead": "Before the city wakes up, a small team is already turning donated ingredients into a daily ritual of care.",
+            "quote": "The kitchen is more than a place to eat. It is where neighbours remember they are not alone.",
+            "sections": [
+                {
+                    "image": "/img-1.jpg",
+                    "title": "Before sunrise",
+                    "description": "Volunteers start cooking at 5am, chopping vegetables and stirring huge pots of dal for the day ahead."
+                },
+                {
+                    "image": "/img-2.jpg",
+                    "title": "Hot meals for 300 families",
+                    "description": "By noon, parents and children gather to share a warm meal, served with care every single day."
+                }
+            ]
+        },
+        "back-to-school-supplies-update": {
+            "lead": "A school bag can be a small thing, but for a child starting the year it can carry confidence, possibility and a fresh beginning.",
+            "quote": "When every child has the tools to learn, the whole classroom moves forward.",
+            "sections": [
+                {
+                    "image": "/img-2.jpg",
+                    "title": "Packed and ready",
+                    "description": "Bags, books and uniforms are sorted by size so every child gets exactly what fits."
+                },
+                {
+                    "image": "/img-1.jpg",
+                    "title": "A confident first day",
+                    "description": "Children walk into class with new supplies and the confidence to start the year strong."
+                }
+            ]
+        },
+        "volunteer-spotlight": {
+            "lead": "Anil did not set out to become a long-term volunteer. He simply kept showing up, one Saturday at a time.",
+            "quote": "You do not need to change everything. You only need to keep making one useful difference.",
+            "sections": [
+                {
+                    "image": "/img-1.jpg",
+                    "title": "One Saturday became three years",
+                    "description": "Anil showed up once and kept coming back, giving every weekend to the cause."
+                },
+                {
+                    "image": "/img-2.jpg",
+                    "title": "A crew that keeps growing",
+                    "description": "His example brought friends and neighbours along, and the weekend team grows every month."
+                }
+            ]
+        },
+        "where-your-donation-goes": {
+            "lead": "Trust is built in the details, so this year we followed every contribution from the first transaction to the final delivery.",
+            "quote": "Transparency is not a report we publish once a year. It is a promise we keep every day.",
+            "sections": [
+                {
+                    "image": "/img-2.jpg",
+                    "title": "Every contribution tracked",
+                    "description": "From the moment a donation arrives to the day help is delivered, we log where it goes."
+                },
+                {
+                    "image": "/img-1.jpg",
+                    "title": "Open for everyone to see",
+                    "description": "Our annual report breaks down each expense so supporters can see the impact of their gift."
+                }
+            ]
+        },
+        "mobile-health-clinic-reaches-remote-villages": {
+            "lead": "For families far from a hospital, the arrival of a clinic on wheels turns distance into a problem with a practical answer.",
+            "quote": "The most important part of care is often simply making it possible to reach someone.",
+            "sections": [
+                {
+                    "image": "/img-1.jpg",
+                    "title": "A clinic on wheels",
+                    "description": "The mobile clinic travels to villages hours away from the nearest hospital."
+                },
+                {
+                    "image": "/img-2.jpg",
+                    "title": "Care at the doorstep",
+                    "description": "Doctors offer check-ups, medicine and advice to families who had no access before."
+                }
+            ]
+        },
+        "winter-food-packs-for-families": {
+            "lead": "Before the cold season arrives, volunteers are planning routes, packing essentials and making sure support reaches every doorstep.",
+            "quote": "A food pack is practical help, but it also says: your community sees you and is here for you.",
+            "sections": [
+                {
+                    "image": "/img-2.jpg",
+                    "title": "Packed with care",
+                    "description": "Volunteers fill each box with dry rations and warm supplies before the cold arrives."
+                },
+                {
+                    "image": "/img-1.jpg",
+                    "title": "On the way to 400 families",
+                    "description": "Trucks are loaded and routes planned so every pack reaches its door in time."
+                }
+            ]
+        }
+    }
+}
