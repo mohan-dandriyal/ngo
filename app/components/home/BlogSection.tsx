@@ -100,7 +100,7 @@ function BlogSection() {
   }
 
   return (
-    <section className="overflow-hidden bg-white py-20 md:py-28" aria-labelledby="blog-heading">
+    <section className="overflow-hidden bg-white pt-20 md:pt-28" aria-labelledby="blog-heading">
       <MainContainer>
         <motion.div
           variants={container}

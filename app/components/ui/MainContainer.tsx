@@ -7,7 +7,7 @@ interface MainContainerProps {
 
 const MainContainer = ({ children }: MainContainerProps) => {
     return (
-        <div className="md:p-10 px-1 max-w-360 mx-auto relative">
+        <div className="md:p-5 m:px-10 px-1 max-w-360 mx-auto relative">
             {children}
         </div>
     )
