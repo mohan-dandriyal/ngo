@@ -49,7 +49,7 @@ export const SectionTitle = ({ children, id = "about-heading" }: SectionTitlePro
         <motion.h2
             id={id}
             variants={stagger(0.07)}
-            className="mt-5 text-4xl font-extrabold leading-tight tracking-tight text-[#0b1635] md:text-5xl"
+            className="mt-5 max-w-5xl text-5xl font-light leading-[1.02] tracking-[-0.04em] text-[#0b1635] md:text-7xl lg:text-8xl"
         >
             <motion.span variants={floatIn} className="mr-[0.25em] inline-block">
                 {children}
@@ -64,7 +64,7 @@ export const SectionDescription = ({ children }: SectionDescriptionProps) => {
     return (
         <motion.p
             variants={stagger(0.07)}
-            className="mt-4 text-base leading-relaxed text-[#0b1635]/70 md:text-lg"
+            className="mt-4 text-base leading-relaxed text-[#0b1635]/70 md:text-xl"
         >
             <motion.span variants={floatIn} className="mr-[0.25em] inline-block">
                 {children}

@@ -15,19 +15,6 @@ interface BlogCardProps {
 // Smooth "expo-out" curve shared by all entrance animations
 const EASE = [0.22, 1, 0.36, 1] as const;
 
-/** Soft watercolor wash built from layered radial gradients (same as the other sections) */
-const watercolor = (base: string, a: string, b: string) =>
-    `radial-gradient(60% 55% at 15% 20%, ${a} 0%, transparent 70%),
-   radial-gradient(55% 60% at 85% 75%, ${b} 0%, transparent 70%),
-   radial-gradient(40% 40% at 70% 15%, ${a} 0%, transparent 75%),
-   ${base}`;
-
-// Cards alternate between the two pastel washes
-const tints = [
-    watercolor("#dcebdd", "#e9f2d9", "#cfe5da"),
-    watercolor("#cfe4e0", "#dcefe9", "#bcd6dc"),
-];
-
 // "2026-10-12" -> "Oct 12, 2026". Pinned to UTC so server and browser always agree.
 const formatDate = (iso: string) =>
     new Date(iso).toLocaleDateString("en-US", {
@@ -83,15 +70,14 @@ export default function BlogCard({ blog, index = 0 }: BlogCardProps) {
                     ? undefined
                     : { y: -8, transition: { type: "spring", stiffness: 300, damping: 22 } }
             }
-            className="group relative flex h-full flex-col overflow-hidden rounded-2xl text-[#0b1635] shadow-lg shadow-[#0b1635]/5 transition-shadow duration-500 hover:shadow-2xl hover:shadow-[#0b1635]/15"
-            style={{ background: tints[index % tints.length] }}
+            className="group relative mx-auto grid h-full w-full max-w-5xl grid-cols-1 gap-5 overflow-hidden text-[#0b1635] shadow-lg shadow-[#0b1635]/5 transition-shadow duration-500 hover:shadow-2xl hover:shadow-[#0b1635]/15 md:grid-cols-2"
         >
             {/* Image */}
             <div className="relative aspect-[4/3] overflow-hidden">
                 <motion.div variants={imageReveal} className="absolute inset-0">
                     <Image
                         src={blog.image}
-                        alt=""
+                        alt={blog.title}
                         fill
                         sizes="(min-width: 1024px) 30vw, (min-width: 640px) 50vw, 100vw"
                         className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
@@ -100,7 +86,7 @@ export default function BlogCard({ blog, index = 0 }: BlogCardProps) {
 
                 <motion.span
                     variants={chip}
-                    className="absolute left-4 top-4 rounded-full bg-white px-3 py-1 text-xs font-semibold text-[#0b1635] shadow-sm"
+                    className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[#0b1635] shadow-sm backdrop-blur-sm"
                 >
                     {blog.category}
                 </motion.span>
@@ -116,7 +102,7 @@ export default function BlogCard({ blog, index = 0 }: BlogCardProps) {
 
                 <motion.h3
                     variants={rise}
-                    className="mt-3 text-2xl font-extrabold leading-snug tracking-tight"
+                    className="mt-3 text-xl font-medium leading-snug tracking-tight sm:text-2xl lg:text-3xl"
                 >
                     {/* The whole card is clickable through this link */}
                     <Link
@@ -127,7 +113,7 @@ export default function BlogCard({ blog, index = 0 }: BlogCardProps) {
                     </Link>
                 </motion.h3>
 
-                <motion.p variants={rise} className="mt-3 text-sm leading-7 text-[#0b1635]/80">
+                <motion.p variants={rise} className="mt-3 text-base leading-7 text-[#0b1635]/80 sm:text-lg">
                     {blog.excerpt}
                 </motion.p>
 
@@ -135,14 +121,14 @@ export default function BlogCard({ blog, index = 0 }: BlogCardProps) {
                     variants={rise}
                     className="mt-auto flex items-center justify-between border-t border-[#0b1635]/15 pt-4"
                 >
-                    <span className="text-xs text-[#0b1635]/70">By {blog.author}</span>
+                    <span className="text-xs text-[#0b1635]/70 sm:text-sm">By {blog.author}</span>
 
-                    <span
+                    <Link href={`/blog/${blog.slug}`}
                         aria-hidden="true"
                         className="flex h-9 w-9 items-center justify-center rounded-full bg-[#0b1635] text-white transition-transform duration-300 group-hover:rotate-45"
                     >
                         <FiArrowUpRight size={16} />
-                    </span>
+                    </Link>
                 </motion.div>
             </div>
         </motion.article>

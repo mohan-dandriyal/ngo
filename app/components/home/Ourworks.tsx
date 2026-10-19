@@ -2,62 +2,18 @@
 
 import React from "react"
 import Image from "next/image"
-import Link from "next/link"
 import { motion, useReducedMotion, type Variants } from "framer-motion"
 import { FiArrowUpRight } from "react-icons/fi"
 import MainContainer from "../ui/MainContainer"
 
 import { SectionBadge, SectionDescription, SectionTitle } from '@/app/components/SectionHeader'
 import { OutlineButton } from "../ui/Button"
+import projectsData from "@/app/data/projects.json"
+import homeData from "@/app/data/home.json"
+import type { ProjectPageData } from "@/app/types/project"
 
-interface Work {
-  slug: string
-  title: string
-  description: string
-  image: string
-  imageAlt: string
-  /** Soft watercolor wash behind the text card */
-  tint: string
-}
-
-/**
- * Builds a soft, watercolor-like background from layered radial gradients.
- * base = main pastel color, a / b = lighter and deeper blotches.
- */
-const watercolor = (base: string, a: string, b: string) =>
-  `radial-gradient(60% 55% at 15% 20%, ${a} 0%, transparent 70%),
-   radial-gradient(55% 60% at 85% 75%, ${b} 0%, transparent 70%),
-   radial-gradient(40% 40% at 70% 15%, ${a} 0%, transparent 75%),
-   ${base}`
-
-// Placeholder projects and images: replace with your real work
-const works: Work[] = [
-  {
-    slug: "village-learning-center",
-    title: "Village learning center",
-    description: "A safe space with teachers, computers and a small library for 200 children.",
-    image: "/img-2.jpg",
-    imageAlt: "Children studying at the village learning center",
-    tint: watercolor("#dcebdd", "#e9f2d9", "#cfe5da"),
-  },
-  {
-    slug: "community-kitchen",
-    title: "Community kitchen",
-    description: "Hot meals served daily to 300 families.",
-    image: "/img-1.jpg",
-    imageAlt: "Volunteers serving meals at the community kitchen",
-    tint: watercolor("#cfe4e0", "#dcefe9", "#bcd6dc"),
-  },
-  {
-    slug: "mobile-health-clinic",
-    title: "Mobile health clinic",
-    description: "Check-ups and medicine delivered to remote villages.",
-    image: "/img-2.jpg",
-    imageAlt: "A health worker examining a patient in a village",
-    tint: watercolor("#dcebdd", "#e9f2d9", "#cfe5da"),
-  },
-
-]
+const data = projectsData as ProjectPageData
+const works = data.projects.slice(0, 3)
 
 function OurWorks() {
   const reduce = useReducedMotion()
@@ -72,7 +28,7 @@ function OurWorks() {
   }
 
   return (
-    <section className="overflow-hidden bg-white " aria-labelledby="works-heading">
+    <section className="overflow-hidden bg-white" aria-labelledby="works-heading">
       <MainContainer>
         <motion.div
           variants={container}
@@ -84,21 +40,19 @@ function OurWorks() {
           {/* Heading row */}
           <motion.div
             variants={fadeUp}
-            className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end"
+            className="flex flex-col  items-start justify-between gap-6 md:flex-row md:items-end"
           >
-            <div className="max-w-2xl">
-              <SectionBadge>Our works</SectionBadge>
+            <div className="max-w-4xl">
+              <SectionBadge>{homeData.worksSection.badge}</SectionBadge>
 
-              <SectionTitle>Projects that turned donations into change</SectionTitle>
+              <SectionTitle>{homeData.worksSection.title}</SectionTitle>
 
-              <SectionDescription>
-                A closer look at what your support has built, served and delivered.
-              </SectionDescription>
+              <SectionDescription>{homeData.worksSection.description}</SectionDescription>
             </div>
 
-            <OutlineButton href="/projects">
+            <OutlineButton href={homeData.worksSection.buttonHref}>
               <div className="flex items-center gap-4">
-                See all works
+                {homeData.worksSection.buttonLabel}
                 <FiArrowUpRight
                   aria-hidden="true"
                   className="transition-transform duration-300 group-hover:rotate-45"
@@ -138,7 +92,7 @@ function OurWorks() {
                     }`}
                     style={{ background: w.tint }}
                   >
-                    <h3 className="max-w-[12ch] text-4xl font-extrabold leading-[0.95] tracking-tight text-[#0b1635] md:text-5xl lg:text-6xl">
+                    <h3 className="max-w-[12ch] text-4xl font-medium leading-[0.95] tracking-tight text-[#0b1635] md:text-5xl lg:text-5xl">
                       {w.title}
                     </h3>
 
@@ -146,13 +100,6 @@ function OurWorks() {
                       {w.description}
                     </p>
 
-                    <Link
-                      href={`/projects/${w.slug}`}
-                      className="mt-8 w-fit text-base font-medium text-[#0b1635] underline underline-offset-4 transition-opacity hover:opacity-70 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0b1635]"
-                    >
-                      Learn More
-                      <span className="sr-only">: {w.title}</span>
-                    </Link>
                   </motion.article>
                 </div>
               )

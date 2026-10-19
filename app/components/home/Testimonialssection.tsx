@@ -6,38 +6,9 @@ import { AnimatePresence, motion, useReducedMotion, type Variants } from "framer
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi"
 import { FaQuoteLeft, FaStar } from "react-icons/fa"
 import MainContainer from "../ui/MainContainer"
+import homeData from "@/app/data/home.json"
 
-interface Testimonial {
-  name: string
-  role: string
-  avatar: string
-  quote: string
-}
-
-// Placeholder testimonials and images: replace with real ones (with permission)
-const testimonials: Testimonial[] = [
-  {
-    name: "Priya Sharma",
-    role: "Monthly donor",
-    avatar: "/img-1.jpg",
-    quote:
-      "I get an update showing exactly where my money went. Seeing the school supplies reach the children made me a monthly donor for good.",
-  },
-  {
-    name: "Rahul Verma",
-    role: "Volunteer, 3 years",
-    avatar: "/img-2.jpg",
-    quote:
-      "Volunteering here changed how I see my own community. The team is organised, kind, and every weekend feels like it counts.",
-  },
-  {
-    name: "Anita Desai",
-    role: "Parent in a supported village",
-    avatar: "/img-1.jpg",
-    quote:
-      "My children now get a hot meal and go to school every day. We are grateful to everyone who stood with us when we needed it most.",
-  },
-]
+const testimonials = homeData.testimonials
 
 const AUTOPLAY_MS = 6000
 
@@ -105,7 +76,7 @@ function TestimonialsSection() {
 
   return (
     <section
-      className="relative isolate overflow-hidden py-16 text-white md:py-28"
+      className="relative isolate overflow-hidden py-20 text-white md:py-28"
       aria-labelledby="testimonials-heading"
     >
       {/* Background image: fills the whole section behind the content */}
@@ -154,7 +125,7 @@ function TestimonialsSection() {
             <motion.h2
               variants={rise}
               id="testimonials-heading"
-              className="mt-5 text-4xl font-extrabold leading-[1.05] tracking-tight md:text-5xl lg:text-6xl"
+              className="mt-5 text-4xl font-medium italic leading-[1.05] tracking-tight md:text-5xl lg:text-6xl"
             >
               Kind words from people who help us help others
             </motion.h2>
@@ -166,7 +137,7 @@ function TestimonialsSection() {
                 ))}
               </div>
               <p className="text-white/80">
-                <strong className="text-white">4.9</strong> from 2,300+ supporters
+                <strong className="text-white text-lg">4.9</strong> from 2,300+ supporters
               </p>
             </motion.div>
 

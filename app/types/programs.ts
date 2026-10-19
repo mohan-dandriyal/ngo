@@ -16,6 +16,7 @@ export interface SuccessStory {
     title: string;
     description: string;
     result: string;
+    top?: string;
 }
 
 export type ProgramCategory = "Education" | "Food" | "Health";
@@ -51,6 +52,11 @@ export interface ProgramsData {
         title: string;
         description: string;
         steps: ProgramStep[];
+    };
+    faqSection: {
+        badge: string;
+        title: string;
+        description: string;
     };
     faqs: ProgramFaq[];
     successStories: {

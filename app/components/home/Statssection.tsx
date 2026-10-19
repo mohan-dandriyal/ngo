@@ -4,13 +4,9 @@ import React from "react"
 import { motion, useReducedMotion, type Variants } from "framer-motion"
 import CountUp from "react-countup"
 import MainContainer from "../ui/MainContainer"
+import homeData from "@/app/data/home.json"
 
-// Placeholder numbers: replace with your real figures
-const stats = [
-  { end: 42, suffix: "", label: "Literacy Programs Launched" },
-  { end: 15000, suffix: "+", label: "Children Reached" },
-  { end: 800, suffix: "+", label: "Volunteers Mobilized" },
-]
+const stats = homeData.growthStats
 
 // Smooth "expo-out" curve shared by all entrance animations
 const EASE = [0.22, 1, 0.36, 1] as const
@@ -52,7 +48,7 @@ function StatsSection() {
   }
 
   return (
-    <section className="overflow-hidden bg-white py-16 md:py-24" aria-labelledby="growth-heading">
+    <section className="overflow-hidden bg-white py-20 md:py-28" aria-labelledby="growth-heading">
       <MainContainer>
         <motion.div
           variants={container}
@@ -65,7 +61,7 @@ function StatsSection() {
           <motion.h2
             variants={floatIn}
             id="growth-heading"
-            className="text-center text-4xl font-extrabold tracking-tight text-[#0b1635] md:text-6xl"
+            className="text-center text-4xl font-medium tracking-tight text-[#0b1635] md:text-6xl"
           >
             Our Growth, Their Future
           </motion.h2>
@@ -95,7 +91,7 @@ function StatsSection() {
 
                 <motion.dd
                   variants={floatIn}
-                  className="text-6xl font-extrabold tracking-tight text-[#0b1635] tabular-nums md:text-7xl lg:text-8xl"
+                  className="text-6xl font- tracking-tight text-[#0b1635] tabular-nums md:text-7xl lg:text-8xl"
                 >
                   <CountUp
                     end={st.end}

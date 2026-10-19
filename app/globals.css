@@ -24,3 +24,13 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes loading {
+  0% {
+    transform: translateX(-140%);
+  }
+  50%,
+  100% {
+    transform: translateX(260%);
+  }
+}

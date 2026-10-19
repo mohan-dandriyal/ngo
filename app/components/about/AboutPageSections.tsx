@@ -20,6 +20,7 @@ function AboutPageSections() {
                 {about[0]?.aboutBannerTitle}
             </InnerPagesBanner>
 
+            <div className='px-3 sm:px-0'>
             <AboutSection
                 image={about[1]?.image ?? ""}
                 badge={about[1]?.badge ?? "About Us"}
@@ -66,6 +67,9 @@ function AboutPageSections() {
             <TestimonialsSection />
 
             <StatsSection />
+
+            </div>
+
         </div>
     )
 }

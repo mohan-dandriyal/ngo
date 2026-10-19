@@ -3,6 +3,10 @@
         "image": "/bg-img-2.png",
         "title": "Our projects"
     },
+    "projectDetailsHero": {
+        "image": "/bg-img-2.png",
+        "title": "projects Details"
+    },
     "intro": {
         "badge": "Work in action",
         "title": "Small acts. Lasting change.",
@@ -48,6 +52,7 @@
                 ]
             }
         },
+
         {
             "slug": "mobile-health-clinic",
             "title": "Mobile health clinic",

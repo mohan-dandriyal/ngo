@@ -6,18 +6,17 @@ import Faq from "../components/programs/Faq"
 import programsData from "@/app/data/programs.json"
 import type { ProgramsData } from "@/app/types/programs"
 import StatsSection from "../components/home/Statssection"
-import MainContainer from "../components/ui/MainContainer"
 
 const data = programsData as ProgramsData
 
 export default function OurProgramsPage() {
     return (
-        <div className="overflow-hidden ">
+        <main className="overflow-hidden bg-white">
             <InnerPagesBanner image={data.hero.image}>
                 {data.hero.title}
             </InnerPagesBanner>
 
-            <ActiveCampaigns />
+            <ActiveCampaigns isShow={false} />
 
 
             <HowWeWork />
@@ -26,9 +25,9 @@ export default function OurProgramsPage() {
 
             <SuccessStories />
 
-            <div className="mt-0 mx-auto max-w-360 border-t border-[#0b1635]/10 ">
+            <div className="mx-auto max-w-360 border-t border-[#0b1635]/10">
                 <StatsSection />
             </div>
-        </div>
+        </main>
     )
 }

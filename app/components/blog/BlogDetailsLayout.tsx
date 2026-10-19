@@ -3,10 +3,10 @@ import { notFound } from "next/navigation";
 import blog from "@/app/data/blog.json";
 import BlogDetails from "@/app/components/blog/BlogDetails";
 import type { Blog, BlogDetail } from "@/app/types/blog";
-import InnerPagesBanner from '@/app/components/layouts/InnerPageBanner'
+import InnerPagesBanner from "../layouts/InnerPageBanner";
 
 const posts = blog.blog as Blog[];
-const details = blog.blogDetail as Record<string, BlogDetail>;
+const blogDetails = blog.blogDetails as Record<string, BlogDetail>;
 
 interface BlogDetailsLayoutProps {
     slug: string;
@@ -26,12 +26,10 @@ export default async function BlogDetailsLayout({ slug }: BlogDetailsLayoutProps
 
     return (
         <>
-
-            <InnerPagesBanner image={blog.blogDetailsHero.image}>
-                {blog.blogDetailsHero.heroTitle}
-            </InnerPagesBanner>
-
-            <BlogDetails post={post} prev={prev} next={next} detail={details[slug]} />
+        <InnerPagesBanner image={blog?.blogDetailsHero?.image}>
+           {blog?.blogDetailsHero?.heroTitle}
+        </InnerPagesBanner>
+        <BlogDetails post={post} prev={prev} next={next} detail={blogDetails[slug]} />
         </>
     );
 }

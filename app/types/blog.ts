@@ -31,8 +31,10 @@ export interface DetailSection {
     description: string;
 }
  
-/** Extra data for the details page, stored in blogDetails.json and keyed by the post's slug */
+/** Extra data for the details page, stored in blog.json under blogDetails and keyed by the post's slug */
 export interface BlogDetail {
+    postDate?: string;
+    profile?: string;
     lead?: string;
     quote?: string;
     sections: DetailSection[];

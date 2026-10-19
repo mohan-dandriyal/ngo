@@ -30,7 +30,7 @@ export default function Home() {
         <div />
       </FixedBackgroundSection>
 
-      <ActiveCampaigns />
+      <ActiveCampaigns isShow={true} />
 
       <OurWorks />
 

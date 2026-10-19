@@ -53,28 +53,16 @@ function MissionVisionSection({ data }: MissionVisionSectionProps) {
                         <SectionBadge>{data.mission.badge}</SectionBadge>
                         <h2
                             id="mission-heading"
-                            className="mt-5 text-4xl font-extrabold leading-tight tracking-tight text-[#0b1635] md:text-5xl"
+                            className="mt-5 text-4xl  leading-tight tracking-tight text-[#0b1635] md:text-5xl"
                         >
                             {data.mission.title}
                         </h2>
-                        <div className="mt-6 space-y-4 text-lg leading-relaxed text-[#0b1635]/70">
+                        <div className="mt-6 space-y-4 text-xl leading-relaxed text-[#0b1635]/70">
                             {asParagraphs(data.mission.description).map((paragraph, index) => (
                                 <p key={`${data.mission.title}-${index}`}>{paragraph}</p>
                             ))}
                         </div>
                     </div>
-
-                    {/* <div className="border-t border-[#0b1635]/15 pt-8">
-                    <SectionBadge>{data.vision.badge}</SectionBadge>
-                    <h3 className="mt-5 text-3xl font-bold leading-tight tracking-tight text-[#0b1635]">
-                        {data.vision.title}
-                    </h3>
-                    <div className="mt-5 space-y-4 leading-relaxed text-[#0b1635]/65">
-                        {asParagraphs(data.vision.description).map((paragraph, index) => (
-                            <p key={`${data.vision.title}-${index}`}>{paragraph}</p>
-                        ))}
-                    </div>
-                </div> */}
                 </motion.div>
             </motion.section>
 
@@ -98,11 +86,11 @@ function MissionVisionSection({ data }: MissionVisionSectionProps) {
                         <SectionBadge>{data.vision.badge}</SectionBadge>
                         <h2
                             id="mission-heading"
-                            className="mt-5 text-4xl font-extrabold leading-tight tracking-tight text-[#0b1635] md:text-5xl"
+                            className="mt-5 text-4xl leading-tight tracking-tight text-[#0b1635] md:text-5xl"
                         >
                             {data.vision.title}
                         </h2>
-                        <div className="mt-6 space-y-4 text-lg leading-relaxed text-[#0b1635]/70">
+                        <div className="mt-6 space-y-4 text-xl leading-relaxed text-[#0b1635]/70">
                             {asParagraphs(data.vision.description).map((paragraph, index) => (
                                 <p key={`${data.vision.title}-${index}`}>{paragraph}</p>
                             ))}

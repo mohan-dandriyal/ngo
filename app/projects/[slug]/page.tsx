@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import projectsData from "@/app/data/projects.json";
 import ProjectDetailsLayout from "@/app/components/project/ProjectDetailsLayout";
 import type { ProjectItem } from "@/app/types/project";
+import Loading from "@/app/components/ui/Loading";
 
 const projects = projectsData.projects as ProjectItem[];
 type PageProps = { params: Promise<{ slug: string }> };
@@ -22,5 +23,5 @@ async function ProjectDetailsContent({ params }: PageProps) {
 }
 
 export default function ProjectDetailsPage({ params }: PageProps) {
-    return <Suspense fallback={<div className="flex min-h-80 items-center justify-center bg-[#f5f7f2] text-[#0b1635]">Loading project...</div>}><ProjectDetailsContent params={params} /></Suspense>;
+    return <Suspense fallback={<Loading />}><ProjectDetailsContent params={params} /></Suspense>;
 }

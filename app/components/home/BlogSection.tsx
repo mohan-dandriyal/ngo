@@ -10,62 +10,16 @@ import MainContainer from "../ui/MainContainer"
 import { OutlineButton } from '@/app/components/ui/Button'
 import { SectionTitle, SectionDescription, SectionBadge } from "../SectionHeader"
 import { Paragraf, CardTitleLink } from "../ui/Layout"
+import blogData from "@/app/data/blog.json"
+import homeData from "@/app/data/home.json"
+import type { Blog } from "@/app/types/blog"
 
-interface Post {
-  slug: string
-  title: string
-  category: string
-  excerpt: string
-  image: string
-  date: string
-  readTime: string
-  author: string
-}
-
-// Placeholder posts and images: replace with your real articles
-const posts: Post[] = [
-  {
-    slug: "how-a-village-kitchen-feeds-300-families",
-    title: "How one village kitchen feeds 300 families every day",
-    category: "Field stories",
-    excerpt:
-      "Meet the volunteers who start cooking at 5am, and see how your donations turn into hot meals for children and their parents.",
-    image: "/img-2.jpg",
-    date: "Oct 8, 2026",
-    readTime: "6 min read",
-    author: "Kathryn Murphy",
-  },
-  {
-    slug: "back-to-school-supplies-update",
-    title: "Back to school: 500 children now have what they need",
-    category: "Education",
-    excerpt: "A look at how the school supplies campaign reached its first milestone.",
-    image: "/img-1.jpg",
-    date: "Oct 2, 2026",
-    readTime: "4 min read",
-    author: "Team Editorial",
-  },
-  {
-    slug: "volunteer-spotlight",
-    title: "Volunteer spotlight: why Anil gives every weekend",
-    category: "Community",
-    excerpt: "Three years, 140 weekends and one simple reason to keep showing up.",
-    image: "/img-2.jpg",
-    date: "Sep 24, 2026",
-    readTime: "5 min read",
-    author: "Team Editorial",
-  },
-  {
-    slug: "where-your-donation-goes",
-    title: "Where your donation goes: our 2026 transparency report",
-    category: "Transparency",
-    excerpt: "A clear breakdown of how every contribution was spent this year.",
-    image: "/img-1.jpg",
-    date: "Sep 12, 2026",
-    readTime: "7 min read",
-    author: "Finance Team",
-  },
-]
+const posts = (blogData.blog as Blog[]).map((post) => ({
+  ...post,
+  date: new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", year: "numeric" }).format(
+    new Date(post.publishedAt),
+  ),
+}))
 
 // Smooth "expo-out" curve shared by all entrance animations
 const EASE = [0.22, 1, 0.36, 1] as const
@@ -146,7 +100,7 @@ function BlogSection() {
   }
 
   return (
-    <section className="overflow-hidden bg-white py-16 md:py-24" aria-labelledby="blog-heading">
+    <section className="overflow-hidden bg-white py-20 md:py-28" aria-labelledby="blog-heading">
       <MainContainer>
         <motion.div
           variants={container}
@@ -160,33 +114,27 @@ function BlogSection() {
             variants={fadeUp}
             className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end"
           >
-            <div className="max-w-2xl">
+            <div className="max-w-4xl">
 
 
-              <SectionBadge>
-                Our blog
-              </SectionBadge>
+              <SectionBadge>{homeData.blogSection.badge}</SectionBadge>
 
-              <SectionTitle>
-                Stories and updates from the field
-              </SectionTitle>
+              <SectionTitle>{homeData.blogSection.title}</SectionTitle>
 
-              <SectionDescription>
-                News, impact reports and the people behind the work.
-              </SectionDescription>
+              <SectionDescription>{homeData.blogSection.description}</SectionDescription>
             </div>
 
-            <OutlineButton href="/blog">
+            <OutlineButton href={homeData.blogSection.buttonHref}>
               <div className="flex items-center gap-3">
-                Read all articles
+                {homeData.blogSection.buttonLabel}
                 <FiArrowUpRight aria-hidden="true" className=" text-xl transition-transform duration-200 group-hover:rotate-45" />
               </div>
             </OutlineButton>
           </motion.div>
 
-          <div className="mt-12 grid gap-5 lg:grid-cols-2">
+          <div className="mt-12">
             {/* Featured post */}
-            <motion.article
+            {/* <motion.article
               variants={featuredReveal}
               className="group relative min-h-112 overflow-hidden rounded-2xl bg-[#0b1635] shadow-xl shadow-[#0b1635]/10 lg:min-h-full"
             >
@@ -226,7 +174,7 @@ function BlogSection() {
                 </motion.div>
                 <motion.h3
                   variants={textRise}
-                  className="mt-3 text-2xl font-extrabold leading-snug tracking-tight md:text-3xl"
+                  className="mt-3 text-2xl font-medium italic leading-snug tracking-tight md:text-4xl"
                 >
                   <Link
                     href={`/blog/${featured.slug}`}
@@ -235,7 +183,8 @@ function BlogSection() {
                     {featured.title}
                   </Link>
                 </motion.h3>
-                <motion.p variants={textRise} className="mt-3 max-w-xl text-white/85">
+
+                <motion.p variants={textRise} className="mt-3 max-w-xl text-white/85 text-lg">
                   {featured.excerpt}
                 </motion.p>
                 <motion.p variants={textRise} className="mt-5 inline-flex items-center gap-2 font-semibold">
@@ -245,19 +194,19 @@ function BlogSection() {
                   </span>
                 </motion.p>
               </div>
-            </motion.article>
+            </motion.article> */}
 
             {/* Smaller posts */}
-            <div className="flex flex-col gap-5">
-              {rest.map((post, i) => (
+            <div className="lg:w-10/12 grid md:grid-cols-2  mx-auto gap-15">
+              {rest?.slice(0, 4)?.map((post, i) => (
                 <motion.article
                   key={post.slug}
                   variants={slideIn}
                   whileHover={reduce ? undefined : { y: -6, transition: { type: "spring", stiffness: 300, damping: 22 } }}
-                  className="group relative flex flex-col gap-5 rounded-2xl p-4 text-[#0b1635] shadow-lg shadow-[#0b1635]/5 transition-shadow duration-500 hover:shadow-2xl hover:shadow-[#0b1635]/15 sm:flex-row"
-                  style={{ background: tints[i % tints.length] }}
+                  className="group relative text-[#0b1635] duration-500 sm:flex-row"
+                 
                 >
-                  <div className="relative aspect-4/3 w-full shrink-0 overflow-hidden rounded-xl sm:aspect-square sm:w-40">
+                  <div className="relative aspect-4/3 w-full shrink-0 overflow-hidden">
                     <motion.div variants={smallImage} className="absolute inset-0">
                       <Image
                         src={post.image}
@@ -269,7 +218,7 @@ function BlogSection() {
                     </motion.div>
                   </div>
 
-                  <div className="flex flex-1 flex-col justify-center">
+                  <div className="flex flex-1 w-10/12 mx-auto flex-col justify-center p-10 relative -top-20"   style={{ background: tints[i % tints.length] }}>
                     <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-[#0b1635]/70">
                       <span className="rounded-full bg-white px-2.5 py-1 font-semibold text-[#0b1635]">
                         {post.category}
@@ -282,7 +231,7 @@ function BlogSection() {
                     <CardTitleLink>
                       <Link
                         href={`/blog/${post.slug}`}
-                        className="font-extrabold tracking-tight text-[#0b1635] after:absolute after:inset-0 after:rounded-2xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0b1635]"
+                        className=" tracking-tight text-[#0b1635] after:absolute after:inset-0 after:rounded-2xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0b1635]"
                       >
                         {post.title}
                       </Link>

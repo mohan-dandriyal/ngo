@@ -2,13 +2,13 @@
 
 import { useMemo, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion, type Variants } from "framer-motion";
-import { FiArrowUpRight, FiSearch } from "react-icons/fi";
+import { FiSearch } from "react-icons/fi";
 
 import blogData from "@/app/data/blog.json";
 import BlogCard from "@/app/components/blog/BlogCard";
 import type { Blog } from "@/app/types/blog";
 import MainContainer from "@/app/components/ui/MainContainer";
-import {  PrimaryButton } from "@/app/components/ui/Button";
+import { SectionBadge, SectionTitle } from "../SectionHeader";
 
 const {  blog: posts } = blogData as { hero: typeof blogData.hero; blog: Blog[] };
 
@@ -26,16 +26,7 @@ const watercolor = (base: string, a: string, b: string) =>
    radial-gradient(40% 40% at 70% 15%, ${a} 0%, transparent 75%),
    ${base}`;
 
-const greenWash = watercolor("#dcebdd", "#e9f2d9", "#cfe5da");
 const tealWash = watercolor("#cfe4e0", "#dcefe9", "#bcd6dc");
-
-const formatDate = (iso: string) =>
-    new Date(iso).toLocaleDateString("en-US", {
-        month: "short",
-        day: "numeric",
-        year: "numeric",
-        timeZone: "UTC",
-    });
 
 export default function BlogSection() {
     const reduce = useReducedMotion();
@@ -73,37 +64,11 @@ export default function BlogSection() {
         show: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.9, ease: EASE } },
     };
 
-    // Featured card: wipes open from the bottom while its image zooms out
-    const featuredReveal: Variants = {
-        hidden: {
-            opacity: reduce ? 1 : 0,
-            clipPath: reduce ? "inset(0% 0% 0% 0% round 16px)" : "inset(100% 0% 0% 0% round 16px)",
-        },
-        show: {
-            opacity: 1,
-            clipPath: "inset(0% 0% 0% 0% round 16px)",
-            transition: {
-                duration: 1.1,
-                ease: EASE,
-                when: "beforeChildren",
-                staggerChildren: reduce ? 0 : 0.1,
-            },
-        },
-    };
-    const imageZoom: Variants = {
-        hidden: { scale: reduce ? 1 : 1.25 },
-        show: { scale: 1, transition: { duration: 1.6, ease: EASE } },
-    };
-    const textRise: Variants = {
-        hidden: { opacity: reduce ? 1 : 0, y: reduce ? 0 : 24 },
-        show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: EASE } },
-    };
-
     return (
         <main className="min-h-screen bg-white text-[#0b1635]">
         
             {/* All posts */}
-            <section id="all-posts" className="py-6 md:py-6" aria-labelledby="latest-heading">
+            <section id="all-posts" className="py-16 sm:py-20 md:py-28" aria-labelledby="latest-heading">
                 <MainContainer>
                     <div className="px-6 md:px-0">
                         <motion.div
@@ -114,17 +79,11 @@ export default function BlogSection() {
                             className="flex flex-col gap-7 lg:flex-row lg:items-end lg:justify-between"
                         >
                             <motion.div variants={floatIn}>
-                                <span className="inline-flex items-center gap-2 rounded-full border border-[#0b1635]/15 bg-white px-4 py-1.5 text-sm font-medium shadow-sm">
-                                    <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-[#0b1635]" />
-                                    Explore our stories
-                                </span>
+                                <SectionBadge>All Posts</SectionBadge>
 
-                                <h2
-                                    id="latest-heading"
-                                    className="mt-5 text-4xl font-extrabold leading-tight tracking-tight md:text-5xl"
-                                >
+                                <SectionTitle>
                                     Latest Articles
-                                </h2>
+                                </SectionTitle>
                             </motion.div>
 
                             <motion.label
@@ -146,7 +105,7 @@ export default function BlogSection() {
                         </motion.div>
 
                         {/* Category filters */}
-                        <div className="flex flex-wrap gap-2 py-8">
+                        <div className="flex flex-wrap gap-3 py-8">
                             {categories.map((category) => {
                                 const selected = activeCategory === category;
 
@@ -157,7 +116,7 @@ export default function BlogSection() {
                                         onClick={() => setActiveCategory(category)}
                                         aria-pressed={selected}
                                         whileTap={reduce ? undefined : { scale: 0.95 }}
-                                        className={`relative rounded-full px-5 py-2 text-sm font-medium transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0b1635] ${
+                                        className={`relative rounded-full px-4 py-3 text-sm font-medium transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0b1635] sm:px-5 sm:py-4 sm:text-base ${
                                             selected ? "text-white" : "bg-[#e9f2e6] text-[#0b1635] hover:bg-[#d6e8dc]"
                                         }`}
                                     >
@@ -176,7 +135,7 @@ export default function BlogSection() {
 
                         {/* Blog cards */}
                         {filteredBlogs.length > 0 ? (
-                            <motion.div layout className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                            <motion.div layout className="mt-8 space-y-8 sm:mt-10 sm:space-y-10 md:mt-12 md:space-y-12">
                                 <AnimatePresence mode="popLayout">
                                     {filteredBlogs.map((post, index) => (
                                         <motion.div
@@ -214,7 +173,7 @@ export default function BlogSection() {
             </section>
 
             {/* Call to action */}
-            <section className="pb-6 pt-4 md:pb-8" aria-labelledby="blog-cta-heading">
+            {/* <section className="pb-6 pt-4 md:pb-8" aria-labelledby="blog-cta-heading">
                 <MainContainer>
                     <motion.div
                         variants={stagger(0.12)}
@@ -235,12 +194,12 @@ export default function BlogSection() {
                         <motion.h2
                             variants={floatIn}
                             id="blog-cta-heading"
-                            className="mt-5 text-4xl font-extrabold tracking-tight md:text-5xl"
+                            className="mt-5 text-4xl tracking-tight md:text-6xl"
                         >
                             Stay in the loop
                         </motion.h2>
 
-                        <motion.p variants={floatIn} className="mx-auto mt-5 max-w-lg leading-7 text-[#0b1635]/80">
+                        <motion.p variants={floatIn} className="mx-auto mt-5 max-w-lg text-xl leading-7 text-[#0b1635]/80">
                             Fresh stories, impact reports and updates from the people your support helps.
                         </motion.p>
 
@@ -257,7 +216,7 @@ export default function BlogSection() {
                         </motion.div>
                     </motion.div>
                 </MainContainer>
-            </section>
+            </section> */}
         </main>
     );
 }

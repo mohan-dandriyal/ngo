@@ -79,15 +79,18 @@
         }
     ],
 
-    "blogDetail": {
+
+    "blogDetails": {
         "how-a-village-kitchen-feeds-300-families": {
+            "postDate": "2026-10-08",
+            "profile": "Kathryn Murphy",
             "lead": "Before the city wakes up, a small team is already turning donated ingredients into a daily ritual of care.",
             "quote": "The kitchen is more than a place to eat. It is where neighbours remember they are not alone.",
             "sections": [
                 {
                     "image": "/img-1.jpg",
                     "title": "Before sunrise",
-                    "description": "Volunteers start cooking at 5am, chopping vegetables and stirring huge pots of dal for the day ahead."
+                    "description": "Volunteers begin before sunrise, preparing fresh ingredients and organizing every meal so the kitchen can welcome families throughout the day."
                 },
                 {
                     "image": "/img-2.jpg",
@@ -97,22 +100,26 @@
             ]
         },
         "back-to-school-supplies-update": {
+            "postDate": "2026-10-02",
+            "profile": "Team Editorial",
             "lead": "A school bag can be a small thing, but for a child starting the year it can carry confidence, possibility and a fresh beginning.",
             "quote": "When every child has the tools to learn, the whole classroom moves forward.",
             "sections": [
                 {
                     "image": "/img-2.jpg",
                     "title": "Packed and ready",
-                    "description": "Bags, books and uniforms are sorted by size so every child gets exactly what fits."
+                    "description": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem repellendus quo unde nisi sequi, blanditiis amet sunt perspiciatis autem optio provident consequatur dolores praesentium impedit non recusandae illum reprehenderit nobis.\n  Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem repellendus quo unde nisi sequi, blanditiis amet sunt perspiciatis autem optio provident consequatur dolores praesentium impedit non recusandae illum reprehenderit nobis. \n  Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem repellendus quo unde nisi sequi, blanditiis amet sunt perspiciatis autem optio provident consequatur dolores praesentium impedit non recusandae illum reprehenderit nobis."
                 },
                 {
                     "image": "/img-1.jpg",
                     "title": "A confident first day",
-                    "description": "Children walk into class with new supplies and the confidence to start the year strong."
+                    "description": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem repellendus quo unde nisi sequi, blanditiis amet sunt perspiciatis autem optio provident consequatur dolores praesentium impedit non recusandae illum reprehenderit nobis."
                 }
             ]
         },
         "volunteer-spotlight": {
+            "postDate": "2026-09-24",
+            "profile": "Team Editorial",
             "lead": "Anil did not set out to become a long-term volunteer. He simply kept showing up, one Saturday at a time.",
             "quote": "You do not need to change everything. You only need to keep making one useful difference.",
             "sections": [
@@ -129,6 +136,8 @@
             ]
         },
         "where-your-donation-goes": {
+            "postDate": "2026-09-12",
+            "profile": "Finance Team",
             "lead": "Trust is built in the details, so this year we followed every contribution from the first transaction to the final delivery.",
             "quote": "Transparency is not a report we publish once a year. It is a promise we keep every day.",
             "sections": [
@@ -145,6 +154,8 @@
             ]
         },
         "mobile-health-clinic-reaches-remote-villages": {
+            "postDate": "2026-09-05",
+            "profile": "Team Editorial",
             "lead": "For families far from a hospital, the arrival of a clinic on wheels turns distance into a problem with a practical answer.",
             "quote": "The most important part of care is often simply making it possible to reach someone.",
             "sections": [
@@ -161,6 +172,8 @@
             ]
         },
         "winter-food-packs-for-families": {
+            "postDate": "2026-08-28",
+            "profile": "Kathryn Murphy",
             "lead": "Before the cold season arrives, volunteers are planning routes, packing essentials and making sure support reaches every doorstep.",
             "quote": "A food pack is practical help, but it also says: your community sees you and is here for you.",
             "sections": [

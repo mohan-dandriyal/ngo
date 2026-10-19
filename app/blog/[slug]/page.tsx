@@ -6,6 +6,7 @@ import BlogDetailsLayout from "@/app/components/blog/BlogDetailsLayout";
 import blog from "@/app/data/blog.json";
 import type { Blog } from "@/app/types/blog";
 import { Suspense } from "react";
+import Loading from "@/app/components/ui/Loading";
 
 const posts = blog.blog as Blog[];
 
@@ -43,7 +44,7 @@ async function BlogDetailsPageContent({ params }: PageProps) {
 
 function BlogDetailsPage({ params }: PageProps) {
     return (
-        <Suspense fallback={<div aria-busy="true">Loading story...</div>}>
+        <Suspense fallback={<Loading />}>
             <BlogDetailsPageContent params={params} />
         </Suspense>
     );

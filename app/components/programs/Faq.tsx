@@ -19,27 +19,23 @@ function Faq() {
 
 
     return (
-        <div>
-            {/* Frequently Asked Questions */}
+        <section aria-labelledby="faq-heading" className="py-20 md:py-28">
             <MainContainer>
                 <div className="px-6 md:px-0">
                     <motion.section
-                        aria-labelledby="faq-heading"
-                        className="mt-0 grid gap-10 py-15 md:grid-cols-12 md:gap-16 md:py-20"
+                        className="grid gap-10 md:grid-cols-12 md:items-start md:gap-16"
                         initial={{ opacity: reduceMotion ? 1 : 0, y: reduceMotion ? 0 : 32 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.15 }}
                         transition={{ duration: 0.8 }}
                     >
                         <div className="md:col-span-5">
-                            <SectionBadge>09. Frequently Asked Questions</SectionBadge>
-                            <SectionTitle id="faq-heading">Everything you need to know.</SectionTitle>
-                            <SectionDescription>
-                                Have another question? Our team is always happy to help you find the right way to get involved.
-                            </SectionDescription>
+                            <SectionBadge>{data.faqSection.badge}</SectionBadge>
+                            <SectionTitle id="faq-heading">{data.faqSection.title}</SectionTitle>
+                            <SectionDescription>{data.faqSection.description}</SectionDescription>
                         </div>
 
-                        <div className="space-y-3 md:col-span-7">
+                        <div className="space-y-5 md:col-span-7 md:mt-0">
                             {data.faqs.map((faq, index) => {
                                 const isOpen = openFaq === index
                                 const answerId = `faq-answer-${index}`
@@ -51,11 +47,12 @@ function Faq() {
                                             aria-expanded={isOpen}
                                             aria-controls={answerId}
                                             onClick={() => setOpenFaq(isOpen ? -1 : index)}
-                                            className="flex w-full items-center justify-between gap-5 py-5 text-left font-semibold text-[#0b1635] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0b1635]"
+                                            className="flex w-full items-center justify-between gap-5 py-5 text-left font-semibold text-[#0b1635] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0b1635] lg:text-2xl sm:text-xl text-lg"
                                         >
                                             <span>{faq.question}</span>
                                             <FiPlus className={`shrink-0 text-xl text-[#71927b] transition-transform duration-300 ${isOpen ? "rotate-45" : ""}`} aria-hidden="true" />
                                         </button>
+
                                         <AnimatePresence initial={false}>
                                             {isOpen && (
                                                 <motion.div
@@ -66,7 +63,7 @@ function Faq() {
                                                     transition={{ duration: reduceMotion ? 0 : 0.25 }}
                                                     className="overflow-hidden"
                                                 >
-                                                    <p className="pb-5 pr-8 text-sm leading-6 text-[#0b1635]/65">{faq.answer}</p>
+                                                    <p className="pb-5 pr-8 text-base leading-7 text-[#0b1635]/65 sm:text-lg">{faq.answer}</p>
                                                 </motion.div>
                                             )}
                                         </AnimatePresence>
@@ -77,7 +74,7 @@ function Faq() {
                     </motion.section>
                 </div>
             </MainContainer>
-        </div>
+        </section>
     )
 }
 

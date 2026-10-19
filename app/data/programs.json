@@ -8,7 +8,7 @@
         "title": "Causes that need you right now",
         "description": "Pick a campaign, see exactly how far it has come, and help it reach its goal.",
         "buttonLabel": "View all campaigns",
-        "buttonHref": "/campaigns"
+        "buttonHref": "/our-programs"
     },
     "campaigns": [
         {
@@ -58,6 +58,8 @@
                 "title": "Listen first",
                 "description": "We learn from the people closest to the challenge and understand what support will make the greatest difference."
             },
+            {},
+            {},
             {
                 "number": "02",
                 "title": "Build together",
@@ -69,6 +71,11 @@
                 "description": "We measure progress, learn as we go, and invest in the ideas that create lasting opportunity."
             }
         ]
+    },
+    "faqSection": {
+        "badge": "09. Frequently Asked Questions",
+        "title": "Everything you need to know.",
+        "description": "Have another question? Our team is always happy to help you find the right way to get involved."
     },
     "faqs": [
         {
@@ -99,7 +106,8 @@
                 "category": "Education",
                 "title": "A brighter start for 500 children",
                 "description": "School supplies and local support helped children return to class ready to learn.",
-                "result": "500 children supported"
+                "result": "500 children supported",
+                "top": "0"
             },
             {
                 "image": "/img-2.jpg",
@@ -107,7 +115,8 @@
                 "category": "Food security",
                 "title": "A table where everyone belongs",
                 "description": "Community kitchens are helping families access nutritious meals with dignity.",
-                "result": "2,300 meals served"
+                "result": "2,300 meals served",
+                "top": "330px"
             },
             {
                 "image": "/bg-img-2.png",
@@ -115,7 +124,8 @@
                 "category": "Community",
                 "title": "Growing confidence together",
                 "description": "Local mentors created a safe place for young people to build skills and confidence.",
-                "result": "120 young people reached"
+                "result": "120 young people reached",
+                "top": "660px"
             }
         ]
     }

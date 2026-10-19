@@ -8,7 +8,7 @@ interface layoutProps {
 
 export const CardTitle = ({ children }: layoutProps) => {
     return (
-        <h3 className="mt-3 text-lg md:text-xl font-bold leading-snug text-black transition-colors duration-200">
+        <h3 className="mt-3 text-lg lg:text-5xl font-normal leading-snug text-black transition-colors duration-200">
             {children}
         </h3>
     )
@@ -16,7 +16,7 @@ export const CardTitle = ({ children }: layoutProps) => {
 
 export const CardTitleLink = ({ children }: layoutProps) => {
     return (
-        <h3 className="mt-3 text-lg md:text-xl font-bold leading-snug text-black transition-colors duration-200 group-hover:text-red-500">
+        <h3 className="mt-3 text-lg md:text-2xl font-bold leading-snug text-black transition-colors duration-200 group-hover:text-red-500">
             {children}
         </h3>
     )
@@ -24,7 +24,7 @@ export const CardTitleLink = ({ children }: layoutProps) => {
 
 export const Paragraf = ({ children }: layoutProps) => {
     return (
-        <p className="mt-2 line-clamp-2 text-sm sm:text-base text-black/60">
+        <p className="mt-2 line-clamp-2 text-lg sm:text-lg text-black/60">
             {children}
         </p>
     )

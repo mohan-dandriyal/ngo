@@ -27,7 +27,7 @@ export default function InnerPagesBanner({children, image}:innerPagesBannerProps
     }
 
     return (
-        <section className="relative h-160 w-full overflow-hidden bg-[#0b1635] text-white">
+        <section className="relative min-h-[30rem] w-full overflow-hidden bg-[#0b1635] text-white sm:min-h-[34rem] md:h-160 md:min-h-0">
             {/* Header stays in the hero (it is fixed, so it still sticks on scroll) */}
             <Header />
 
@@ -57,9 +57,9 @@ export default function InnerPagesBanner({children, image}:innerPagesBannerProps
                 <div className="absolute -right-32 top-1/4 h-112 w-md rounded-full bg-[#cfe4e0]/15 blur-3xl" />
             </div>
 
-            <div className="relative z-10 mx-auto flex h-full max-w-7xl items-center justify-end px-6 pb-28 pt-28 md:px-20">
+            <div className="relative z-10 mx-auto flex h-full max-w-7xl items-center justify-end px-5 pb-20 pt-28 sm:px-6 sm:pb-24 md:px-20 md:pb-28 md:pt-28">
                 <div className="w-full">
-                    <div className="space-y-6 mt-40 py-4 text-center w-full text">
+                    <div className="mt-24 w-full space-y-6 py-4 text-center sm:mt-32 md:mt-40">
                         {/* Framer Motion Animated Text Container */}
                         <AnimatePresence mode="wait">
                             <motion.div
@@ -69,7 +69,7 @@ export default function InnerPagesBanner({children, image}:innerPagesBannerProps
                                 exit={{ opacity: 0, y: reduce ? 0 : -25, filter: "blur(8px)" }}
                                 transition={{ duration: 0.8, ease: EASE }}
                             >
-                                <h2 className="text-5xl font-extrabold leading-[1.05] tracking-tight md:text-7xl">
+                                <h2 className="text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-7xl">
                                     <span className="block">
                                         {children}
                                     </span>
@@ -77,7 +77,7 @@ export default function InnerPagesBanner({children, image}:innerPagesBannerProps
 
                                 <div>
                                     <div>
-                                        <div className="w-9 border rounded-3xl mx-auto mt-10 flex justify-center py-5 overflow-hidden">
+                                        <div className="mx-auto mt-8 flex w-9 justify-center overflow-hidden rounded-3xl border py-4 sm:mt-10 sm:py-5">
                                             <button onClick={handleScrollDown} className="cursor-pointer focus:outline-none">
                                                 <motion.div
                                                     animate={{ y: [0, 10, 0] }}

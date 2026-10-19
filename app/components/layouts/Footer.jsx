@@ -8,8 +8,8 @@ import { FiMail, FiMapPin, FiPhone } from "react-icons/fi"
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa"
 import { FaXTwitter } from "react-icons/fa6"
 import MainContainer from "../ui/MainContainer"
+import blogData from "@/app/data/blog.json"
 
-// Placeholder content and images: replace with your own
 const companyLinks = [
   { label: "About us", href: "/about" },
   { label: "Appointment", href: "/appointment" },
@@ -19,27 +19,16 @@ const companyLinks = [
 ]
 
 const causes = [
-  {
-    date: "October 8, 2026",
-    title: "We've reached 2 million in donations and counting",
-    image: "/img-1.jpg",
-    href: "/blog/two-million-donations",
-  },
-  {
-    date: "October 2, 2026",
-    title: "We need more food for homeless children",
-    image: "/img-2.jpg",
-    href: "/blog/food-for-homeless-children",
-  },
-]
-
-const gallery = [
-  "/img-1.jpg",
-  "/img-2.jpg",
-  "/img-1.jpg",
-  "/img-2.jpg",
-  "/img-1.jpg",
-  "/img-2.jpg",
+  ...blogData.blog.slice(0, 2).map((post) => ({
+    date: new Intl.DateTimeFormat("en-US", {
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    }).format(new Date(`${post.publishedAt}T00:00:00`)),
+    title: post.title,
+    image: post.image,
+    href: `/blog/${post.slug}`,
+  })),
 ]
 
 const socials = [
@@ -103,7 +92,7 @@ function Footer() {
     },
   }
 
-  // List items (contact rows, links, causes, gallery tiles, socials) pop in one after another
+  // List items (contact rows, links, causes, socials) pop in one after another
   const item = {
     hidden: { opacity: reduce ? 1 : 0, y: reduce ? 0 : 20, scale: reduce ? 1 : 0.9 },
     show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.7, ease: EASE } },
@@ -180,7 +169,7 @@ function Footer() {
 
 
             {/* Causes */}
-            <motion.div variants={fadeUp} className="lg:col-span-4">
+            <motion.div variants={fadeUp} className="lg:col-span-7">
               <h3 className={headingClass}>Causes</h3>
               <ul className="mt-9 space-y-6">
                 {causes.map((c) => (
@@ -210,31 +199,6 @@ function Footer() {
               </ul>
             </motion.div>
 
-            {/* Gallery */}
-            <motion.div variants={fadeUp} className="lg:col-span-3">
-              <h3 className={headingClass}>Gallery</h3>
-              <ul className="mt-9 grid grid-cols-3 gap-3">
-                {gallery.map((src, i) => (
-                  <motion.li
-                    key={i}
-                    variants={item}
-                    className="group relative aspect-square overflow-hidden rounded-xl"
-                  >
-                    <Image
-                      src={src}
-                      alt={`Gallery photo ${i + 1}`}
-                      fill
-                      sizes="(min-width: 1024px) 8vw, 30vw"
-                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
-                    />
-                    <span
-                      aria-hidden="true"
-                      className="absolute inset-0 bg-[#0b1635]/0 transition-colors duration-300 group-hover:bg-[#0b1635]/20"
-                    />
-                  </motion.li>
-                ))}
-              </ul>
-            </motion.div>
           </div>
 
           {/* Newsletter box */}

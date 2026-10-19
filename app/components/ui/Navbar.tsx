@@ -71,7 +71,7 @@ const Navbar = ({ toggle, setToggle }: NavbarProps) => {
         initial="hidden"
         animate="show"
         onMouseLeave={() => setHovered(null)}
-        className="hidden gap-2 md:flex"
+        className="hidden gap-2 lg:flex"
       >
         {/* <motion.li variants={drop} className="relative" onMouseEnter={() => setWorkOpen(true)} onMouseLeave={() => setWorkOpen(false)}>
           <button type="button" aria-expanded={workOpen} aria-haspopup="menu" onFocus={() => setWorkOpen(true)} className={`relative block rounded-full px-5 py-2 font-medium transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0b1635] ${workActive ? "text-white" : "text-[#0b1635]"}`}>
@@ -132,7 +132,7 @@ const Navbar = ({ toggle, setToggle }: NavbarProps) => {
         aria-label="Toggle menu"
         aria-expanded={toggle}
         aria-controls="mobile-menu"
-        className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-full transition-colors duration-300 hover:bg-[#dcebdd] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0b1635] md:hidden"
+        className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-full transition-colors duration-300 hover:bg-[#dcebdd] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0b1635] lg:hidden"
       >
         <span className={`h-0.5 w-6 bg-[#0b1635] transition-all duration-300 ${toggle ? "translate-y-2 rotate-45" : ""}`} />
         <span className={`h-0.5 w-6 bg-[#0b1635] transition-all duration-300 ${toggle ? "opacity-0" : ""}`} />
@@ -148,7 +148,7 @@ const Navbar = ({ toggle, setToggle }: NavbarProps) => {
             initial="hidden"
             animate="show"
             exit={{ opacity: reduce ? 1 : 0, y: reduce ? 0 : -12, transition: { duration: 0.2 } }}
-            className="absolute left-0 top-full mt-2 w-full overflow-hidden rounded-2xl shadow-lg shadow-[#0b1635]/10 md:hidden"
+            className="absolute left-0 top-full mt-2 w-full overflow-hidden rounded-2xl shadow-lg shadow-[#0b1635]/10 lg:hidden"
             style={{ background: menuBackground }}
           >
             <ul className="flex flex-col p-4">

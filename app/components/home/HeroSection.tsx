@@ -15,40 +15,10 @@ import "swiper/css/navigation"
 import "swiper/css/effect-fade"
 
 import Header from "../layouts/Header"
+import homeData from "@/app/data/home.json"
 
-const heroSlides = [
-  {
-    id: 1,
-    line1: "Lend the",
-    line2: "Helping Hand",
-    line3: "Get Involved.",
-    description:
-      "We are here to support you every step of the way, empowering communities and changing lives.",
-  },
-  {
-    id: 2,
-    line1: "Bring Hope",
-    line2: "To Children",
-    line3: "Make A Change.",
-    description:
-      "Your small contribution can provide education, food, and a brighter future for those in need.",
-  },
-  {
-    id: 3,
-    line1: "Together We",
-    line2: "Can Build A",
-    line3: "Better Tomorrow.",
-    description:
-      "Join our global community of volunteers and donors dedicated to making a lasting impact.",
-  },
-]
-
-// Placeholder numbers: replace with your real figures
-const stats = [
-  { end: 12500, suffix: "+", label: "Children supported" },
-  { end: 340, suffix: "+", label: "Active volunteers" },
-  { end: 28, suffix: "", label: "Communities reached" },
-]
+const heroSlides = homeData.heroSlides
+const stats = homeData.heroStats
 
 // Smooth "expo-out" curve shared by all entrance animations
 const EASE = [0.22, 1, 0.36, 1] as const

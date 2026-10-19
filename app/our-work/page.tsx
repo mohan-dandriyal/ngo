@@ -1,5 +1,5 @@
-import OurWorkLayout from "@/app/components/our-work/OurWorkLayout";
+import { redirect } from "next/navigation";
 
 export default function OurWorkPage() {
-    return <OurWorkLayout />;
+    redirect("/projects");
 }

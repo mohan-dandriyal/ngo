@@ -1,0 +1,69 @@
+{
+    "worksSection": {
+        "badge": "Our works",
+        "title": "Projects that turned donations into change",
+        "description": "A closer look at what your support has built, served and delivered.",
+        "buttonLabel": "See all works",
+        "buttonHref": "/projects"
+    },
+    "blogSection": {
+        "badge": "Our blog",
+        "title": "Stories and updates from the field",
+        "description": "News, impact reports and the people behind the work.",
+        "buttonLabel": "Read all articles",
+        "buttonHref": "/blog"
+    },
+    "heroSlides": [
+        {
+            "id": 1,
+            "line1": "Lend the",
+            "line2": "Helping Hand",
+            "line3": "Get Involved.",
+            "description": "We are here to support you every step of the way, empowering communities and changing lives."
+        },
+        {
+            "id": 2,
+            "line1": "Bring Hope",
+            "line2": "To Children",
+            "line3": "Make A Change.",
+            "description": "Your small contribution can provide education, food, and a brighter future for those in need."
+        },
+        {
+            "id": 3,
+            "line1": "Together We",
+            "line2": "Can Build A",
+            "line3": "Better Tomorrow.",
+            "description": "Join our global community of volunteers and donors dedicated to making a lasting impact."
+        }
+    ],
+    "heroStats": [
+        { "end": 12500, "suffix": "+", "label": "Children supported" },
+        { "end": 340, "suffix": "+", "label": "Active volunteers" },
+        { "end": 28, "suffix": "", "label": "Communities reached" }
+    ],
+    "growthStats": [
+        { "end": 42, "suffix": "", "label": "Literacy Programs Launched" },
+        { "end": 15000, "suffix": "+", "label": "Children Reached" },
+        { "end": 800, "suffix": "+", "label": "Volunteers Mobilized" }
+    ],
+    "testimonials": [
+        {
+            "name": "Priya Sharma",
+            "role": "Monthly donor",
+            "avatar": "/img-1.jpg",
+            "quote": "I get an update showing exactly where my money went. Seeing the school supplies reach the children made me a monthly donor for good."
+        },
+        {
+            "name": "Rahul Verma",
+            "role": "Volunteer, 3 years",
+            "avatar": "/img-2.jpg",
+            "quote": "Volunteering here changed how I see my own community. The team is organised, kind, and every weekend feels like it counts."
+        },
+        {
+            "name": "Anita Desai",
+            "role": "Parent in a supported village",
+            "avatar": "/img-1.jpg",
+            "quote": "My children now get a hot meal and go to school every day. We are grateful to everyone who stood with us when we needed it most."
+        }
+    ]
+}

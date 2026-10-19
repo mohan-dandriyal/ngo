@@ -6,7 +6,7 @@ import { motion, useReducedMotion, type Variants } from "framer-motion"
 import { FiArrowUpRight } from "react-icons/fi"
 import MainContainer from "../ui/MainContainer"
 import { PrimaryButton } from '@/app/components/ui/Button'
-import { SectionDescription, SectionBadge } from "../SectionHeader"
+import { SectionDescription, SectionBadge, SectionTitle } from "../SectionHeader"
 
 
 import { aboutSection } from "@/app/types/about"
@@ -121,9 +121,9 @@ function AboutSection({
 
                         {/* Heading reveals word by word */}
                         <motion.div variants={fadeUp}>
-                            <h2 className="mt-5 max-w-3xl text-5xl font-light leading-[1.02] tracking-[-0.04em] text-[#0b1635] md:text-7xl lg:text-8xl">
+                            <SectionTitle>
                                 {title}
-                            </h2>
+                            </SectionTitle>
                         </motion.div>
 
                         <motion.div variants={fadeUp}>
