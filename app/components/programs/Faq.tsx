@@ -19,7 +19,7 @@ function Faq() {
 
 
     return (
-        <section aria-labelledby="faq-heading" className="py-20 md:py-28">
+        <section aria-labelledby="faq-heading" className="pb-20 md:pb-28 mt-8">
             <MainContainer>
                 <div className="px-6 md:px-0">
                     <motion.section

@@ -86,7 +86,7 @@ function Header() {
           {/* CTA */}
           <Link
             href="/contact"
-            className="hidden rounded-full border border-[#0b1635] bg-[#0b1635] px-6 py-2.5 font-medium text-white
+            className="hidden rounded-full border border-[#0b1635] bg-[#0b1635] px-6 py-2.5 font-medium texr-sm text-white
                        transition-all duration-300 hover:-translate-y-0.5 hover:border-[#cfe4e0] hover:bg-[#cfe4e0] hover:text-[#0b1635]
                        hover:shadow-lg hover:shadow-[#0b1635]/15 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0b1635] lg:inline-block"
           >

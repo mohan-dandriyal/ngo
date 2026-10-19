@@ -102,7 +102,7 @@ function Footer() {
 
   return (
     <footer
-      className="relative isolate overflow-hidden rounded-t-3xl pb-2 pt-16 text-[#0b1635] md:pt-20"
+      className="relative isolate overflow-hidden rounded-t-3xl pb-10 pt-16 text-[#0b1635] md:pt-20"
       style={{ background: footerBackground }}
     >
       <MainContainer>

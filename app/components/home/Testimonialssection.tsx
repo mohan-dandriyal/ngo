@@ -76,7 +76,7 @@ function TestimonialsSection() {
 
   return (
     <section
-      className="relative isolate overflow-hidden py-20 text-white md:py-28"
+      className="relative md:mt-28 mt-20 isolate overflow-hidden py-20 text-white md:py-28"
       aria-labelledby="testimonials-heading"
     >
       {/* Background image: fills the whole section behind the content */}

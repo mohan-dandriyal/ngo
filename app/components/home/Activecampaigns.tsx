@@ -64,7 +64,7 @@ function ActiveCampaigns({ isShow }: activeCampaigns) {
   }
 
   return (
-    <section className="overflow-hidden bg-white py-20 md:py-28" aria-labelledby="campaigns-heading">
+    <section className="overflow-hidden bg-white pt-8 md:pt-10" aria-labelledby="campaigns-heading">
       <MainContainer>
         <div className="px-6 md:px-0">
           {/* Heading row */}

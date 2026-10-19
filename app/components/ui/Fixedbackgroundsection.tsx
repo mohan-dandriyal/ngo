@@ -15,7 +15,7 @@ function FixedBackgroundSection({ children, image }: FixedBackgroundProps) {
 
     return (
         <section
-            className="relative isolate flex min-h-[70vh] items-center overflow-hidden py-20 text-white md:py-28"
+            className="relative isolate flex min-h-[70vh] items-center overflow-hidden py-20 mt-15 text-white md:py-28"
             aria-labelledby="fixed-bg-heading"
 
             style={{ clipPath: "inset(0)" }}

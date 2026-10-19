@@ -48,7 +48,7 @@ function StatsSection() {
   }
 
   return (
-    <section className="overflow-hidden bg-white py-20 md:py-28" aria-labelledby="growth-heading">
+    <section className="overflow-hidden" aria-labelledby="growth-heading">
       <MainContainer>
         <motion.div
           variants={container}
@@ -56,12 +56,12 @@ function StatsSection() {
           whileInView="show"
           viewport={{ once: true, amount: 0.25 }}
           className="mx-6 rounded-2xl px-4 py-14 md:mx-0 md:px-10 md:py-20"
-          style={{ background: cardBackground }}
+          // style={{ background: cardBackground }}
         >
           <motion.h2
             variants={floatIn}
             id="growth-heading"
-            className="text-center text-4xl font-medium tracking-tight text-[#0b1635] md:text-6xl"
+            className="text-center text-4xl  font-medium tracking-tight text-white md:text-6xl"
           >
             Our Growth, Their Future
           </motion.h2>
@@ -79,19 +79,19 @@ function StatsSection() {
                       variants={drawLine}
                       aria-hidden="true"
                       style={{ originY: 0 }}
-                      className="absolute left-0 top-0 hidden h-full border-l-2 border-dotted border-[#0b1635]/40 md:block"
+                      className="absolute left-0 top-0 hidden h-full border-l-2 border-dotted border-[#FFFF]/40 md:block"
                     />
                     <motion.span
                       variants={drawLine}
                       aria-hidden="true"
-                      className="absolute left-1/4 top-0 w-1/2 border-t-2 border-dotted border-[#0b1635]/40 md:hidden"
+                      className="absolute left-1/4 top-0 w-1/2 border-t-2 border-dotted border-[#FFFF] md:hidden"
                     />
                   </>
                 )}
 
                 <motion.dd
                   variants={floatIn}
-                  className="text-6xl font- tracking-tight text-[#0b1635] tabular-nums md:text-7xl lg:text-8xl"
+                  className="text-6xl font- tracking-tight text-[#fdfdfd] tabular-nums md:text-7xl lg:text-8xl"
                 >
                   <CountUp
                     end={st.end}
@@ -104,7 +104,7 @@ function StatsSection() {
                 </motion.dd>
                 <motion.dt
                   variants={floatIn}
-                  className="mt-4 max-w-[10rem] text-lg font-semibold leading-snug text-[#0b1635]"
+                  className="mt-4 max-w-[10rem] text-lg font-semibold leading-snug text-[#fdfdfd]"
                 >
                   {st.label}
                 </motion.dt>

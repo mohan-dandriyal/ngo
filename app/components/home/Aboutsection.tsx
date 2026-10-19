@@ -70,7 +70,7 @@ function AboutSection({
     }
 
     return (
-        <section className="overflow-hidden bg-white py-20 md:py-28" aria-labelledby="about-heading">
+        <section className="overflow-hidden bg-white py-20 md:py-28 mt-10" aria-labelledby="about-heading">
             <MainContainer>
                 <div className="grid items-center gap-14 px-6 md:px-0 lg:grid-cols-2 lg:gap-20">
                     {/* Photo collage */}
@@ -79,13 +79,13 @@ function AboutSection({
                         initial="hidden"
                         whileInView="show"
                         viewport={viewport}
-                        className="relative mx-auto aspect-224/250 w-full max-w-lg scale-125"
+                        className="relative hidden sm:block mx-auto aspect-224/250 w-full max-w-lg scale-105"
                     >
                         {/* Offset watercolor panel behind the photo */}
                         <motion.div
                             variants={panel}
                             aria-hidden="true"
-                            className="absolute inset-0 translate-x-3 translate-y-3 md:translate-x-5 md:translate-y-5"
+                            className="absolute hidden sm:block  inset-0 translate-x-3 translate-y-3 md:translate-x-5 md:translate-y-5"
                             style={{ background: tealWash }}
                         />
 

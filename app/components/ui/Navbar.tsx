@@ -98,7 +98,7 @@ const Navbar = ({ toggle, setToggle }: NavbarProps) => {
                 onFocus={() => setHovered(link.href)}
                 onBlur={() => setHovered(null)}
                 aria-current={active ? "page" : undefined}
-                className={`relative block rounded-full px-5 py-2 font-medium transition-colors duration-300
+                className={`relative block rounded-full px-5 py-2 text-sm font-medium transition-colors duration-300
                   focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0b1635]
                   ${active ? "text-white" : "text-[#0b1635]"}`}
               >
@@ -115,7 +115,7 @@ const Navbar = ({ toggle, setToggle }: NavbarProps) => {
                   <motion.span
                     layoutId="nav-hover"
                     transition={reduce ? { duration: 0 } : { type: "spring", stiffness: 400, damping: 34 }}
-                    className="absolute inset-0 rounded-full bg-[#dcebdd]"
+                    className="absolute inset-0 rounded-full text-sm bg-[#dcebdd]"
                   />
                 )}
                 <span className="relative">{link.label}</span>
@@ -132,7 +132,7 @@ const Navbar = ({ toggle, setToggle }: NavbarProps) => {
         aria-label="Toggle menu"
         aria-expanded={toggle}
         aria-controls="mobile-menu"
-        className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-full transition-colors duration-300 hover:bg-[#dcebdd] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0b1635] lg:hidden"
+        className="flex h-10 w-10 flex-col items-center  justify-center gap-1.5 rounded-full transition-colors duration-300 hover:bg-[#dcebdd] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0b1635] lg:hidden"
       >
         <span className={`h-0.5 w-6 bg-[#0b1635] transition-all duration-300 ${toggle ? "translate-y-2 rotate-45" : ""}`} />
         <span className={`h-0.5 w-6 bg-[#0b1635] transition-all duration-300 ${toggle ? "opacity-0" : ""}`} />
@@ -161,7 +161,7 @@ const Navbar = ({ toggle, setToggle }: NavbarProps) => {
                       href={link.href}
                       onClick={() => setToggle(false)}
                       aria-current={active ? "page" : undefined}
-                      className={`block rounded-xl px-4 py-3 font-medium transition-colors duration-300
+                      className={`block rounded-xl px-4 py-3 font-medium text-sm transition-colors duration-300
                         ${active ? "bg-[#0b1635] text-white" : "text-[#0b1635] hover:bg-white/70"}`}
                     >
                       {link.label}
@@ -177,7 +177,7 @@ const Navbar = ({ toggle, setToggle }: NavbarProps) => {
                 <Link
                   href="/contact"
                   onClick={() => setToggle(false)}
-                  className="block rounded-full bg-[#0b1635] px-4 py-3 text-center font-medium text-white transition-colors duration-300 hover:bg-[#1c2b57]"
+                  className="block rounded-full  bg-[#0b1635] px-4 py-3 text-center font-medium text-white transition-colors duration-300 hover:bg-[#1c2b57]"
                 >
                   Contact Us
                 </Link>

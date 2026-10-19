@@ -71,7 +71,7 @@ function SuccessStories() {
                                         </p>
 
                                         <h3 className="mt-3 text-3xl font-medium leading-tight tracking-tight text-[#0b1635]">{story.title}</h3>
-                                        <p className="mt-4 leading-relaxed lg:text-lg text-[#0b1635]/65">{story.description}</p>
+                                        <p className="mt-4 leading-relaxed lg:text-base text-[#0b1635]/65">{story.description}</p>
                                     </div>
                                 </motion.article>
                             ))}

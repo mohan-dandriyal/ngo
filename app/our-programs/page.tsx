@@ -6,6 +6,7 @@ import Faq from "../components/programs/Faq"
 import programsData from "@/app/data/programs.json"
 import type { ProgramsData } from "@/app/types/programs"
 import StatsSection from "../components/home/Statssection"
+import FixedBackgroundSection from "../components/ui/Fixedbackgroundsection"
 
 const data = programsData as ProgramsData
 
@@ -16,18 +17,31 @@ export default function OurProgramsPage() {
                 {data.hero.title}
             </InnerPagesBanner>
 
-            <ActiveCampaigns isShow={false} />
+            <div className="mt-8">
+                <ActiveCampaigns isShow={false} />
+            </div>
 
+            <div className="mt-10 mb-22">
+                <HowWeWork />
+            </div>
 
-            <HowWeWork />
+            <div className="mt-15">
+                <Faq />
+            </div>
 
-            <Faq />
+            <div className="mx-auto max-w-360 border-t border-[#0b1635]/10">
+                <ActiveCampaigns isShow={true} />
+
+                <FixedBackgroundSection image={programsData.hero.image ?? ""}>
+                    <div className=" mx-auto">
+                        <StatsSection />
+                    </div>
+                </FixedBackgroundSection>
+            </div>
 
             <SuccessStories />
 
-            <div className="mx-auto max-w-360 border-t border-[#0b1635]/10">
-                <StatsSection />
-            </div>
+            
         </main>
     )
 }

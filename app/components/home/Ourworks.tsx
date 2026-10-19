@@ -28,7 +28,7 @@ function OurWorks() {
   }
 
   return (
-    <section className="overflow-hidden bg-white" aria-labelledby="works-heading">
+    <section className="overflow-hidden mt-8 bg-white" aria-labelledby="works-heading">
       <MainContainer>
         <motion.div
           variants={container}

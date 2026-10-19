@@ -26,15 +26,17 @@ export default function Home() {
         role={about[1]?.role ?? ""}
       />
 
-      <FixedBackgroundSection image={about[0]?.aboutBannerImage ?? ""}>
-        <div />
-      </FixedBackgroundSection>
+    
 
       <ActiveCampaigns isShow={true} />
 
-      <OurWorks />
+        <FixedBackgroundSection image={about[0]?.aboutBannerImage ?? ""}>
+        <div className=" mx-auto">
+          <StatsSection />
+        </div>
+      </FixedBackgroundSection>
 
-      <StatsSection />
+      <OurWorks />
 
       <TestimonialsSection />
 

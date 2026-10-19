@@ -16,6 +16,7 @@
     "heroSlides": [
         {
             "id": 1,
+            "image": "/home-hero.jpg",
             "line1": "Lend the",
             "line2": "Helping Hand",
             "line3": "Get Involved.",
@@ -23,6 +24,7 @@
         },
         {
             "id": 2,
+            "image": "/bg-image.png",
             "line1": "Bring Hope",
             "line2": "To Children",
             "line3": "Make A Change.",
@@ -30,6 +32,7 @@
         },
         {
             "id": 3,
+            "image": "/bg-img-2.png",
             "line1": "Together We",
             "line2": "Can Build A",
             "line3": "Better Tomorrow.",

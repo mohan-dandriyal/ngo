@@ -115,8 +115,7 @@
                 "category": "Food security",
                 "title": "A table where everyone belongs",
                 "description": "Community kitchens are helping families access nutritious meals with dignity.",
-                "result": "2,300 meals served",
-                "top": "330px"
+                "result": "2,300 meals served"
             },
             {
                 "image": "/bg-img-2.png",
@@ -124,8 +123,7 @@
                 "category": "Community",
                 "title": "Growing confidence together",
                 "description": "Local mentors created a safe place for young people to build skills and confidence.",
-                "result": "120 young people reached",
-                "top": "660px"
+                "result": "120 young people reached"
             }
         ]
     }
