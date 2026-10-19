@@ -36,7 +36,9 @@ export default function Home() {
         </div>
       </FixedBackgroundSection>
 
-      <OurWorks />
+     <div className="sm:mt-0 mt-20">
+       <OurWorks />
+     </div>
 
       <TestimonialsSection />
 

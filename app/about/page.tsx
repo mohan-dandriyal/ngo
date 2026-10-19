@@ -3,7 +3,7 @@ import AboutPageSections from '../components/about/AboutPageSections'
 
 function AboutPage() {
   return (
-    <div>
+    <div className='bg-white'>
         <AboutPageSections />
     </div>
   )

@@ -33,7 +33,7 @@ function AboutPageSections() {
                     role={about[1]?.role ?? ""}
                 />
 
-                <div className='sm:mt-12'>
+                <div className=''>
                     <WhereBegan
                         image_left={about[2]?.image_1 ?? ""}
                         image_right={about[2]?.image_2 ?? ""}
@@ -59,7 +59,7 @@ function AboutPageSections() {
                 </div>
 
 
-                <div className="mt-10">
+                <div className="sm:mt-10 mt-20">
                     <MissionVisionSection
                         data={about[2]?.missionVision ?? {
                             image: about[2]?.image_2 ?? "",
