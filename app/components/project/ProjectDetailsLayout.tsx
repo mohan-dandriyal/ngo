@@ -31,7 +31,7 @@ export default function ProjectDetailsLayout({ project, related }: ProjectDetail
                 {projects.projectDetailsHero?.title}
             </InnerPagesBanner>
 
-            <main className="bg-[#f5f7f2] pb-20 pt-8 text-[#0b1635] md:pb-32 md:pt-12">
+            <main className="bg-[#f5f7f2] pb-20  text-[#0b1635] md:pb-32 pt-18">
 
 
                 <MainContainer>
@@ -45,7 +45,7 @@ export default function ProjectDetailsLayout({ project, related }: ProjectDetail
                         <header className="grid lg:grid-cols-[0.85fr_1.15fr]">
                             <div className="flex flex-col justify-center p-7 md:p-12 lg:p-16" style={{ backgroundColor: project.tint }}>
                                 <motion.p initial="hidden" animate="show" variants={reveal} className="text-xs font-bold uppercase tracking-[0.2em] text-[#476451]">{project.category} · {project.impact}</motion.p>
-                                <motion.h1 initial="hidden" animate="show" variants={reveal} className="mt-5 text-5xl font-black leading-[1.02] tracking-[-0.04em] md:text-7xl">{project.title}</motion.h1>
+                                <motion.h1 initial="hidden" animate="show" variants={reveal} className="mt-5 text-5xl font- leading-[1.02] tracking-[-0.04em] md:text-5xl">{project.title}</motion.h1>
                                 <motion.p initial="hidden" animate="show" variants={reveal} className="mt-7 text-lg leading-8 text-[#0b1635]/70">{project.detail.lead}</motion.p>
                             </div>
                             <div className="relative min-h-[23rem] lg:min-h-[36rem]"><Image src={project.image} alt={project.imageAlt} fill priority sizes="(min-width: 1024px) 65vw, 100vw" className="object-cover" /></div>

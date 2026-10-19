@@ -64,7 +64,7 @@ export const SectionDescription = ({ children }: SectionDescriptionProps) => {
     return (
         <motion.p
             variants={stagger(0.07)}
-            className="mt-4 text-base leading-relaxed text-[#0b1635]/70 md:text-xl"
+            className="mt-4 text-base leading-relaxed text-[#0b1635]/70 md:text-lg"
         >
             <motion.span variants={floatIn} className="mr-[0.25em] inline-block">
                 {children}

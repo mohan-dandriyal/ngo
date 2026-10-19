@@ -18,6 +18,7 @@ export default function Home() {
     <main className="overflow-hidden bg-white">
       <HeroSection />
 
+      <div className="mt-22 mb-12">
       <AboutSection
         image={about[1]?.image ?? ""}
         badge={about[1]?.badge ?? ""}
@@ -28,6 +29,8 @@ export default function Home() {
         name={about[1]?.name ?? ""}
         role={about[1]?.role ?? ""}
       />
+      </div>
+
 
 
 
@@ -39,7 +42,7 @@ export default function Home() {
         </div>
       </FixedBackgroundSection>
 
-      <div className="sm:mt-0 mt-20">
+      <div className="sm:mt-20 mt-20">
         <OurWorks />
       </div>
 

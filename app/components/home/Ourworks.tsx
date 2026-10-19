@@ -92,7 +92,7 @@ function OurWorks() {
                     }`}
                     style={{ background: w.tint }}
                   >
-                    <h3 className="max-w-[12ch] text-4xl font-medium leading-[0.95] tracking-tight text-[#0b1635] md:text-5xl lg:text-5xl">
+                    <h3 className="max-w-[12ch] font-medium leading-[0.95] tracking-tight text-[#0b1635] text-lg lg:text-4xl">
                       {w.title}
                     </h3>
 

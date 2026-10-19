@@ -47,7 +47,7 @@ function Faq() {
                                             aria-expanded={isOpen}
                                             aria-controls={answerId}
                                             onClick={() => setOpenFaq(isOpen ? -1 : index)}
-                                            className="flex w-full items-center justify-between gap-5 py-5 text-left font-semibold text-[#0b1635] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0b1635] lg:text-2xl sm:text-xl text-lg"
+                                            className="flex w-full items-center justify-between gap-5 py-5 text-left font-semibold text-[#0b1635] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0b1635] lg:text-xl sm:text-xl text-lg"
                                         >
                                             <span>{faq.question}</span>
                                             <FiPlus className={`shrink-0 text-xl text-[#71927b] transition-transform duration-300 ${isOpen ? "rotate-45" : ""}`} aria-hidden="true" />
@@ -63,7 +63,7 @@ function Faq() {
                                                     transition={{ duration: reduceMotion ? 0 : 0.25 }}
                                                     className="overflow-hidden"
                                                 >
-                                                    <p className="pb-5 pr-8 text-base leading-7 text-[#0b1635]/65 sm:text-lg">{faq.answer}</p>
+                                                    <p className="pb-5 pr-8 text-base leading-7 text-[#0b1635]/65">{faq.answer}</p>
                                                 </motion.div>
                                             )}
                                         </AnimatePresence>

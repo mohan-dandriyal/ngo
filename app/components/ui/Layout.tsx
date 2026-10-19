@@ -8,7 +8,7 @@ interface layoutProps {
 
 export const CardTitle = ({ children }: layoutProps) => {
     return (
-        <h3 className="mt-3 text-lg lg:text-5xl font-normal leading-snug text-black transition-colors duration-200">
+        <h3 className="mt-3 text-lg lg:text-4xl font-normal leading-snug text-black transition-colors duration-200">
             {children}
         </h3>
     )

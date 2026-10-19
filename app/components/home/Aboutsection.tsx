@@ -70,7 +70,7 @@ function AboutSection({
     }
 
     return (
-        <section className="overflow-hidden bg-white py-10 md:py-8 mt-5" aria-labelledby="about-heading">
+        <section className="overflow-hidden bg-white py-20 md:py-8" aria-labelledby="about-heading">
             <MainContainer>
                 <div className="grid items-center gap-14 px-6 md:px-0 lg:grid-cols-2 lg:gap-20">
                     {/* Photo collage */}

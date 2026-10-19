@@ -15,14 +15,16 @@ function AboutPageSections() {
     console.log(about)
 
     return (
-        <div>
+        <div className='overflow-hidden'>
             <InnerPagesBanner
                 image={about[0]?.aboutBannerImage ?? ""}>
                 {about[0]?.aboutBannerTitle}
             </InnerPagesBanner>
 
-            <div className='px-3 sm:px-0 sm: mt-10'>
-                <AboutSection
+            <div className='px-3 sm:px-0 sm: '>
+                
+                <div className='md:mt-22 mt-7 md:mb-22 m3-7'>
+                    <AboutSection
                     image={about[1]?.image ?? ""}
                     badge={about[1]?.badge ?? "About Us"}
                     title={about[1]?.title ?? ""}
@@ -32,6 +34,7 @@ function AboutPageSections() {
                     name={about[1]?.name ?? ""}
                     role={about[1]?.role ?? ""}
                 />
+                </div>
 
                 <div className=''>
                     <WhereBegan
