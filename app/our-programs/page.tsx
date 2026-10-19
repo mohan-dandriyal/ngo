@@ -8,6 +8,8 @@ import type { ProgramsData } from "@/app/types/programs"
 import StatsSection from "../components/home/Statssection"
 import FixedBackgroundSection from "../components/ui/Fixedbackgroundsection"
 
+
+
 const data = programsData as ProgramsData
 
 export default function OurProgramsPage() {
@@ -18,7 +20,7 @@ export default function OurProgramsPage() {
             </InnerPagesBanner>
 
             <div className="mt-8">
-                <ActiveCampaigns isShow={false} />
+                <ActiveCampaigns isShow={false} campaignsData={[]} />
             </div>
 
             <div className="mt-10 mb-22">

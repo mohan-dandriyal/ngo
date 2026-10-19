@@ -8,6 +8,9 @@ import TestimonialsSection from "./components/home/Testimonialssection";
 import Faq from "./components/programs/Faq";
 import FixedBackgroundSection from "./components/ui/Fixedbackgroundsection";
 
+
+import programsData from "@/app/data/programs.json"
+
 import about from "@/app/data/about.json"
 
 export default function Home() {
@@ -26,19 +29,19 @@ export default function Home() {
         role={about[1]?.role ?? ""}
       />
 
-    
 
-      <ActiveCampaigns isShow={true} />
 
-        <FixedBackgroundSection image={about[0]?.aboutBannerImage ?? ""}>
+      <ActiveCampaigns isShow={true} campaignsData={programsData.campaigns?.slice(0, 3)} />
+
+      <FixedBackgroundSection image={about[0]?.aboutBannerImage ?? ""}>
         <div className=" mx-auto">
           <StatsSection />
         </div>
       </FixedBackgroundSection>
 
-     <div className="sm:mt-0 mt-20">
-       <OurWorks />
-     </div>
+      <div className="sm:mt-0 mt-20">
+        <OurWorks />
+      </div>
 
       <TestimonialsSection />
 

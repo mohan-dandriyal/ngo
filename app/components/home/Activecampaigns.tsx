@@ -10,10 +10,10 @@ import { CardTitle, Paragraf } from '@/app/components/ui/Layout'
 import { SectionTitle, SectionDescription, SectionBadge } from '@/app/components/SectionHeader'
 import { OutlineButton } from "../ui/Button"
 import programsData from "@/app/data/programs.json"
-import type { ProgramCategory, ProgramsData } from "@/app/types/programs"
+import type { ProgramCampaign, ProgramCategory, ProgramsData } from "@/app/types/programs"
 
 const data = programsData as ProgramsData
-const campaigns = data.campaigns
+
 const filters: ("All" | ProgramCategory)[] = ["All", "Education", "Food", "Health"]
 
 // Smooth "expo-out" curve for the entrance animations
@@ -21,13 +21,17 @@ const EASE = [0.22, 1, 0.36, 1] as const
 
 interface activeCampaigns {
   isShow: boolean
+  campaignsData?: ProgramCampaign[]
 }
 
-function ActiveCampaigns({ isShow }: activeCampaigns) {
+function ActiveCampaigns({ campaignsData, isShow }: activeCampaigns) {
   const reduce = useReducedMotion()
+
+  const campaigns = campaignsData?.length ? campaignsData : data.campaigns
+
   const [filter, setFilter] = React.useState<"All" | ProgramCategory>("All")
 
-  const visible = filter === "All" ? campaigns : campaigns.filter((c) => c.category === filter)
+  const visible = filter === "All" ? campaigns : campaigns?.filter((c) => c?.category === filter)
 
   // Card: floats up, then its parts reveal one after another
   const card: Variants = {
@@ -102,6 +106,7 @@ function ActiveCampaigns({ isShow }: activeCampaigns) {
           </motion.div>
 
           {/* Filter tabs */}
+          {isShow && (
           <motion.div
             initial={{ opacity: reduce ? 1 : 0, y: reduce ? 0 : 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -111,31 +116,25 @@ function ActiveCampaigns({ isShow }: activeCampaigns) {
             aria-label="Filter campaigns"
             className="mt-10 flex flex-wrap gap-6"
           >
-            {filters.map((f) => {
-              const selected = filter === f
-              return (
-                <motion.button
-                  key={f}
-                  type="button"
-                  role="tab"
-                  aria-selected={selected}
-                  onClick={() => setFilter(f)}
-                  whileTap={reduce ? undefined : { scale: 0.95 }}
-                  className={`relative px-8 py-4 text-lg font-medium transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0b1635] ${selected ? "text-white" : "bg-[#e9f2e6] text-[#0b1635] hover:bg-[#d6e8dc]"
-                    }`}
-                >
-                  {selected && (
-                    <motion.span
-                      layoutId="campaign-tab"
-                      transition={reduce ? { duration: 0 } : { type: "spring", stiffness: 380, damping: 32 }}
-                      className="absolute inset-0 rounded-full bg-[#0b1635]"
-                    />
-                  )}
-                  <span className="relative">{f}</span>
-                </motion.button>
-              )
-            })}
+                {filters.map((f) => {
+                  const selected = filter === f
+                  return (
+                    <motion.button
+                      key={f}
+                      type="button"
+                      role="tab"
+                      aria-selected={selected}
+                      onClick={() => setFilter(f)}
+                      whileTap={reduce ? undefined : { scale: 0.95 }}
+                      className={`rounded-full px-8 py-4 text-lg font-medium transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0b1635] ${selected ? "bg-[#0b1635] text-white" : "bg-[#e9f2e6] text-[#0b1635] hover:bg-[#d6e8dc]"
+                        }`}
+                    >
+                      {f}
+                    </motion.button>
+                  )
+                })}
           </motion.div>
+          )}
 
           {/* Cards */}
           <motion.div layout className="mt-8">

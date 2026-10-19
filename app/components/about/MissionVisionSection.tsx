@@ -27,7 +27,7 @@ function MissionVisionSection({ data }: MissionVisionSectionProps) {
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             >
                 <motion.div
-                    className="relative h-[420px] overflow-hidden rounded-3xl md:h-[560px]"
+                    className="relative hidden sm:block h-[420px] overflow-hidden rounded-3xl md:h-[560px]"
                     initial={{ opacity: reduceMotion ? 1 : 0, x: reduceMotion ? 0 : -28, scale: reduceMotion ? 1 : 0.96 }}
                     whileInView={{ opacity: 1, x: 0, scale: 1 }}
                     viewport={{ once: true, amount: 0.3 }}
@@ -63,6 +63,22 @@ function MissionVisionSection({ data }: MissionVisionSectionProps) {
                             ))}
                         </div>
                     </div>
+                </motion.div>
+
+                  <motion.div
+                    className="relative sm:hidden block h-[420px] overflow-hidden rounded-3xl md:h-[560px]"
+                    initial={{ opacity: reduceMotion ? 1 : 0, x: reduceMotion ? 0 : -28, scale: reduceMotion ? 1 : 0.96 }}
+                    whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.8, delay: 0.1 }}
+                    whileHover={reduceMotion ? undefined : { scale: 1.015 }}
+                >
+                    <Image
+                        src={data.image}
+                        fill
+                        alt={data.imageAlt}
+                        className="object-cover object-center"
+                    />
                 </motion.div>
             </motion.section>
 
