@@ -22,16 +22,16 @@ export interface SuccessStory {
 export type ProgramCategory = "Education" | "Food" | "Health";
 
 export interface ProgramCampaign {
-    id: number;
-    title: string;
-    category: ProgramCategory;
-    image: string;
-    imageAlt: string;
-    description: string;
-    raised: number;
-    goal: number;
-    donors: number;
-    daysLeft: number;
+     id: number;
+  title: string;
+  category: string;
+  image: string;
+  imageAlt: string;
+  description: string;
+  raised: number;
+  goal: number;
+  donors: number;
+  daysLeft: number;
 }
 
 export interface ProgramsData {

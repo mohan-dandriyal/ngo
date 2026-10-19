@@ -20,7 +20,7 @@ export default function OurProgramsPage() {
             </InnerPagesBanner>
 
             <div className="mt-8">
-                <ActiveCampaigns isShow={false} campaignsData={[]} />
+                <ActiveCampaigns isShow={false} campaignsData={data.campaigns} />
             </div>
 
             <div className="mt-10 mb-22">
@@ -32,8 +32,6 @@ export default function OurProgramsPage() {
             </div>
 
             <div className="mx-auto max-w-360 border-t border-[#0b1635]/10">
-                <ActiveCampaigns isShow={true} />
-
                 <FixedBackgroundSection image={programsData.hero.image ?? ""}>
                     <div className=" mx-auto">
                         <StatsSection />

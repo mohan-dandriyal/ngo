@@ -10,7 +10,8 @@ import { CardTitle, Paragraf } from '@/app/components/ui/Layout'
 import { SectionTitle, SectionDescription, SectionBadge } from '@/app/components/SectionHeader'
 import { OutlineButton } from "../ui/Button"
 import programsData from "@/app/data/programs.json"
-import type { ProgramCampaign, ProgramCategory, ProgramsData } from "@/app/types/programs"
+import type { ProgramCampaign,  ProgramCategory, ProgramsData } from "@/app/types/programs";
+
 
 const data = programsData as ProgramsData
 
@@ -20,14 +21,15 @@ const filters: ("All" | ProgramCategory)[] = ["All", "Education", "Food", "Healt
 const EASE = [0.22, 1, 0.36, 1] as const
 
 interface activeCampaigns {
-  isShow: boolean
-  campaignsData?: ProgramCampaign[]
+  campaignsData: ProgramCampaign[];
+  isShow : boolean;
 }
+
 
 function ActiveCampaigns({ campaignsData, isShow }: activeCampaigns) {
   const reduce = useReducedMotion()
 
-  const campaigns = campaignsData?.length ? campaignsData : data.campaigns
+  const campaigns = campaignsData
 
   const [filter, setFilter] = React.useState<"All" | ProgramCategory>("All")
 
