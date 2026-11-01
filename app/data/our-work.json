@@ -1,13 +1,90 @@
 {
-    "hero": { "image": "/home-hero.jpg", "title": "Our work" },
-    "intro": {
-        "badge": "See the bigger picture",
-        "title": "People, projects and moments of change.",
-        "description": "Explore the work behind the mission, from practical projects in local communities to the everyday moments that make the impact real."
+  "hero": {
+    "image": "/volunteer-team.jpg",
+    "badge": "Community Development",
+    "title": "Our Work",
+    "description": "Combining education, daily nutrition, and mobile healthcare.",
+    "breadcrumbs": [
+      { "label": "Home", "href": "/" },
+      { "label": "Our Work" }
+    ]
+  },
+  "intro": {
+    "badge": "Our Approach",
+    "title": "Three pillars of lasting change.",
+    "description": "Children learn best when they are nourished, healthy, and supported by a strong community."
+  },
+  "pillars": [
+    {
+      "number": "01",
+      "title": "Education & STEM",
+      "description": "Solar-lit learning hubs, bilingual libraries, and local youth fellowships.",
+      "stat": "24 Learning Hubs"
     },
-    "cards": [
-        { "label": "Projects", "title": "Ideas turned into action.", "description": "Discover the classrooms, kitchens and clinics your support helps build and sustain.", "image": "/img-2.jpg", "imageAlt": "Children learning together", "href": "/projects", "buttonLabel": "Explore projects", "tint": "#dcebdd" },
-        { "label": "Gallery", "title": "The moments behind the work.", "description": "Meet the people, places and small moments that make every project matter.", "image": "/img-1.jpg", "imageAlt": "Community volunteers at work", "href": "/gallery", "buttonLabel": "View gallery", "tint": "#cfe4e0" }
-    ],
-    "cta": { "eyebrow": "Keep building with us", "title": "Good work grows when we do it together.", "buttonLabel": "Get involved", "buttonHref": "/contact" }
+    {
+      "number": "02",
+      "title": "Community Nutrition",
+      "description": "Women-led kitchens serving fresh, locally sourced midday meals daily.",
+      "stat": "90,000+ Meals Yearly"
+    },
+    {
+      "number": "03",
+      "title": "Mobile Healthcare",
+      "description": "Medical vans and village health guides delivering doorstep care.",
+      "stat": "12 Remote Routes"
+    }
+  ],
+  "cards": [
+    {
+      "label": "Our Programs",
+      "title": "Lasting community hubs.",
+      "description": "Explore our village classrooms, women-run kitchens, and mobile clinics.",
+      "image": "/village-classroom.jpg",
+      "imageAlt": "Students learning together",
+      "href": "/our-programs",
+      "buttonLabel": "View programs",
+      "tint": "#E6EFEA",
+      "metric": "4 Flagship Hubs"
+    },
+    {
+      "label": "Our Causes",
+      "title": "Causes to champion today.",
+      "description": "Support active grassroots drives in education, food, and healthcare.",
+      "image": "/community-kitchen.jpg",
+      "imageAlt": "Volunteers serving meals",
+      "href": "/our-causes",
+      "buttonLabel": "Explore causes",
+      "tint": "#F9EBE5",
+      "metric": "6 Active Causes"
+    },
+    {
+      "label": "Impact Stories",
+      "title": "Voices from our villages.",
+      "description": "Read stories from students, mothers, and local mentors.",
+      "image": "/healthcare-clinic.jpg",
+      "imageAlt": "Healthcare worker checking a child",
+      "href": "/success-stories",
+      "buttonLabel": "Read stories",
+      "tint": "#EFECE6",
+      "metric": "18,500+ Lives Reached"
+    },
+    {
+      "label": "Field Archive",
+      "title": "Moments from the ground.",
+      "description": "Browse photos from classrooms, kitchens, and volunteer drives.",
+      "image": "/volunteer-team.jpg",
+      "imageAlt": "Community volunteers at work",
+      "href": "/gallery",
+      "buttonLabel": "Open gallery",
+      "tint": "#E6EFEA",
+      "metric": "Photo Archive"
+    }
+  ],
+  "cta": {
+    "eyebrow": "Build With Us",
+    "title": "Good work grows stronger together.",
+    "description": "Join us as a volunteer, partner, or supporter.",
+    "buttonLabel": "Get Involved",
+    "buttonHref": "/contact"
+  }
 }

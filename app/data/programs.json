@@ -1,130 +1,178 @@
 {
-    "hero": {
-        "image": "/home-hero.jpg",
-        "title": "Our Programs"
+  "hero": {
+    "image": "/volunteer-team.jpg",
+    "badge": "Community Initiatives",
+    "title": "Our Programs",
+    "description": "Focused grassroots programs in education, nutrition, and rural healthcare.",
+    "breadcrumbs": [
+      { "label": "Home", "href": "/" },
+      { "label": "Our Programs" }
+    ]
+  },
+  "campaignsSection": {
+    "badge": "Active Campaigns",
+    "title": "Causes you can champion today",
+    "description": "Direct grassroots initiatives with complete transparency and local leadership.",
+    "buttonLabel": "All programs",
+    "buttonHref": "/our-programs"
+  },
+  "campaigns": [
+    {
+      "id": 1,
+      "title": "STEM & Study Kits for 500 Students",
+      "category": "Education",
+      "location": "Udaipur & Tonk",
+      "image": "/village-classroom.jpg",
+      "imageAlt": "Students learning with books and kits",
+      "description": "Solar lamps, books, and science kits for 500 rural students.",
+      "raised": 21400,
+      "goal": 25000,
+      "donors": 348,
+      "daysLeft": 16
     },
-    "campaignsSection": {
-        "badge": "Active campaigns",
-        "title": "Causes that need you right now",
-        "description": "Pick a campaign, see exactly how far it has come, and help it reach its goal.",
-        "buttonLabel": "View all campaigns",
-        "buttonHref": "/our-programs"
+    {
+      "id": 2,
+      "title": "Daily Hot Meals for 300 Families",
+      "category": "Food",
+      "location": "Bundelkhand",
+      "image": "/community-kitchen.jpg",
+      "imageAlt": "Volunteers serving nutritious hot meals",
+      "description": "Freshly cooked midday meals served daily at our women-run kitchens.",
+      "raised": 10200,
+      "goal": 12000,
+      "donors": 236,
+      "daysLeft": 11
     },
-    "campaigns": [
-        {
-            "id": 1,
-            "title": "School supplies for 500 children",
-            "category": "Education",
-            "image": "/img-1.jpg",
-            "imageAlt": "Children learning together in a classroom",
-            "description": "Books, bags and uniforms so children in rural villages can start the school year ready to learn.",
-            "raised": 18400,
-            "goal": 25000,
-            "donors": 312,
-            "daysLeft": 18
-        },
-        {
-            "id": 2,
-            "title": "Daily hot meals for families",
-            "category": "Food",
-            "image": "/img-2.jpg",
-            "imageAlt": "Community members sharing a meal",
-            "description": "Fund nutritious hot meals served every day at our community kitchens.",
-            "raised": 9200,
-            "goal": 12000,
-            "donors": 204,
-            "daysLeft": 9
-        },
-        {
-            "id": 3,
-            "title": "Vaccination drive for children",
-            "category": "Health",
-            "image": "/img-2.jpg",
-            "imageAlt": "Child receiving healthcare support",
-            "description": "Protect children under five with free vaccinations in underserved districts.",
-            "raised": 11800,
-            "goal": 15000,
-            "donors": 187,
-            "daysLeft": 14
-        }
-    ],
-    "howWeWork": {
-        "badge": "How we work",
-        "title": "From listening to lasting impact.",
-        "description": "Every program is built around trust, shared ownership, and a clear path from immediate support to long-term change.",
-        "steps": [
-            {
-                "number": "01",
-                "title": "Listen first",
-                "description": "We learn from the people closest to the challenge and understand what support will make the greatest difference."
-            },
-            {},
-            {},
-            {
-                "number": "02",
-                "title": "Build together",
-                "description": "We work with local leaders, volunteers, and partners to shape practical solutions with the community."
-            },
-            {
-                "number": "03",
-                "title": "Grow what works",
-                "description": "We measure progress, learn as we go, and invest in the ideas that create lasting opportunity."
-            }
-        ]
+    {
+      "id": 3,
+      "title": "Mobile Pediatric Clinic Drive",
+      "category": "Health",
+      "location": "12 Remote Blocks",
+      "image": "/healthcare-clinic.jpg",
+      "imageAlt": "Healthcare worker examining a child",
+      "description": "Essential check-ups, vaccines, and medicines for remote villages.",
+      "raised": 13400,
+      "goal": 16000,
+      "donors": 219,
+      "daysLeft": 14
     },
-    "faqSection": {
-        "badge": "09. Frequently Asked Questions",
-        "title": "Everything you need to know.",
-        "description": "Have another question? Our team is always happy to help you find the right way to get involved."
+    {
+      "id": 4,
+      "title": "Open-Air Village Reading Libraries",
+      "category": "Education",
+      "location": "18 Partner Villages",
+      "image": "/volunteer-team.jpg",
+      "imageAlt": "Volunteers sharing storybooks with children",
+      "description": "Bilingual storybooks and youth mentors for 18 village libraries.",
+      "raised": 8900,
+      "goal": 11000,
+      "donors": 164,
+      "daysLeft": 21
     },
-    "faqs": [
-        {
-            "question": "Who can participate in a program?",
-            "answer": "Our programs are open to people, families, local organizations, and volunteers who want to create positive change in their communities."
-        },
-        {
-            "question": "How do you choose the programs you support?",
-            "answer": "We listen to local leaders, understand the need, and focus on practical ideas that can create meaningful and lasting impact."
-        },
-        {
-            "question": "Can I volunteer or contribute my skills?",
-            "answer": "Yes. You can share your time, professional skills, or local knowledge through our volunteer page and we will help find the right opportunity."
-        },
-        {
-            "question": "How can I follow the impact of my support?",
-            "answer": "We share updates from the communities and programs you support so you can see the progress your contribution helps make possible."
-        }
-    ],
-    "successStories": {
-        "badge": "Success stories",
-        "title": "Small steps. Real change.",
-        "description": "Every story begins with people choosing to show up for one another.",
-        "stories": [
-            {
-                "image": "/img-1.jpg",
-                "imageAlt": "Children learning together in a classroom",
-                "category": "Education",
-                "title": "A brighter start for 500 children",
-                "description": "School supplies and local support helped children return to class ready to learn.",
-                "result": "500 children supported",
-                "top": "0"
-            },
-            {
-                "image": "/img-2.jpg",
-                "imageAlt": "Community members sharing a meal",
-                "category": "Food security",
-                "title": "A table where everyone belongs",
-                "description": "Community kitchens are helping families access nutritious meals with dignity.",
-                "result": "2,300 meals served"
-            },
-            {
-                "image": "/bg-img-2.png",
-                "imageAlt": "Young people working together outdoors",
-                "category": "Community",
-                "title": "Growing confidence together",
-                "description": "Local mentors created a safe place for young people to build skills and confidence.",
-                "result": "120 young people reached"
-            }
-        ]
+    {
+      "id": 5,
+      "title": "Seasonal Nutrition & Ration Kits",
+      "category": "Food",
+      "location": "Northern Valleys",
+      "image": "/nutrition-program.jpg",
+      "imageAlt": "Community nutrition distribution",
+      "description": "30-day dry ration packs and warm supplies for 400 rural households.",
+      "raised": 14600,
+      "goal": 18000,
+      "donors": 289,
+      "daysLeft": 9
+    },
+    {
+      "id": 6,
+      "title": "Rural Maternal & Wellness Camps",
+      "category": "Health",
+      "location": "Marwar Region",
+      "image": "/medical-outreach.jpg",
+      "imageAlt": "Medical outreach check-up",
+      "description": "Preventive health check-ups and nutrition guidance for rural mothers.",
+      "raised": 11200,
+      "goal": 15000,
+      "donors": 195,
+      "daysLeft": 24
     }
+  ],
+  "howWeWork": {
+    "badge": "How We Work",
+    "title": "Simple, community-led execution.",
+    "description": "A three-step approach built around local trust and lasting outcomes.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Listen & Co-Design",
+        "description": "We plan every hub alongside parents, teachers, and village elders."
+      },
+      {
+        "number": "02",
+        "title": "Equip & Mobilize",
+        "description": "We train local fellows and source supplies from regional producers."
+      },
+      {
+        "number": "03",
+        "title": "Measure & Sustain",
+        "description": "We track outcomes openly and transition full stewardship to villages."
+      }
+    ]
+  },
+  "faqSection": {
+    "badge": "FAQs",
+    "title": "Common questions",
+    "description": "Quick answers about how our programs operate."
+  },
+  "faqs": [
+    {
+      "question": "How much of my donation goes to fieldwork?",
+      "answer": "94% goes directly into books, meals, medical supplies, and local educator stipends."
+    },
+    {
+      "question": "How do you select partner villages?",
+      "answer": "We partner with rural clusters lacking nearby schools or clinics where village councils invite collaboration."
+    },
+    {
+      "question": "How can I join the volunteer team?",
+      "answer": "Visit our Volunteer page to explore our team tracks and connect with our coordinators."
+    },
+    {
+      "question": "How are campaign results shared?",
+      "answer": "We publish quarterly dispatches with field photos, attendance milestones, and expense summaries."
+    }
+  ],
+  "successStories": {
+    "badge": "Impact Snapshots",
+    "title": "Small steps. Real change.",
+    "description": "Recent milestones across our partner communities.",
+    "stories": [
+      {
+        "image": "/village-classroom.jpg",
+        "imageAlt": "Students learning in village hub",
+        "category": "Education",
+        "location": "Kishangarh",
+        "title": "Brighter classrooms for 500 students",
+        "description": "Solar study lamps and STEM kits boosted school attendance to 98%.",
+        "result": "500 children enrolled"
+      },
+      {
+        "image": "/community-kitchen.jpg",
+        "imageAlt": "Volunteers serving hot meals",
+        "category": "Nutrition",
+        "location": "Jhansi Cluster",
+        "title": "A shared table for 300 families",
+        "description": "18 local mothers prepare fresh millet and lentil meals daily.",
+        "result": "90,000+ meals served"
+      },
+      {
+        "image": "/healthcare-clinic.jpg",
+        "imageAlt": "Doctor checking a child",
+        "category": "Healthcare",
+        "location": "Barmer District",
+        "title": "Trusted care at the doorstep",
+        "description": "Bi-weekly mobile clinics deliver check-ups and vaccines to 12 hamlets.",
+        "result": "4,200+ patients treated"
+      }
+    ]
+  }
 }

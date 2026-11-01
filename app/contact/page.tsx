@@ -1,15 +1,12 @@
-"use client";
-
-
+import type { Metadata } from "next";
 import ContactLayout from "../components/contact/ContactLayout";
+import contactData from "@/app/data/contact.json";
 
-
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description: contactData.hero.description,
+};
 
 export default function ContactPage() {
-
-    return (
-        <div className="bg-[#f5f7f2] text-[#0b1635]">
-           <ContactLayout />
-        </div>
-    );
+  return <ContactLayout />;
 }

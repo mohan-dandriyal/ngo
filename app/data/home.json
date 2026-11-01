@@ -1,72 +1,118 @@
 {
-    "worksSection": {
-        "badge": "Our works",
-        "title": "Projects that turned donations into change",
-        "description": "A closer look at what your support has built, served and delivered.",
-        "buttonLabel": "See all works",
-        "buttonHref": "/projects"
+  "heroSlides": [
+    {
+      "id": 1,
+      "badge": "Community Impact Since 2018",
+      "image": "/volunteer-team.jpg",
+      "line1": "Every Child",
+      "line2": "Deserves A Bright",
+      "line3": "Tomorrow.",
+      "description": "Building joyful village classrooms and equipping rural students to thrive.",
+      "primaryCta": { "label": "Explore Causes", "href": "/our-causes" },
+      "secondaryCta": { "label": "Our Programs", "href": "/our-programs" }
     },
-    "blogSection": {
-        "badge": "Our blog",
-        "title": "Stories and updates from the field",
-        "description": "News, impact reports and the people behind the work.",
-        "buttonLabel": "Read all articles",
-        "buttonHref": "/blog"
+    {
+      "id": 2,
+      "badge": "Nourishing Families Daily",
+      "image": "/community-kitchen.jpg",
+      "line1": "Warm Meals,",
+      "line2": "Shared Tables &",
+      "line3": "Stronger Lives.",
+      "description": "Women-led community kitchens serving fresh, nutritious meals every day.",
+      "primaryCta": { "label": "Our Programs", "href": "/our-programs" },
+      "secondaryCta": { "label": "Support Us", "href": "/contact" }
     },
-    "heroSlides": [
-        {
-            "id": 1,
-            "image": "/home-hero.jpg",
-            "line1": "Lend the",
-            "line2": "Helping Hand",
-            "line3": "Get Involved.",
-            "description": "We are here to support you every step of the way, empowering communities and changing lives."
-        },
-        {
-            "id": 2,
-            "image": "/bg-image.png",
-            "line1": "Bring Hope",
-            "line2": "To Children",
-            "line3": "Make A Change.",
-            "description": "Your small contribution can provide education, food, and a brighter future for those in need."
-        },
-        {
-            "id": 3,
-            "image": "/bg-img-2.png",
-            "line1": "Together We",
-            "line2": "Can Build A",
-            "line3": "Better Tomorrow.",
-            "description": "Join our global community of volunteers and donors dedicated to making a lasting impact."
-        }
-    ],
-    "heroStats": [
-        { "end": 12500, "suffix": "+", "label": "Children supported" },
-        { "end": 340, "suffix": "+", "label": "Active volunteers" },
-        { "end": 28, "suffix": "", "label": "Communities reached" }
-    ],
-    "growthStats": [
-        { "end": 42, "suffix": "", "label": "Literacy Programs Launched" },
-        { "end": 15000, "suffix": "+", "label": "Children Reached" },
-        { "end": 800, "suffix": "+", "label": "Volunteers Mobilized" }
-    ],
-    "testimonials": [
-        {
-            "name": "Priya Sharma",
-            "role": "Monthly donor",
-            "avatar": "/img-1.jpg",
-            "quote": "I get an update showing exactly where my money went. Seeing the school supplies reach the children made me a monthly donor for good."
-        },
-        {
-            "name": "Rahul Verma",
-            "role": "Volunteer, 3 years",
-            "avatar": "/img-2.jpg",
-            "quote": "Volunteering here changed how I see my own community. The team is organised, kind, and every weekend feels like it counts."
-        },
-        {
-            "name": "Anita Desai",
-            "role": "Parent in a supported village",
-            "avatar": "/img-1.jpg",
-            "quote": "My children now get a hot meal and go to school every day. We are grateful to everyone who stood with us when we needed it most."
-        }
+    {
+      "id": 3,
+      "badge": "Healthcare At Every Doorstep",
+      "image": "/healthcare-clinic.jpg",
+      "line1": "Bringing Care",
+      "line2": "Closer To Every",
+      "line3": "Village.",
+      "description": "Mobile health clinics delivering free check-ups and medicines to remote families.",
+      "primaryCta": { "label": "Explore Causes", "href": "/our-causes" },
+      "secondaryCta": { "label": "Meet Our Team", "href": "/volunteer" }
+    }
+  ],
+  "heroStats": [
+    { "end": 18500, "suffix": "+", "label": "Children Supported" },
+    { "end": 640, "suffix": "+", "label": "Volunteers" },
+    { "end": 42, "suffix": "", "label": "Partner Villages" }
+  ],
+  "statsSection": {
+    "badge": "Measurable Impact",
+    "title": "Our Growth, Their Future",
+    "description": "Transparent grassroots impact across every partner village.",
+    "stats": [
+      {
+        "end": 54,
+        "suffix": "",
+        "label": "Learning & Nutrition Hubs",
+        "description": "Locally managed centers operating six days a week."
+      },
+      {
+        "end": 18500,
+        "suffix": "+",
+        "label": "Children Reached",
+        "description": "Daily meals, study kits, and primary healthcare."
+      },
+      {
+        "end": 94,
+        "suffix": "%",
+        "label": "Direct Field Allocation",
+        "description": "Every donation goes straight into village programs."
+      }
     ]
+  },
+  "worksSection": {
+    "badge": "Our Programs",
+    "title": "Programs built for lasting change",
+    "description": "Community classrooms, kitchens, and mobile clinics shaped with local leaders.",
+    "buttonLabel": "All programs",
+    "buttonHref": "/our-programs"
+  },
+  "blogSection": {
+    "badge": "Field Dispatches",
+    "title": "Updates from the ground",
+    "description": "Short stories and reports from our partner villages.",
+    "buttonLabel": "Read all articles",
+    "buttonHref": "/blog"
+  },
+  "testimonialsSection": {
+    "badge": "Community Voices",
+    "title": "Words from our supporters",
+    "description": "Trusted by monthly donors, volunteers, and village partners.",
+    "rating": "4.9",
+    "supportersCount": "3,200+ supporters"
+  },
+  "testimonials": [
+    {
+      "name": "Priya Sharma",
+      "role": "Monthly Supporter",
+      "location": "Bengaluru",
+      "avatar": "/team-3.jpg",
+      "quote": "Clear quarterly reports show the exact classrooms and kitchens my donations support."
+    },
+    {
+      "name": "Rahul Verma",
+      "role": "Weekend Volunteer",
+      "location": "New Delhi",
+      "avatar": "/team-4.jpg",
+      "quote": "We listen to village elders first and build community solutions that truly last."
+    },
+    {
+      "name": "Anita Desai",
+      "role": "Community Coordinator",
+      "location": "Rajasthan",
+      "avatar": "/team-6.jpg",
+      "quote": "Our village learning hub gave our daughters a safe, inspiring place to study and grow."
+    }
+  ],
+  "ctaSection": {
+    "badge": "Join The Mission",
+    "title": "Small acts build stronger communities.",
+    "description": "Support a classroom, partner on a program, or join our field team.",
+    "primaryButton": { "label": "Our Team & Volunteers", "href": "/volunteer" },
+    "secondaryButton": { "label": "Contact Us", "href": "/contact" }
+  }
 }

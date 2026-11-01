@@ -1,26 +1,81 @@
 {
-    "hero": {
-        "image": "/home-hero.jpg",
-        "title": "Our gallery"
+  "hero": {
+    "image": "/volunteer-team.jpg",
+    "badge": "Visual Archive",
+    "title": "Impact Gallery",
+    "description": "Moments of learning, nourishment, and care across our partner villages.",
+    "breadcrumbs": [
+      { "label": "Home", "href": "/" },
+      { "label": "Impact Gallery" }
+    ]
+  },
+  "intro": {
+    "badge": "Moments That Matter",
+    "title": "People behind every milestone.",
+    "description": "Snapshots from our classrooms, community kitchens, and mobile health camps."
+  },
+  "allFilterLabel": "All Moments",
+  "items": [
+    {
+      "id": 1,
+      "category": "Education",
+      "title": "Village Learning & Book Hub",
+      "location": "Rajasthan",
+      "description": "Students and mentors sharing books at our afternoon learning center.",
+      "image": "/village-classroom.jpg",
+      "imageAlt": "Students and mentors learning together"
     },
-    "intro": {
-        "badge": "Moments that matter",
-        "title": "A closer look at the work.",
-        "description": "From classrooms and community kitchens to care on the road, these are the people and moments behind every project."
+    {
+      "id": 2,
+      "category": "Food",
+      "title": "Midday Meals at Annapurna Kitchen",
+      "location": "Bundelkhand",
+      "description": "Freshly cooked millet and lentil meals served to village families.",
+      "image": "/community-kitchen.jpg",
+      "imageAlt": "Volunteers serving hot meals at the community kitchen"
     },
-    "allFilterLabel": "All moments",
-    "items": [
-        { "id": 1, "category": "Education", "title": "Learning together", "description": "Children discovering new possibilities at the village learning center.", "image": "/img-2.jpg", "imageAlt": "Children learning together" },
-        { "id": 2, "category": "Community", "title": "Made with care", "description": "Local volunteers preparing a day of support for their neighbors.", "image": "/img-1.jpg", "imageAlt": "Community volunteers at work" },
-        { "id": 3, "category": "Health", "title": "Care on the road", "description": "The mobile clinic brings trusted healthcare closer to remote families.", "image": "/home-hero.jpg", "imageAlt": "A healthcare worker supporting a family" },
-        { "id": 4, "category": "Food", "title": "Around one table", "description": "A warm meal creates space for connection and dignity.", "image": "/bg-image.png", "imageAlt": "A community gathering" },
-        { "id": 5, "category": "Education", "title": "Room to grow", "description": "A bright, welcoming corner made for reading, questions and ideas.", "image": "/bg-img-2.png", "imageAlt": "A bright community learning space" },
-        { "id": 6, "category": "Community", "title": "Showing up", "description": "Small acts of consistency become lasting change over time.", "image": "/img-1.jpg", "imageAlt": "A volunteer showing up for the community" }
-    ],
-    "cta": {
-        "eyebrow": "Be part of the story",
-        "title": "There is always room for one more helping hand.",
-        "buttonLabel": "Get involved",
-        "buttonHref": "/contact"
+    {
+      "id": 3,
+      "category": "Health",
+      "title": "Pediatric Care at the Doorstep",
+      "location": "Barmer District",
+      "description": "Gentle wellness check-ups at our bi-weekly mobile health camp.",
+      "image": "/healthcare-clinic.jpg",
+      "imageAlt": "Healthcare worker examining a smiling child"
+    },
+    {
+      "id": 4,
+      "category": "Community",
+      "title": "Green Village Sapling Drive",
+      "location": "Marwar Region",
+      "description": "Weekend volunteers and youth fellows planting native trees together.",
+      "image": "/volunteer-team.jpg",
+      "imageAlt": "Volunteers planting saplings and sharing books"
+    },
+    {
+      "id": 5,
+      "category": "Food",
+      "title": "Community Courtyard Dining",
+      "location": "Jhansi Cluster",
+      "description": "Neighbors gathering for warm, nutritious meals prepared by local mothers.",
+      "image": "/nutrition-program.jpg",
+      "imageAlt": "Community members sharing a warm meal"
+    },
+    {
+      "id": 6,
+      "category": "Health",
+      "title": "Rural Maternal & Child Check-up",
+      "location": "Western Hamlets",
+      "description": "Preventive screenings and free essential medicines for rural families.",
+      "image": "/medical-outreach.jpg",
+      "imageAlt": "Medical check-up for rural child"
     }
+  ],
+  "cta": {
+    "eyebrow": "Join Our Mission",
+    "title": "Lend a helping hand today.",
+    "description": "Join a weekend field drive or support a village classroom.",
+    "buttonLabel": "Meet Our Team",
+    "buttonHref": "/volunteer"
+  }
 }

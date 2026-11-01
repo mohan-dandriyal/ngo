@@ -3,35 +3,31 @@ export default function Loading() {
     <main
       aria-live="polite"
       aria-label="Loading page"
-      className="relative flex min-h-dvh w-full items-center justify-center overflow-hidden bg-white px-6 text-white"
+      className="relative flex min-h-dvh w-full items-center justify-center overflow-hidden bg-[#faf8f5] px-6 text-[#0f291e]"
     >
       <div
         aria-hidden="true"
-        className="absolute -left-24 -top-24 h-72 w-72 rounded-full bg-[#cfe4e0]/15 blur-3xl motion-reduce:blur-0"
+        className="absolute -left-24 -top-24 h-72 w-72 rounded-full bg-[#e6efea] blur-3xl motion-reduce:blur-0"
       />
       <div
         aria-hidden="true"
-        className="absolute -bottom-32 -right-20 h-96 w-96 rounded-full bg-[#71927b]/25 blur-3xl motion-reduce:blur-0"
+        className="absolute -bottom-32 -right-20 h-96 w-96 rounded-full bg-[#f9ebe5] blur-3xl motion-reduce:blur-0"
       />
 
-      <section className="relative flex  w-full max-w-sm flex-col items-center rounded-[2rem] border border-white/15 px-8 py-12 text-center shadow-2xl shadow-black/20 backdrop-blur-xl sm:px-12">
-        <div className="relative flex h-28 w-28 items-center justify-center">
+      <section className="relative flex w-full max-w-sm flex-col items-center rounded-3xl border border-[#0f291e]/10 bg-white/90 px-8 py-12 text-center shadow-xl shadow-[#0f291e]/5 backdrop-blur-xl sm:px-12">
+        <div className="relative flex h-24 w-24 items-center justify-center">
           <span
             aria-hidden="true"
-            className="absolute inset-0 rounded-full border border-blue-500/40"
+            className="absolute inset-0 rounded-full border-2 border-[#e6efea]"
           />
           <span
             aria-hidden="true"
-            className="absolute inset-1 animate-[spin_4s_linear_infinite] rounded-full border border-transparent border-t-red-200 border-r-red-500 motion-reduce:animate-none"
-          />
-          <span
-            aria-hidden="true"
-            className="absolute h-3 w-3 animate-pulse rounded-full bg-[#e4cfcf] shadow-[0_0_24px_8px_rgba(207,228,224,0.28)] motion-reduce:animate-none"
+            className="absolute inset-1 animate-[spin_3s_linear_infinite] rounded-full border-2 border-transparent border-t-[#d96b43] border-r-[#2d6a4f] motion-reduce:animate-none"
           />
           <svg
             aria-hidden="true"
             viewBox="0 0 48 48"
-            className="relative h-11 w-11 text-blue-500"
+            className="relative h-10 w-10 text-[#d96b43]"
             fill="none"
             stroke="currentColor"
             strokeWidth="2.5"
@@ -42,10 +38,9 @@ export default function Loading() {
           </svg>
         </div>
 
-        <p className="mt-8 italic text-xs font-bold uppercase tracking-[0.28em] text-[#cfe4e0]">
-          Loading...
+        <p className="mt-6 text-xs font-bold uppercase tracking-[0.24em] text-[#2d6a4f]">
+          KindredHope Foundation
         </p>
- 
       </section>
     </main>
   );

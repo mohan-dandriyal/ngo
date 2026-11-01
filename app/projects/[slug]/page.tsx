@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
 
@@ -10,18 +11,37 @@ const projects = projectsData.projects as ProjectItem[];
 type PageProps = { params: Promise<{ slug: string }> };
 
 export function generateStaticParams() {
-    return projects.map((project) => ({ slug: project.slug }));
+  return projects.map((project) => ({ slug: project.slug }));
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const project = projects.find((item) => item.slug === slug);
+  if (!project) return { title: "Project Not Found" };
+  return {
+    title: project.title,
+    description: project.description,
+  };
 }
 
 async function ProjectDetailsContent({ params }: PageProps) {
-    const { slug } = await params;
-    const project = projects.find((item) => item.slug === slug);
+  const { slug } = await params;
+  const project = projects.find((item) => item.slug === slug);
 
-    if (!project) notFound();
+  if (!project) notFound();
 
-    return <ProjectDetailsLayout project={project} related={projects.filter((item) => item.slug !== slug).slice(0, 2)} />;
+  return (
+    <ProjectDetailsLayout
+      project={project}
+      related={projects.filter((item) => item.slug !== slug).slice(0, 2)}
+    />
+  );
 }
 
 export default function ProjectDetailsPage({ params }: PageProps) {
-    return <Suspense fallback={<Loading />}><ProjectDetailsContent params={params} /></Suspense>;
+  return (
+    <Suspense fallback={<Loading />}>
+      <ProjectDetailsContent params={params} />
+    </Suspense>
+  );
 }

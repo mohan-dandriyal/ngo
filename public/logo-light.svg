@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 72" fill="none">
+  <defs>
+    <linearGradient id="leafGradLight" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#52B788"/>
+      <stop offset="100%" stop-color="#74C69D"/>
+    </linearGradient>
+    <linearGradient id="sunGradLight" x1="16" y1="12" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F4A261"/>
+      <stop offset="100%" stop-color="#E07A5F"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(6, 8)">
+    <rect x="0" y="0" width="56" height="56" rx="16" fill="#1B4332"/>
+    <circle cx="28" cy="22" r="9" fill="url(#sunGradLight)"/>
+    <path d="M12 31C12 22 20 26 28 35C22 41 12 39 12 31Z" fill="url(#leafGradLight)"/>
+    <path d="M44 31C44 22 36 26 28 35C34 41 44 39 44 31Z" fill="#95D5B2"/>
+    <path d="M16 42C21 46 35 46 40 42" stroke="#F4A261" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <text x="74" y="37" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="24" font-weight="800" letter-spacing="-0.03em" fill="#FAF8F5">
+    Kindred<tspan fill="#F4A261">Hope</tspan>
+  </text>
+  <text x="75" y="54" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" letter-spacing="0.22em" fill="#B7E4C7">
+    FOUNDATION
+  </text>
+</svg>

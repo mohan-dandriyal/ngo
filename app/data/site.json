@@ -1,0 +1,67 @@
+{
+  "brand": {
+    "name": "KindredHope",
+    "tagline": "Lend a Helping Hand",
+    "logoLight": "/logo.svg",
+    "logoDark": "/logo-light.svg",
+    "description": "Community-led education, nutritious daily meals, and mobile healthcare for underserved families."
+  },
+  "header": {
+    "navLinks": [
+      { "label": "Home", "href": "/" },
+      { "label": "About", "href": "/about" },
+      { "label": "Programs", "href": "/our-programs" },
+      { "label": "Our Causes", "href": "/our-causes" },
+      { "label": "Volunteer", "href": "/volunteer" },
+      { "label": "Gallery", "href": "/gallery" },
+      { "label": "Blog", "href": "/blog" },
+      { "label": "Contact", "href": "/contact" }
+    ],
+    "donateCta": {
+      "label": "Donate Now",
+      "href": "#"
+    }
+  },
+  "footer": {
+    "newsletter": {
+      "badge": "Field Dispatch",
+      "title": "Monthly impact stories in your inbox.",
+      "description": "Short, transparent updates from our partner villages.",
+      "placeholder": "Enter your email address",
+      "buttonLabel": "Subscribe",
+      "successMessage": "Thank you for subscribing!"
+    },
+    "companyHeading": "Organization",
+    "companyLinks": [
+      { "label": "About Us", "href": "/about" },
+      { "label": "Our Work", "href": "/our-work" },
+      { "label": "Success Stories", "href": "/success-stories" },
+      { "label": "Impact Gallery", "href": "/gallery" },
+      { "label": "Field Journal", "href": "/blog" },
+      { "label": "Contact Us", "href": "/contact" }
+    ],
+    "programsHeading": "Programs & Causes",
+    "programLinks": [
+      { "label": "Our Programs", "href": "/our-programs" },
+      { "label": "Our Causes", "href": "/our-causes" },
+      { "label": "Team & Volunteers", "href": "/volunteer" },
+      { "label": "Learning Centers", "href": "/our-programs/village-learning-center" },
+      { "label": "Community Kitchens", "href": "/our-programs/community-kitchen" },
+      { "label": "Mobile Clinics", "href": "/our-programs/mobile-health-clinic" }
+    ],
+    "causesHeading": "Recent Dispatches",
+    "contact": {
+      "address": "3170 Rosewood Lane Unit 200 , Beverly Hills, CA 90210",
+      "email": "info@xyz.com",
+      "phone": "+1 000000000"
+    },
+    "socials": [
+      { "label": "Facebook", "href": "https://facebook.com", "platform": "facebook" },
+      { "label": "X", "href": "https://x.com", "platform": "x" },
+      { "label": "Instagram", "href": "https://instagram.com", "platform": "instagram" },
+      { "label": "YouTube", "href": "https://youtube.com", "platform": "youtube" },
+      { "label": "LinkedIn", "href": "https://linkedin.com", "platform": "linkedin" }
+    ],
+    "copyright": "© 2026 KindredHope Foundation. All Rights Reserved. Powered by Lestow"
+  }
+}

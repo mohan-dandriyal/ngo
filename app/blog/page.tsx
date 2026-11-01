@@ -1,13 +1,15 @@
+import type { Metadata } from "next";
+import React from "react";
+import BlogSections from "@/app/components/blog/BlogSections";
+import blogData from "@/app/data/blog.json";
 
-import React from 'react'
-import BlogSections from '@/app/components/blog/BlogSections'
+export const metadata: Metadata = {
+  title: "Field Journal & Blog",
+  description: blogData.hero.description,
+};
 
 function Blog() {
-  return (
-    <div>
-        <BlogSections />
-    </div>
-  )
+  return <BlogSections />;
 }
 
-export default Blog
+export default Blog;

@@ -1,28 +1,89 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #faf8f5;
+  --foreground: #0f291e;
+  --primary: #0f291e;
+  --primary-light: #1b4332;
+  --secondary: #2d6a4f;
+  --accent: #d96b43;
+  --accent-light: #f4a261;
+  --surface: #f2efe9;
+  --surface-sage: #e6efea;
+  --surface-blush: #f9ebe5;
+  --muted: #4a6358;
+  --font-jakarta: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-outfit: "Outfit", "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-playfair: "Playfair Display", Georgia, serif;
+  --font-geist-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-jakarta);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+  --color-surface: var(--surface);
+  --color-surface-sage: var(--surface-sage);
+  --color-surface-blush: var(--surface-blush);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-jakarta), system-ui, sans-serif;
+  --font-display: var(--font-outfit), var(--font-jakarta), system-ui, sans-serif;
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-mono: var(--font-geist-mono), monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #FFF;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Plus Jakarta Sans", Arial, Helvetica, sans-serif;
+  font-family: var(--font-jakarta), system-ui, -apple-system, sans-serif;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  line-height: 1.65;
+  letter-spacing: -0.008em;
+}
+
+::selection {
+  background-color: #d96b43;
+  color: #ffffff;
+}
+
+/* Display typography for headings and impact numbers */
+.font-display {
+  font-family: var(--font-outfit), var(--font-jakarta), system-ui, sans-serif;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+/* Editorial serif for pull quotes and italicized highlights */
+.font-editorial {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-outfit), var(--font-jakarta), system-ui, sans-serif;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+blockquote p {
+  font-family: var(--font-playfair), Georgia, serif;
 }
 
 @keyframes loading {
@@ -33,4 +94,34 @@ body {
   100% {
     transform: translateX(260%);
   }
+}
+
+@keyframes floatSlow {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulseSoft {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.65;
+    transform: scale(1.18);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.animate-pulse-soft {
+  animation: pulseSoft 2.8s ease-in-out infinite;
 }

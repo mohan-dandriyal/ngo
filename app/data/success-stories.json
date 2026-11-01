@@ -1,0 +1,115 @@
+{
+  "hero": {
+    "image": "/community-kitchen.jpg",
+    "badge": "Verified Impact",
+    "title": "Success Stories",
+    "description": "Real lives and thriving villages powered by community leadership.",
+    "breadcrumbs": [
+      { "label": "Home", "href": "/" },
+      { "label": "Success Stories" }
+    ]
+  },
+  "intro": {
+    "badge": "Stories of Change",
+    "title": "Every number has a name and a story.",
+    "description": "How local leadership and steady support are transforming 42 partner villages."
+  },
+  "impactMetrics": [
+    {
+      "value": "98%",
+      "label": "School Retention",
+      "detail": "Across our after-school Village Learning Centers."
+    },
+    {
+      "value": "90,000+",
+      "label": "Warm Meals Served",
+      "detail": "Prepared fresh daily across our community kitchens."
+    },
+    {
+      "value": "4,200+",
+      "label": "Patients Treated",
+      "detail": "Through bi-weekly mobile health camps in remote blocks."
+    }
+  ],
+  "featuredStory": {
+    "badge": "Featured Spotlight",
+    "title": "From a borrowed room to Kishangarh's first STEM & reading hub",
+    "location": "Kishangarh, Rajasthan",
+    "quote": "Three years ago my daughter hesitated to read aloud. Last month she demonstrated a solar pump model to the district board.",
+    "person": "Sunita & Aarav Meena",
+    "role": "Parent & 7th Grade Student",
+    "description": [
+      "Together with the village council, we renovated an old grain storehouse, added rooftop solar, stocked 800 books, and trained local youth mentors. Today, 240 children attend daily."
+    ],
+    "image": "/village-classroom.jpg",
+    "imageAlt": "Students and mentors at the village learning hub",
+    "metrics": [
+      { "label": "Daily Attendance", "value": "240 Students" },
+      { "label": "Local Fellows", "value": "14 Educators" },
+      { "label": "Girl Students", "value": "54%" }
+    ]
+  },
+  "stories": [
+    {
+      "image": "/village-classroom.jpg",
+      "imageAlt": "Children learning together",
+      "category": "Education",
+      "location": "Udaipur & Tonk",
+      "title": "Brighter start for 500 rural students",
+      "description": "Solar lamps and STEM kits helped 500 students stay in school.",
+      "result": "500 children thriving"
+    },
+    {
+      "image": "/community-kitchen.jpg",
+      "imageAlt": "Community members sharing a warm meal",
+      "category": "Nutrition",
+      "location": "Bundelkhand",
+      "title": "A shared table for 300 families",
+      "description": "18 local mothers cook hot, nutritious meals daily for the village.",
+      "result": "300 families nourished"
+    },
+    {
+      "image": "/healthcare-clinic.jpg",
+      "imageAlt": "Healthcare worker checking a child",
+      "category": "Healthcare",
+      "location": "Barmer District",
+      "title": "Pediatric care at the doorstep",
+      "description": "Mobile clinics bring doctors and vaccines to 12 desert hamlets.",
+      "result": "12 villages reached"
+    },
+    {
+      "image": "/volunteer-team.jpg",
+      "imageAlt": "Volunteers and children reading outdoors",
+      "category": "Literacy",
+      "location": "Satpura Belt",
+      "title": "18 open-air village libraries",
+      "description": "Youth fellows host daily afternoon reading circles under banyan trees.",
+      "result": "450+ young readers"
+    },
+    {
+      "image": "/nutrition-program.jpg",
+      "imageAlt": "Seasonal nutrition packs",
+      "category": "Relief",
+      "location": "Northern Valleys",
+      "title": "Winter warmth & ration packs",
+      "description": "Women's cooperatives stitched 1,200 quilts paired with 30-day food kits.",
+      "result": "400 families supported"
+    },
+    {
+      "image": "/medical-outreach.jpg",
+      "imageAlt": "Maternal health check-up",
+      "category": "Wellness",
+      "location": "Marwar Region",
+      "title": "24 trained village health guides",
+      "description": "Local women trained in first aid, hygiene, and maternal nutrition.",
+      "result": "24 health champions"
+    }
+  ],
+  "cta": {
+    "badge": "Write The Next Story",
+    "title": "Turn local hope into lasting reality.",
+    "description": "Support a classroom, fund community meals, or join our team.",
+    "buttonLabel": "Explore Programs",
+    "buttonHref": "/our-programs"
+  }
+}

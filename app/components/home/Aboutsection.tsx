@@ -1,169 +1,167 @@
-"use client"
+"use client";
 
-import React from "react"
-import Image from "next/image"
-import { motion, useReducedMotion, type Variants } from "framer-motion"
-import { FiArrowUpRight } from "react-icons/fi"
-import MainContainer from "../ui/MainContainer"
-import { PrimaryButton } from '@/app/components/ui/Button'
-import { SectionDescription, SectionBadge, SectionTitle } from "../SectionHeader"
+import React from "react";
+import Image from "next/image";
+import { motion, useReducedMotion, type Variants } from "framer-motion";
+import { FiArrowUpRight, FiCheckCircle } from "react-icons/fi";
+import MainContainer from "../ui/MainContainer";
+import { PrimaryButton } from "@/app/components/ui/Button";
+import { SectionDescription, SectionBadge, SectionTitle } from "../SectionHeader";
+import { aboutSection } from "@/app/types/about";
 
-
-import { aboutSection } from "@/app/types/about"
-
-// Play each animation once, when ~25% of the block is visible
-const viewport = { once: true, amount: 0.25 }
-
-// Smooth "expo-out" curve shared by all entrance animations
-const EASE = [0.22, 1, 0.36, 1] as const
-
-/** Soft watercolor wash built from layered radial gradients (same as the other sections) */
-const watercolor = (base: string, a: string, b: string) =>
-    `radial-gradient(60% 55% at 15% 20%, ${a} 0%, transparent 70%),
-   radial-gradient(55% 60% at 85% 75%, ${b} 0%, transparent 70%),
-   radial-gradient(40% 40% at 70% 15%, ${a} 0%, transparent 75%),
-   ${base}`
-
-const tealWash = watercolor("#cfe4e0", "#dcefe9", "#bcd6dc")
+const viewport = { once: true, amount: 0.2 };
+const EASE = [0.22, 1, 0.36, 1] as const;
 
 function AboutSection({
-    image,
-    badge,
-    title,
-    description,
-    buttonText,
+  image,
+  badge,
+  title,
+  description,
+  highlights = [],
+  buttonText,
+  profileImage,
+  name,
+  role,
+  experienceYears = "8+",
+  experienceLabel = "Years of Grassroots Impact",
 }: aboutSection) {
-    const reduce = useReducedMotion()
+  const reduce = useReducedMotion();
 
-    // With reduced motion, "hidden" equals "show", so nothing moves or fades
-    const stagger = (gap: number, delay = 0): Variants => ({
-        hidden: {},
-        show: { transition: { staggerChildren: gap, delayChildren: delay } },
-    })
+  const stagger = (gap: number, delay = 0): Variants => ({
+    hidden: {},
+    show: { transition: { staggerChildren: gap, delayChildren: delay } },
+  });
 
-    const fadeUp: Variants = {
-        hidden: { opacity: reduce ? 1 : 0, y: reduce ? 0 : 36 },
-        show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: EASE } },
-    }
+  const fadeUp: Variants = {
+    hidden: { opacity: reduce ? 1 : 0, y: reduce ? 0 : 28 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.75, ease: EASE } },
+  };
 
-    // Main photo: wipes open from the top while its image zooms out
-    const photoReveal: Variants = {
-        hidden: {
-            opacity: reduce ? 1 : 0,
-            clipPath: reduce ? "inset(0% 0% 0% 0%)" : "inset(0% 0% 100% 0%)",
-        },
-        show: {
-            opacity: 1,
-            clipPath: "inset(0% 0% 0% 0%)",
-            transition: { duration: 1.1, ease: EASE },
-        },
-    }
-    const photoZoom: Variants = {
-        hidden: { scale: reduce ? 1 : 1.3 },
-        show: { scale: 1, transition: { duration: 1.6, ease: EASE } },
-    }
+  const paragraphs = Array.isArray(description) ? description : [description];
 
-    // Pastel panel behind the photo slides into its offset position
-    const panel: Variants = {
-        hidden: { opacity: reduce ? 1 : 0, x: reduce ? 0 : -30, y: reduce ? 0 : -30 },
-        show: { opacity: 1, x: 0, y: 0, transition: { duration: 1, ease: EASE } },
-    }
+  return (
+    <section className="overflow-hidden py-18" aria-labelledby="about-heading">
+      <MainContainer>
+        <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
+          {/* Left: Photo Collage + Floating Badge */}
+          <motion.div
+            variants={stagger(0.15)}
+            initial="hidden"
+            whileInView="show"
+            viewport={viewport}
+            className="relative mx-auto w-full max-w-xl lg:col-span-5"
+          >
+            {/* Offset decorative card */}
+            <div
+              aria-hidden="true"
+              className="absolute inset-0 translate-x-4 translate-y-4 rounded-3xl bg-[#e6efea]"
+            />
 
-    return (
-        <section className="overflow-hidden bg-white py-20 md:py-8" aria-labelledby="about-heading">
-            <MainContainer>
-                <div className="grid items-center gap-14 px-6 md:px-0 lg:grid-cols-2 lg:gap-20">
-                    {/* Photo collage */}
-                    <motion.div
-                        variants={stagger(0.2)}
-                        initial="hidden"
-                        whileInView="show"
-                        viewport={viewport}
-                        className="relative hidden sm:block mx-auto aspect-224/250 w-full max-w-lg scale-105"
-                    >
-                        {/* Offset watercolor panel behind the photo */}
-                        <motion.div
-                            variants={panel}
-                            aria-hidden="true"
-                            className="absolute hidden sm:block  inset-0 translate-x-3 translate-y-3 md:translate-x-5 md:translate-y-5"
-                            style={{ background: tealWash }}
-                        />
+            <motion.div
+              variants={fadeUp}
+              className="relative aspect-4/5 w-full overflow-hidden rounded-3xl border border-[#0f291e]/10 bg-[#0f291e] shadow-xl shadow-[#0f291e]/10"
+            >
+              <Image
+                src={image}
+                alt={title}
+                fill
+                sizes="(min-width: 1024px) 42vw, 90vw"
+                className="object-cover transition-transform duration-700 ease-out hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-[#0f291e]/60 via-transparent to-transparent" />
+            </motion.div>
 
-                        {/* Main photo */}
-                        <motion.div
-                            variants={photoReveal}
-                            className="absolute h-full w-full overflow-hidden shadow-xl shadow-[#0b1635]/10"
-                        >
-                            <motion.div variants={photoZoom} className="absolute inset-0">
-                                <Image
-                                    src={image}
-                                    alt="Volunteers packing food boxes for families"
-                                    fill
-                                    sizes="(min-width: 1024px) 25vw, 80vw"
-                                    className="object-cover transition-transform duration-700 ease-out hover:scale-105"
-                                />
-                            </motion.div>
-                        </motion.div>
-                    </motion.div>
+            {/* Floating Experience Badge */}
+            <motion.div
+              variants={fadeUp}
+              className="absolute -bottom-6 -left-3 z-10 flex items-center gap-4 rounded-2xl border border-[#0f291e]/10 bg-white p-5 shadow-xl shadow-[#0f291e]/10 sm:left-6"
+            >
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#d96b43] font-display text-2xl font-bold text-white">
+                {experienceYears}
+              </div>
+              <div>
+                <p className="text-sm font-bold text-[#0f291e]">{experienceLabel}</p>
+                <p className="text-xs text-[#0f291e]/65">100% Community Partnered</p>
+              </div>
+            </motion.div>
+          </motion.div>
 
-                    {/* Content: sits on a pastel watercolor card */}
-                    <motion.div
-                        variants={stagger(0.12, 0.15)}
-                        initial="hidden"
-                        whileInView="show"
-                        viewport={viewport}
-                        className="rounded-2xl  text-[#0b1635] md:p-12"
+          {/* Right: Editorial Content */}
+          <motion.div
+            variants={stagger(0.1, 0.1)}
+            initial="hidden"
+            whileInView="show"
+            viewport={viewport}
+            className="lg:col-span-7"
+          >
+            <motion.div variants={fadeUp}>
+              <SectionBadge>{badge}</SectionBadge>
+            </motion.div>
 
-                    >
-                        <motion.div variants={fadeUp}>
-                            <SectionBadge>{badge}</SectionBadge>
-                        </motion.div>
+            <motion.div variants={fadeUp}>
+              <SectionTitle id="about-heading">{title}</SectionTitle>
+            </motion.div>
 
-                        {/* Heading reveals word by word */}
-                        <motion.div variants={fadeUp}>
-                            <SectionTitle>
-                                {title}
-                            </SectionTitle>
-                        </motion.div>
+            <motion.div variants={fadeUp} className="space-y-3">
+              {paragraphs.map((para, i) => (
+                <SectionDescription key={i}>{para}</SectionDescription>
+              ))}
+            </motion.div>
 
-                        <motion.div variants={fadeUp}>
-                            <SectionDescription>
-                                {description}
-                            </SectionDescription>
-                        </motion.div>
+            {highlights.length > 0 && (
+              <motion.ul variants={fadeUp} className="mt-7 space-y-3">
+                {highlights.map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-start gap-3 text-sm font-medium text-[#0f291e]/85 sm:text-base"
+                  >
+                    <FiCheckCircle
+                      className="mt-0.5 shrink-0 text-[#2d6a4f]"
+                      size={18}
+                    />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </motion.ul>
+            )}
 
-                        {/* Button + founder */}
-                        <motion.div
-                            variants={fadeUp}
-                            className="mt-8 flex flex-wrap items-center justify-between gap-6 border-t border-[#0b1635]/15 pt-8"
-                        >
-                            <motion.div
-                                whileHover={reduce ? undefined : { scale: 1.05 }}
-                                whileTap={reduce ? undefined : { scale: 0.96 }}
-                                className="inline-block"
-                            >
+            {/* Action + Founder Signature Row */}
+            <motion.div
+              variants={fadeUp}
+              className="mt-9 flex flex-wrap items-center gap-8 border-t border-[#0f291e]/12 pt-8"
+            >
+              {buttonText && (
+                <PrimaryButton href="/about">
+                  <span>{buttonText}</span>
+                  <FiArrowUpRight className="text-lg transition-transform duration-300 group-hover:rotate-45" />
+                </PrimaryButton>
+              )}
 
-                                {
-                                    buttonText &&
-                                    <PrimaryButton href="/about">
-                                        <div className="flex gap-2 items-center">
-                                            {buttonText}
-
-                                            <span>
-                                                <FiArrowUpRight className="text-xl group-hover:rotate-45 duration-300" />
-                                            </span>
-                                        </div>
-                                    </PrimaryButton>
-                                }
-                            </motion.div>
-
-                           
-                        </motion.div>
-                    </motion.div>
+              {name && (
+                <div className="flex items-center gap-3.5">
+                  {profileImage && (
+                    <div className="relative h-12 w-12 overflow-hidden rounded-full ring-2 ring-[#d96b43]/40 ring-offset-2">
+                      <Image
+                        src={profileImage}
+                        alt={name}
+                        fill
+                        sizes="48px"
+                        className="object-cover"
+                      />
+                    </div>
+                  )}
+                  <div>
+                    <p className="text-sm font-bold text-[#0f291e]">{name}</p>
+                    <p className="text-xs font-medium text-[#0f291e]/65">{role}</p>
+                  </div>
                 </div>
-            </MainContainer>
-        </section>
-    )
+              )}
+            </motion.div>
+          </motion.div>
+        </div>
+      </MainContainer>
+    </section>
+  );
 }
 
-export default AboutSection
+export default AboutSection;

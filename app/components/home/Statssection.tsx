@@ -1,120 +1,82 @@
-"use client"
+"use client";
 
-import React from "react"
-import { motion, useReducedMotion, type Variants } from "framer-motion"
-import CountUp from "react-countup"
-import MainContainer from "../ui/MainContainer"
-import homeData from "@/app/data/home.json"
+import React from "react";
+import { motion, useReducedMotion, type Variants } from "framer-motion";
+import CountUp from "react-countup";
+import MainContainer from "../ui/MainContainer";
+import { SectionBadge, SectionDescription, SectionTitle } from "../SectionHeader";
+import homeData from "@/app/data/home.json";
+import type { HomePageData } from "@/app/types/home";
 
-const stats = homeData.growthStats
-
-// Smooth "expo-out" curve shared by all entrance animations
-const EASE = [0.22, 1, 0.36, 1] as const
-
-/** Same soft watercolor pattern as the cards in the other sections */
-const cardBackground = `radial-gradient(60% 55% at 15% 20%, #e9f2d9 0%, transparent 70%),
-   radial-gradient(55% 60% at 85% 75%, #bcd6dc 0%, transparent 70%),
-   radial-gradient(40% 40% at 70% 15%, #e9f2d9 0%, transparent 75%),
-   radial-gradient(40% 45% at 25% 95%, #cfe5da 0%, transparent 70%),
-   #dcebdd`
+const data = homeData as HomePageData;
+const statsSection = data.statsSection;
+const EASE = [0.22, 1, 0.36, 1] as const;
 
 function StatsSection() {
-  const reduce = useReducedMotion()
+  const reduce = useReducedMotion();
 
   const container: Variants = {
     hidden: {},
-    show: { transition: { staggerChildren: reduce ? 0 : 0.18 } },
-  }
+    show: { transition: { staggerChildren: reduce ? 0 : 0.14 } },
+  };
 
-  // Heading and column content float up and un-blur
   const floatIn: Variants = {
-    hidden: {
-      opacity: reduce ? 1 : 0,
-      y: reduce ? 0 : 40,
-      filter: reduce ? "blur(0px)" : "blur(8px)",
-    },
-    show: {
-      opacity: 1,
-      y: 0,
-      filter: "blur(0px)",
-      transition: { duration: 0.9, ease: EASE },
-    },
-  }
-
-  // Dotted dividers draw themselves from top to bottom
-  const drawLine: Variants = {
-    hidden: { scaleY: reduce ? 1 : 0 },
-    show: { scaleY: 1, transition: { duration: 1.2, ease: EASE } },
-  }
+    hidden: { opacity: reduce ? 1 : 0, y: reduce ? 0 : 28 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: EASE } },
+  };
 
   return (
-    <section className="overflow-hidden" aria-labelledby="growth-heading">
+    <section aria-labelledby="growth-heading">
       <MainContainer>
         <motion.div
           variants={container}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.25 }}
-          className="mx-6 rounded-2xl px-4 py-14 md:mx-0 md:px-10 md:py-20"
-          // style={{ background: cardBackground }}
+          className="text-center"
         >
-          <motion.h2
-            variants={floatIn}
-            id="growth-heading"
-            className="text-center text-4xl  font-medium tracking-tight text-white md:text-6xl"
-          >
-            Our Growth, Their Future
-          </motion.h2>
+          <div className="mx-auto flex max-w-3xl flex-col items-center">
+            <SectionBadge light>{statsSection.badge}</SectionBadge>
+            <SectionTitle id="growth-heading" light>
+              {statsSection.title}
+            </SectionTitle>
+            <SectionDescription light>
+              {statsSection.description}
+            </SectionDescription>
+          </div>
 
-          <dl className="mt-14 grid md:mt-20 md:grid-cols-3">
-            {stats.map((st, i) => (
-              <div
+          <dl className="mt-12 grid gap-6 md:grid-cols-3">
+            {statsSection.stats.map((st) => (
+              <motion.div
                 key={st.label}
-                className="relative flex flex-col items-center justify-center px-6 py-12 text-center md:min-h-72"
+                variants={floatIn}
+                className="flex flex-col items-center justify-center rounded-3xl border border-white/15 bg-white/8 p-8 text-center backdrop-blur-md transition-transform duration-300 hover:-translate-y-1"
               >
-                {/* Dotted divider: on the left edge from the second column on (top edge on mobile) */}
-                {i > 0 && (
-                  <>
-                    <motion.span
-                      variants={drawLine}
-                      aria-hidden="true"
-                      style={{ originY: 0 }}
-                      className="absolute left-0 top-0 hidden h-full border-l-2 border-dotted border-[#FFFF]/40 md:block"
-                    />
-                    <motion.span
-                      variants={drawLine}
-                      aria-hidden="true"
-                      className="absolute left-1/4 top-0 w-1/2 border-t-2 border-dotted border-[#FFFF] md:hidden"
-                    />
-                  </>
-                )}
-
-                <motion.dd
-                  variants={floatIn}
-                  className="text-6xl font- tracking-tight text-[#fdfdfd] tabular-nums md:text-7xl lg:text-8xl"
-                >
+                <dd className="font-display text-5xl font-bold tracking-tight text-[#f4a261] tabular-nums sm:text-6xl lg:text-7xl">
                   <CountUp
                     end={st.end}
                     suffix={st.suffix}
-                    duration={reduce ? 0 : 2.5}
+                    duration={reduce ? 0 : 2.4}
                     separator=","
                     enableScrollSpy
                     scrollSpyOnce
                   />
-                </motion.dd>
-                <motion.dt
-                  variants={floatIn}
-                  className="mt-4 max-w-[10rem] text-lg font-semibold leading-snug text-[#fdfdfd]"
-                >
+                </dd>
+                <dt className="mt-4 text-lg font-bold tracking-tight text-white">
                   {st.label}
-                </motion.dt>
-              </div>
+                </dt>
+                {st.description && (
+                  <p className="mt-2 max-w-xs text-sm leading-relaxed text-white/75">
+                    {st.description}
+                  </p>
+                )}
+              </motion.div>
             ))}
           </dl>
         </motion.div>
       </MainContainer>
     </section>
-  )
+  );
 }
 
-export default StatsSection
+export default StatsSection;

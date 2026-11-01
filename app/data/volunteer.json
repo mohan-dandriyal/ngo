@@ -1,0 +1,216 @@
+{
+  "hero": {
+    "image": "/volunteer-team.jpg",
+    "badge": "Our People",
+    "title": "Our Team & Volunteers",
+    "description": "Meet the field leaders, educators, doctors, and volunteers driving grassroots change.",
+    "breadcrumbs": [
+      { "label": "Home", "href": "/" },
+      { "label": "Our Volunteers" }
+    ]
+  },
+  "teamSection": {
+    "badge": "Leadership & Field Crew",
+    "title": "Meet our core team & volunteers",
+    "description": "Working side-by-side with village communities across education, nutrition, and healthcare.",
+    "members": [
+      {
+        "id": 1,
+        "name": "Meera Krishnan",
+        "role": "Founder & Executive Director",
+        "department": "Leadership",
+        "location": "Beverly Hills & Field Hubs",
+        "experience": "8+ Years Service",
+        "image": "/team-1.jpg",
+        "imageAlt": "Meera Krishnan, Founder & Executive Director",
+        "bio": "Leads 54 community-run education and nutrition hubs across 42 partner villages.",
+        "quote": "Lasting change begins when we listen to village leaders first."
+      },
+      {
+        "id": 2,
+        "name": "Dr. Sana Qureshi",
+        "role": "Chief Medical Officer",
+        "department": "Healthcare",
+        "location": "Mobile Clinic Route",
+        "experience": "12+ Years Pediatrics",
+        "image": "/team-2.jpg",
+        "imageAlt": "Dr. Sana Qureshi, Chief Medical Officer",
+        "bio": "Heads our mobile clinics and trains village women as frontline health guides.",
+        "quote": "Trusted care at a family's doorstep bridges the widest gap in rural health."
+      },
+      {
+        "id": 3,
+        "name": "Savita Devi",
+        "role": "Head Coordinator, Kitchens",
+        "department": "Nutrition",
+        "location": "Community Kitchen Hubs",
+        "experience": "90,000+ Meals Yearly",
+        "image": "/team-3.jpg",
+        "imageAlt": "Savita Devi, Head Coordinator of Community Kitchens",
+        "bio": "Coordinates 18 local mothers preparing fresh midday meals for 300+ families daily.",
+        "quote": "Every plate carries the warmth and pride of our shared neighborhood table."
+      },
+      {
+        "id": 4,
+        "name": "Aarav Mehta",
+        "role": "STEM & Learning Director",
+        "department": "Education",
+        "location": "Village Learning Hubs",
+        "experience": "24 Learning Hubs",
+        "image": "/team-4.jpg",
+        "imageAlt": "Aarav Mehta, STEM & Learning Director",
+        "bio": "Designs hands-on science kits, solar classrooms, and rural teaching fellowships.",
+        "quote": "Right learning tools light up a child's confidence for life."
+      },
+      {
+        "id": 5,
+        "name": "Anil Sharma",
+        "role": "Lead Field Volunteer",
+        "department": "Community",
+        "location": "Regional Outreach",
+        "experience": "140+ Weekends",
+        "image": "/team-5.jpg",
+        "imageAlt": "Anil Sharma, Lead Field Volunteer",
+        "bio": "Weekend architect volunteer building open-air libraries and leading village drives.",
+        "quote": "Showing up week after week turns small ideas into thriving hubs."
+      },
+      {
+        "id": 6,
+        "name": "Neha Kapoor",
+        "role": "Youth Fellowships Lead",
+        "department": "Literacy",
+        "location": "18 Village Libraries",
+        "experience": "450+ Readers",
+        "image": "/team-6.jpg",
+        "imageAlt": "Neha Kapoor, Youth Fellowships Lead",
+        "bio": "Trains rural college fellows to lead daily reading and wellness circles.",
+        "quote": "Local youth mentors are the strongest role models a village can have."
+      }
+    ]
+  },
+  "momentsSection": {
+    "badge": "Team In Action",
+    "title": "On the ground with our volunteers",
+    "description": "Weekly classroom sessions, morning kitchens, health camps, and green drives.",
+    "moments": [
+      {
+        "id": 1,
+        "title": "Village Sapling & Book Drive",
+        "category": "Field Drive",
+        "location": "Marwar Region",
+        "image": "/volunteer-team.jpg",
+        "imageAlt": "Volunteers planting trees and sharing books",
+        "caption": "Planting 5,000 native trees with village youth clubs."
+      },
+      {
+        "id": 2,
+        "title": "Annapurna Kitchen Service",
+        "category": "Nutrition Team",
+        "location": "Bundelkhand",
+        "image": "/community-kitchen.jpg",
+        "imageAlt": "Volunteers serving hot meals",
+        "caption": "Serving fresh millet and lentil meals to 1,100+ residents daily."
+      },
+      {
+        "id": 3,
+        "title": "Mobile Pediatric Camp",
+        "category": "Medical Team",
+        "location": "Barmer District",
+        "image": "/healthcare-clinic.jpg",
+        "imageAlt": "Medical volunteer examining a smiling child",
+        "caption": "Bi-weekly check-ups and vaccines across 12 remote hamlets."
+      },
+      {
+        "id": 4,
+        "title": "Village Literacy & Books",
+        "category": "Education Fellows",
+        "location": "Kishangarh Hub",
+        "image": "/village-classroom.jpg",
+        "imageAlt": "Volunteers sharing books with children",
+        "caption": "Afternoon reading sessions and science kits for rural students."
+      },
+      {
+        "id": 5,
+        "title": "Courtyard Meal Preparation",
+        "category": "Kitchen Collective",
+        "location": "Jhansi Cluster",
+        "image": "/nutrition-program.jpg",
+        "imageAlt": "Community meal service",
+        "caption": "Sourcing local harvests from women smallholders for daily meals."
+      },
+      {
+        "id": 6,
+        "title": "Doorstep Wellness Check-ups",
+        "category": "Health Guides",
+        "location": "Western Hamlets",
+        "image": "/medical-outreach.jpg",
+        "imageAlt": "Rural medical outreach",
+        "caption": "Training village women in maternal nutrition and first aid."
+      }
+    ]
+  },
+  "benefitsSection": {
+    "badge": "Our Culture",
+    "title": "How our team creates impact",
+    "description": "Three core commitments shared by every coordinator and volunteer.",
+    "benefits": [
+      {
+        "number": "01",
+        "title": "Community Partnership",
+        "description": "Working side-by-side with village teachers, mothers, and elders."
+      },
+      {
+        "number": "02",
+        "title": "Field Mentorship",
+        "description": "Hands-on training led by experienced educators and doctors."
+      },
+      {
+        "number": "03",
+        "title": "Lasting Stewardship",
+        "description": "Building self-reliant local leadership in every village we serve."
+      }
+    ]
+  },
+  "rolesSection": {
+    "badge": "Volunteer Tracks",
+    "title": "Where volunteers contribute",
+    "description": "Four core tracks across our partner districts.",
+    "roles": [
+      {
+        "id": "education",
+        "title": "Classroom & STEM Mentors",
+        "commitment": "4 hrs / week",
+        "location": "Learning Centers",
+        "description": "Guide students through science kits and bilingual reading circles."
+      },
+      {
+        "id": "nutrition",
+        "title": "Community Kitchen Crew",
+        "commitment": "Weekends",
+        "location": "Kitchen Hubs",
+        "description": "Support women-led kitchens with meal service and ration packing."
+      },
+      {
+        "id": "health",
+        "title": "Mobile Health Fellows",
+        "commitment": "2 days / month",
+        "location": "Clinic Routes",
+        "description": "Doctors and nurses assisting check-ups and wellness workshops."
+      },
+      {
+        "id": "skills",
+        "title": "Storytelling & Design",
+        "commitment": "Flexible",
+        "location": "Remote & Field",
+        "description": "Document field impact and translate children's storybooks."
+      }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Join Our Team",
+    "title": "Ready to lend your time and skills?",
+    "description": "Connect with our coordination desk to join the next field orientation.",
+    "buttonLabel": "Connect With Us",
+    "buttonHref": "/contact"
+  }
+}

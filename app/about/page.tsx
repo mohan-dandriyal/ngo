@@ -1,12 +1,12 @@
-import React from 'react'
-import AboutPageSections from '../components/about/AboutPageSections'
+import type { Metadata } from "next";
+import AboutPageSections from "../components/about/AboutPageSections";
 
-function AboutPage() {
-  return (
-    <div className='bg-white'>
-        <AboutPageSections />
-    </div>
-  )
+export const metadata: Metadata = {
+  title: "About Us",
+  description:
+    "Learn how KindredHope Foundation partners with local communities to build lasting education, nutrition, and healthcare programs.",
+};
+
+export default function AboutPage() {
+  return <AboutPageSections />;
 }
-
-export default AboutPage

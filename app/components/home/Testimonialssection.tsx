@@ -1,168 +1,143 @@
-"use client"
+"use client";
 
-import React from "react"
-import Image from "next/image"
-import { AnimatePresence, motion, useReducedMotion, type Variants } from "framer-motion"
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi"
-import { FaQuoteLeft, FaStar } from "react-icons/fa"
-import MainContainer from "../ui/MainContainer"
-import homeData from "@/app/data/home.json"
+import React from "react";
+import Image from "next/image";
+import { AnimatePresence, motion, useReducedMotion, type Variants } from "framer-motion";
+import { FiChevronLeft, FiChevronRight, FiMapPin } from "react-icons/fi";
+import { FaQuoteLeft, FaStar } from "react-icons/fa";
+import MainContainer from "../ui/MainContainer";
+import homeData from "@/app/data/home.json";
+import type { HomePageData } from "@/app/types/home";
 
-const testimonials = homeData.testimonials
+const data = homeData as HomePageData;
+const testimonials = data.testimonials;
+const sectionInfo = data.testimonialsSection;
 
-const AUTOPLAY_MS = 6000
-
-// Smooth "expo-out" curve shared by all entrance animations
-const EASE = [0.22, 1, 0.36, 1] as const
-
-/** Soft watercolor wash built from layered radial gradients (same as the other sections) */
-const cardWash =
-  "radial-gradient(60% 55% at 15% 15%, #e9f2d9 0%, transparent 70%), radial-gradient(55% 60% at 90% 85%, #cfe5da 0%, transparent 70%), radial-gradient(40% 40% at 70% 15%, #e9f2d9 0%, transparent 75%), #dcebdd"
+const AUTOPLAY_MS = 6500;
+const EASE = [0.22, 1, 0.36, 1] as const;
 
 function TestimonialsSection() {
-  const reduce = useReducedMotion()
-  const [[index, direction], setPage] = React.useState<[number, number]>([0, 1])
-  const [paused, setPaused] = React.useState(false)
+  const reduce = useReducedMotion();
+  const [[index, direction], setPage] = React.useState<[number, number]>([0, 1]);
+  const [paused, setPaused] = React.useState(false);
 
   const paginate = React.useCallback((dir: number) => {
-    setPage(([i]) => [(i + dir + testimonials.length) % testimonials.length, dir])
-  }, [])
+    setPage(([i]) => [(i + dir + testimonials.length) % testimonials.length, dir]);
+  }, []);
 
-  const goTo = (i: number) => setPage(([cur]) => [i, i > cur ? 1 : -1])
+  const goTo = (i: number) => setPage(([cur]) => [i, i > cur ? 1 : -1]);
 
-  // Auto-advance, paused on hover/focus and skipped for reduced motion
   React.useEffect(() => {
-    if (paused || reduce) return
-    const id = setInterval(() => paginate(1), AUTOPLAY_MS)
-    return () => clearInterval(id)
-  }, [paused, reduce, paginate, index])
+    if (paused || reduce) return;
+    const id = setInterval(() => paginate(1), AUTOPLAY_MS);
+    return () => clearInterval(id);
+  }, [paused, reduce, paginate, index]);
 
-  // Left column: parts reveal one after another
   const column: Variants = {
     hidden: {},
-    show: { transition: { staggerChildren: reduce ? 0 : 0.12 } },
-  }
+    show: { transition: { staggerChildren: reduce ? 0 : 0.1 } },
+  };
   const rise: Variants = {
-    hidden: { opacity: reduce ? 1 : 0, y: reduce ? 0 : 36 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: EASE } },
-  }
+    hidden: { opacity: reduce ? 1 : 0, y: reduce ? 0 : 28 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.75, ease: EASE } },
+  };
 
-  // Slide change: card content glides in, then its parts follow
   const slide: Variants = {
-    enter: (dir: number) => ({ opacity: reduce ? 1 : 0, x: reduce ? 0 : dir * 80 }),
+    enter: (dir: number) => ({ opacity: reduce ? 1 : 0, x: reduce ? 0 : dir * 50 }),
     center: {
       opacity: 1,
       x: 0,
-      transition: {
-        duration: 0.7,
-        ease: EASE,
-        when: "beforeChildren",
-        staggerChildren: reduce ? 0 : 0.09,
-      },
+      transition: { duration: 0.6, ease: EASE },
     },
     exit: (dir: number) => ({
-      opacity: reduce ? 1 : 0,
-      x: reduce ? 0 : dir * -80,
-      transition: { duration: 0.35, ease: "easeIn" },
+      opacity: 0,
+      x: reduce ? 0 : dir * -50,
+      transition: { duration: 0.3, ease: "easeIn" },
     }),
-  }
-  const part: Variants = {
-    enter: { opacity: reduce ? 1 : 0, y: reduce ? 0 : 20 },
-    center: { opacity: 1, y: 0, transition: { duration: 0.6, ease: EASE } },
-    exit: { opacity: 1 },
-  }
+  };
 
-  const t = testimonials[index]
+  const t = testimonials[index];
 
   return (
     <section
-      className="relative md:mt-28 mt-20 isolate overflow-hidden py-20 text-white md:py-28"
+      className="relative isolate overflow-hidden bg-[#0f291e] py-18 text-white"
       aria-labelledby="testimonials-heading"
     >
-      {/* Background image: fills the whole section behind the content */}
-      <motion.div
-        aria-hidden="true"
-        className="absolute inset-0 -z-20"
-        initial={{ scale: reduce ? 1 : 1.12 }}
-        whileInView={{ scale: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1.8, ease: EASE }}
-      >
+      {/* Background image with rich emerald overlay */}
+      <div aria-hidden="true" className="absolute inset-0 -z-20">
         <Image
-          src="/bg-image.png"
+          src="/volunteer-team.jpg"
           alt=""
-          aria-hidden="true"
           fill
-          priority
           sizes="100vw"
-          className="object-cover object-center"
+          className="object-cover object-center opacity-25"
         />
-      </motion.div>
-      {/* Linear gradient over the image: darker at the top, fading to clear at the bottom.
-          Tweak the from / via / to colors, or use bg-linear-to-r for a left-to-right fade. */}
+      </div>
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-linear-to-b from-black/80 via-black/40 to-transparent"
+        className="absolute inset-0 -z-10 bg-linear-to-r from-[#0f291e] via-[#0f291e]/92 to-[#1b4332]/85"
       />
 
       <MainContainer>
-        <div className="relative grid items-center gap-14 px-6 md:px-0 lg:grid-cols-5 lg:gap-16">
-          {/* Left: heading, rating, controls */}
+        <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
+          {/* Left: Heading, Rating & Controls */}
           <motion.div
             variants={column}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, amount: 0.3 }}
-            className="lg:col-span-2"
+            viewport={{ once: true, amount: 0.25 }}
+            className="lg:col-span-5"
           >
             <motion.span
               variants={rise}
-              className="inline-flex items-center rounded-full bg-white/15 px-4 py-1.5 text-sm font-medium text-white backdrop-blur-sm"
+              className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-[#f4a261] backdrop-blur-sm"
             >
-              Testimonials
+              <span className="h-2 w-2 rounded-full bg-[#d96b43]" />
+              {sectionInfo.badge}
             </motion.span>
 
             <motion.h2
               variants={rise}
               id="testimonials-heading"
-              className="mt-5 text-4xl font-medium italic leading-[1.05] tracking-tight md:text-5xl lg:text-6xl"
+              className="font-display mt-5 text-3xl font-semibold leading-[1.08] tracking-tight sm:text-4xl lg:text-5xl"
             >
-              Kind words from people who help us help others
+              {sectionInfo.title}
             </motion.h2>
 
+            <motion.p variants={rise} className="mt-4 text-base text-white/75">
+              {sectionInfo.description}
+            </motion.p>
+
             <motion.div variants={rise} className="mt-6 flex items-center gap-3">
-              <div className="flex text-amber-300" aria-hidden="true">
+              <div className="flex gap-1 text-[#f4a261]" aria-hidden="true">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <FaStar key={i} />
+                  <FaStar key={i} size={16} />
                 ))}
               </div>
-              <p className="text-white/80">
-                <strong className="text-white text-lg">4.9</strong> from 2,300+ supporters
+              <p className="text-sm text-white/85">
+                <strong className="font-bold text-white">{sectionInfo.rating}</strong>{" "}
+                from {sectionInfo.supportersCount}
               </p>
             </motion.div>
 
-            <motion.div variants={rise} className="mt-10 flex items-center gap-5">
-              <div className="flex gap-3">
-                <motion.button
+            <motion.div variants={rise} className="mt-8 flex items-center gap-5">
+              <div className="flex gap-2.5">
+                <button
                   type="button"
                   aria-label="Previous testimonial"
                   onClick={() => paginate(-1)}
-                  whileHover={reduce ? undefined : { scale: 1.08 }}
-                  whileTap={reduce ? undefined : { scale: 0.92 }}
-                  className="flex h-12 w-12 items-center justify-center rounded-full border border-white/50 text-white transition-colors duration-300 hover:bg-white hover:text-[#0b1635] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                  className="flex h-11 w-11 cursor-pointer items-center justify-center rounded-full border border-white/30 bg-white/5 text-white transition hover:border-[#f4a261] hover:bg-[#f4a261] hover:text-[#0f291e]"
                 >
-                  <FiChevronLeft size={20} />
-                </motion.button>
-                <motion.button
+                  <FiChevronLeft size={18} />
+                </button>
+                <button
                   type="button"
                   aria-label="Next testimonial"
                   onClick={() => paginate(1)}
-                  whileHover={reduce ? undefined : { scale: 1.08 }}
-                  whileTap={reduce ? undefined : { scale: 0.92 }}
-                  className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#0b1635] transition-colors duration-300 hover:bg-[#cfe4e0] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                  className="flex h-11 w-11 cursor-pointer items-center justify-center rounded-full bg-[#d96b43] text-white transition hover:bg-[#f4a261] hover:text-[#0f291e]"
                 >
-                  <FiChevronRight size={20} />
-                </motion.button>
+                  <FiChevronRight size={18} />
+                </button>
               </div>
 
               <div className="flex gap-2">
@@ -173,8 +148,10 @@ function TestimonialsSection() {
                     aria-label={`Show testimonial ${i + 1}`}
                     aria-current={i === index}
                     onClick={() => goTo(i)}
-                    className={`h-1.5 rounded-full transition-all duration-500 ${
-                      i === index ? "w-8 bg-white" : "w-4 bg-white/40 hover:bg-white/70"
+                    className={`h-1.5 cursor-pointer rounded-full transition-all duration-500 ${
+                      i === index
+                        ? "w-8 bg-[#f4a261]"
+                        : "w-4 bg-white/35 hover:bg-white/65"
                     }`}
                   />
                 ))}
@@ -182,32 +159,27 @@ function TestimonialsSection() {
             </motion.div>
           </motion.div>
 
-          {/* Right: quote card */}
-          <motion.div
-            initial={{ opacity: reduce ? 1 : 0, y: reduce ? 0 : 60, scale: reduce ? 1 : 0.96 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 1, ease: EASE, delay: reduce ? 0 : 0.25 }}
+          {/* Right: Quote Card */}
+          <div
             onMouseEnter={() => setPaused(true)}
             onMouseLeave={() => setPaused(false)}
             onFocus={() => setPaused(true)}
             onBlur={() => setPaused(false)}
             role="region"
             aria-roledescription="carousel"
-            aria-label="Testimonials"
-            className="relative lg:col-span-3"
+            aria-label="Supporter Testimonials"
+            className="relative lg:col-span-7"
           >
-            {/* Offset layer behind for depth */}
             <div
               aria-hidden="true"
-              className="absolute inset-0 translate-x-3 translate-y-3 rounded-2xl bg-white/25 backdrop-blur-sm md:translate-x-5 md:translate-y-5"
+              className="absolute inset-0 translate-x-3 translate-y-3 rounded-3xl bg-[#d96b43]/25 backdrop-blur-sm"
             />
 
-            <div
-              className="relative overflow-hidden rounded-2xl p-8 text-[#0b1635] shadow-2xl md:p-12"
-              style={{ background: cardWash }}
-            >
-              <FaQuoteLeft aria-hidden="true" className="absolute right-8 top-8 h-16 w-16 text-[#0b1635]/10" />
+            <div className="relative overflow-hidden rounded-3xl border border-white/15 bg-[#faf8f5] p-8 text-[#0f291e] shadow-2xl sm:p-10 md:p-12">
+              <FaQuoteLeft
+                aria-hidden="true"
+                className=" absolute right-8 top-8 h-16 w-16 text-[#0f291e]/8"
+              />
 
               <AnimatePresence mode="wait" custom={direction} initial={false}>
                 <motion.figure
@@ -217,46 +189,52 @@ function TestimonialsSection() {
                   initial="enter"
                   animate="center"
                   exit="exit"
-                  className="relative min-h-[18rem]"
+                  className="relative flex min-h-64 flex-col justify-between"
                 >
-                  <motion.span
-                    variants={part}
-                    className="flex h-12 w-12 items-center justify-center rounded-full bg-[#0b1635] text-white"
-                  >
-                    <FaQuoteLeft aria-hidden="true" size={18} />
-                  </motion.span>
+                  <div>
+                    <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#d96b43] text-white shadow-md shadow-[#d96b43]/25">
+                      <FaQuoteLeft aria-hidden="true" size={18} />
+                    </span>
 
-                  <motion.blockquote
-                    variants={part}
-                    className="mt-6 text-xl font-medium leading-relaxed md:text-2xl"
-                  >
-                    {t.quote}
-                  </motion.blockquote>
+                    <blockquote className="font-display mt-6 text-xl font-medium leading-relaxed text-[#0f291e] sm:text-2xl">
+                      “{t.quote}”
+                    </blockquote>
+                  </div>
 
-                  <motion.figcaption
-                    variants={part}
-                    className="mt-8 flex items-center gap-4 border-t border-[#0b1635]/15 pt-6"
-                  >
-                    <Image
-                      src={t.avatar}
-                      alt={t.name}
-                      width={56}
-                      height={56}
-                      className="h-14 w-14 rounded-full object-cover ring-2 ring-[#0b1635] ring-offset-2 ring-offset-[#dcebdd]"
-                    />
-                    <div>
-                      <p className="font-bold">{t.name}</p>
-                      <p className="text-sm text-[#0b1635]/70">{t.role}</p>
+                  <figcaption className="mt-8 flex flex-wrap items-center justify-between gap-4 border-t border-[#0f291e]/12 pt-6">
+                    <div className="flex items-center gap-4">
+                      <div className="relative h-14 w-14 overflow-hidden rounded-full ring-2 ring-[#d96b43] ring-offset-2 ring-offset-[#faf8f5]">
+                        <Image
+                          src={t.avatar}
+                          alt={t.name}
+                          fill
+                          sizes="56px"
+                          className="object-cover"
+                        />
+                      </div>
+                      <div>
+                        <p className="text-base font-bold text-[#0f291e]">{t.name}</p>
+                        <p className="text-xs font-medium text-[#0f291e]/70">
+                          {t.role}
+                        </p>
+                      </div>
                     </div>
-                  </motion.figcaption>
+
+                    {t.location && (
+                      <span className="inline-flex items-center gap-1.5 rounded-full bg-[#e6efea] px-3.5 py-1.5 text-xs font-semibold text-[#1b4332]">
+                        <FiMapPin size={12} />
+                        {t.location}
+                      </span>
+                    )}
+                  </figcaption>
                 </motion.figure>
               </AnimatePresence>
             </div>
-          </motion.div>
+          </div>
         </div>
       </MainContainer>
     </section>
-  )
+  );
 }
 
-export default TestimonialsSection
+export default TestimonialsSection;

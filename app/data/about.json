@@ -1,47 +1,92 @@
 [
-    {
-        "aboutBannerTitle": "About Us",
-        "aboutBannerImage": "/home-hero.jpg"
-    },
-    {
-        "image": "/img-2.jpg",
-        "badge": "About us",
-        "title": "Growing together to create lasting impact",
-        "description": "From grassroots initiatives to large scale community programs, we continue to grow with one purpose: to serve those in need with integrity and compassion.",
-        "buttonText": "More about us",
-        "profileImage": "/img-1.jpg",
-        "name": "Kathryn Murphy",
-        "role": "CEO & Founder"
-    },
-
-    {
-        "badge": "Where it began",
-        "title": "Good things grow when we grow them together.",
+  {
+    "aboutBannerTitle": "About KindredHope",
+    "aboutBannerSubtitle": "Rooted in Empathy, Driven by Community",
+    "aboutBannerImage": "/volunteer-team.jpg",
+    "breadcrumbs": [
+      { "label": "Home", "href": "/" },
+      { "label": "About Us" }
+    ]
+  },
+  {
+    "image": "/village-classroom.jpg",
+    "badge": "Who We Are",
+    "title": "Growing together for lasting village impact",
+    "description": [
+      "Since 2018, KindredHope Foundation has partnered with rural families to build 54 community-run education, nutrition, and healthcare hubs."
+    ],
+    "highlights": [
+      "100% locally partnered programs across 42 villages",
+      "94% of funds go directly to education, food & health",
+      "Open-book quarterly impact reports"
+    ],
+    "buttonText": "Discover our story",
+    "profileImage": "/team-1.jpg",
+    "name": "Meera Krishnan",
+    "role": "Founder & Director",
+    "experienceYears": "8+",
+    "experienceLabel": "Years of Service"
+  },
+  {
+    "badge": "Where It Began",
+    "title": "Nurturing change from the ground up.",
+    "description": [
+      "What started as a weekend reading circle and a shared neighborhood kitchen is now a network of locally led village programs."
+    ],
+    "image_1": "/village-classroom.jpg",
+    "image_2": "/community-kitchen.jpg",
+    "image_left_alt": "Volunteers and children learning together",
+    "image_left_title": "Joyful learning hubs",
+    "image_left_description": "Well-equipped spaces where children read, experiment, and grow.",
+    "image_right_alt": "Volunteers serving nutritious warm meals",
+    "image_right_title": "Community ownership",
+    "image_right_description": "Every kitchen and clinic is co-managed with village families.",
+    "coreValues": [
+      {
+        "number": "01",
+        "title": "Dignity First",
+        "description": "Every family is respected as an equal partner and co-creator."
+      },
+      {
+        "number": "02",
+        "title": "Full Transparency",
+        "description": "Every contribution is tracked with open field reports."
+      },
+      {
+        "number": "03",
+        "title": "Local Leadership",
+        "description": "We train teachers and health workers from within each village."
+      }
+    ],
+    "missionVision": {
+      "image": "/community-kitchen.jpg",
+      "imageAlt": "Volunteers serving nutritious warm meals",
+      "visionImage": "/healthcare-clinic.jpg",
+      "visionImageAlt": "Doctor checking a smiling child at a rural health camp",
+      "mission": {
+        "badge": "Our Mission",
+        "title": "Everyday care that sparks generational change.",
         "description": [
-            "Kindred started with one simple belief: no one should have to face a hard season alone. Today, we work alongside local leaders to turn small acts of support into lasting change.",
-            "We listen first, show up consistently, and invest in the people who know their communities best."
+          "We make quality learning, daily meals, and primary healthcare accessible across underserved rural communities."
         ],
-        "image_1": "/bg-image.png",
-        "image_2": "/bg-img-2.png",
-        "image_left_alt": "Children learning together in a classroom",
-        "image_left_title": "Learning through opportunity",
-        "image_left_description": "Creating safe spaces where young people can learn, build confidence, and imagine what is possible.",
-        "image_right_alt": "Children reading and learning outdoors together",
-        "image_right_title": "Growing together",
-        "image_right_description": "Working alongside communities to turn shared care into lasting change.",
-        "missionVision": {
-            "image": "/bg-img-2.png",
-            "imageAlt": "Community members working together",
-            "mission": {
-                "badge": "Our mission",
-                "title": "Turning care into lasting change.",
-                "description": "We partner with communities to make support more accessible, practical, and rooted in dignity."
-            },
-            "vision": {
-                "badge": "Our vision",
-                "title": "Stronger communities, together.",
-                "description": "We imagine a future where every person has the support, opportunity, and confidence to shape a better life for themselves and their community."
-            }
-        }
+        "points": [
+          "Hands-on village STEM & literacy hubs",
+          "Women-led daily community kitchens",
+          "Mobile pediatric & maternal health clinics"
+        ]
+      },
+      "vision": {
+        "badge": "Our Vision",
+        "title": "Self-reliant villages where every child thrives.",
+        "description": [
+          "A future where every child has nutritious food, great mentors, and trusted healthcare close to home."
+        ],
+        "points": [
+          "100 self-sustaining village hubs by 2028",
+          "Zero classroom hunger across partner blocks",
+          "Youth fellowships in every community"
+        ]
+      }
     }
+  }
 ]

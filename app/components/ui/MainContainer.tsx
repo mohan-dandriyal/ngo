@@ -1,16 +1,18 @@
-import { ReactNode } from "react"
-
+import { ReactNode } from "react";
 
 interface MainContainerProps {
-    children: ReactNode
+  children: ReactNode;
+  className?: string;
 }
 
-const MainContainer = ({ children }: MainContainerProps) => {
-    return (
-        <div className="md:p-5 m:px-10 px-1 max-w-360 mx-auto relative">
-            {children}
-        </div>
-    )
-}
+const MainContainer = ({ children, className = "" }: MainContainerProps) => {
+  return (
+    <div
+      className={`relative mx-auto w-full max-w-360 px-6 sm:px-10 md:px-14 lg:px-20 ${className}`}
+    >
+      {children}
+    </div>
+  );
+};
 
-export default MainContainer
+export default MainContainer;

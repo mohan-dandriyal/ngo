@@ -1,0 +1,334 @@
+{
+  "hero": {
+    "image": "/volunteer-team.jpg",
+    "badge": "Grassroots Drives",
+    "title": "Our Causes",
+    "description": "Urgent, community-led causes across rural education, daily nutrition, and mobile healthcare.",
+    "breadcrumbs": [
+      { "label": "Home", "href": "/" },
+      { "label": "Our Causes" }
+    ]
+  },
+  "causeDetailsHero": {
+    "image": "/volunteer-team.jpg",
+    "badge": "Cause Overview",
+    "title": "Cause Details",
+    "description": "See how your support creates direct, lasting impact on the ground.",
+    "breadcrumbs": [
+      { "label": "Home", "href": "/" },
+      { "label": "Our Causes", "href": "/our-causes" }
+    ]
+  },
+  "homeSection": {
+    "badge": "Our Causes",
+    "title": "Causes you can champion today",
+    "description": "Every cause is co-designed with village leaders and backed by open field reporting.",
+    "buttonLabel": "Explore all causes",
+    "buttonHref": "/our-causes"
+  },
+  "intro": {
+    "badge": "Active Causes",
+    "title": "Stand beside communities building a brighter future.",
+    "description": "Choose a grassroots cause to explore its field report, community leadership, and real-world impact."
+  },
+  "cardLinkLabel": "View cause details",
+  "featuredLabel": "Priority Cause",
+  "causes": [
+    {
+      "slug": "stem-and-study-kits",
+      "title": "STEM & Study Kits for 500 Students",
+      "category": "Education",
+      "location": "Udaipur & Tonk",
+      "impact": "500 Rural Students",
+      "supporters": "348 Supporters",
+      "urgency": "Active Drive",
+      "image": "/village-classroom.jpg",
+      "imageAlt": "Students learning with books and STEM kits",
+      "description": "Solar study lamps, bilingual books, and hands-on science kits for first-generation learners.",
+      "tint": "#E6EFEA",
+      "featured": true,
+      "detail": {
+        "lead": "Equipping 500 children across six rural village schools with solar lamps, school bags, and interactive STEM kits so they start the academic term with confidence and curiosity.",
+        "overview": [
+          "Across remote hamlets in Udaipur and Tonk districts, nearly 60% of first-generation learners attend government middle schools without basic laboratory equipment or dependable evening lighting at home. When sunset arrives or seasonal power cuts hit, students lose precious hours of study time, and abstract science lessons remain difficult to grasp from chalkboard diagrams alone.",
+          "Through this community-led education drive, KindredHope partners directly with village parent-teacher councils and local headmasters to provide every enrolled child with a comprehensive learning kit. Each kit includes a weather-resistant school bag, bilingual workbooks, geometry tools, a rechargeable solar desk lamp, and modular STEM experiment blocks.",
+          "In addition to distributing supplies, our education fellows conduct weekly hands-on workshops with village teachers so students can build working solar circuits, test water filtration models, and develop problem-solving skills that stay with them for life."
+        ],
+        "quote": "When a child has the tools to read and experiment at home, the entire classroom moves forward together—and parents see a future worth investing in.",
+        "location": "Udaipur & Tonk Districts",
+        "timeline": "Academic Term 2026–27",
+        "beneficiaries": "500 students & 18 village teachers",
+        "impactMetrics": [
+          { "value": "98%", "label": "Daily School Attendance" },
+          { "value": "3.5 hrs", "label": "Evening Solar Study Time" },
+          { "value": "6 Schools", "label": "Equipped With STEM Labs" }
+        ],
+        "highlights": [
+          "Solar study lamps providing 3+ hours of dependable evening reading light",
+          "Curriculum-aligned hands-on science, optics, and robotics modules",
+          "Co-managed with village parent-teacher committees for long-term care",
+          "Weekly teacher mentorship sessions led by rural STEM fellows"
+        ],
+        "sections": [
+          {
+            "title": "Co-designed with village educators for real classroom needs",
+            "description": "Rather than shipping generic stationery, our education fellows spent three months sitting alongside rural teachers in Udaipur and Tonk to map out where students struggled most. Together, we designed modular STEM kits for grades 4 through 8 that turn textbook chapters on electricity, magnetism, and simple machines into hands-on discovery right at the student's desk.",
+            "image": "/village-classroom.jpg"
+          },
+          {
+            "title": "Removing financial barriers and keeping girls in school",
+            "description": "For daily-wage agricultural families, the start-of-term cost of uniforms, notebooks, and lighting often delays enrollment—especially for adolescent girls. By delivering complete study kits and solar lamps before the term begins, families experience immediate relief and classroom retention across all six partner schools has risen to 98%.",
+            "image": "/volunteer-team.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "daily-hot-meals",
+      "title": "Daily Hot Meals for 300 Families",
+      "category": "Food & Nutrition",
+      "location": "Bundelkhand",
+      "impact": "1,100+ Daily Meals",
+      "supporters": "236 Supporters",
+      "urgency": "Daily Service",
+      "image": "/community-kitchen.jpg",
+      "imageAlt": "Volunteers serving nutritious hot meals",
+      "description": "Freshly cooked millet, lentil, and vegetable meals served daily at our women-led kitchens.",
+      "tint": "#F9EBE5",
+      "detail": {
+        "lead": "Every morning at 5:30 AM, 18 local mothers prepare farm-fresh grains and seasonal greens to nourish children, daily-wage workers, and elderly neighbors with dignity.",
+        "overview": [
+          "In drought-prone blocks of Bundelkhand, irregular harvests and seasonal migration leave hundreds of families—especially young children and elderly residents—vulnerable to chronic nutritional gaps. Hungry children struggle to concentrate in morning classes, while elderly neighbors living alone often skip balanced meals altogether.",
+          "Our Annapurna Community Kitchens are owned and operated by a collective of 18 village women who transform locally grown millets, protein-rich lentils, and leafy greens into hot, wholesome midday meals six days a week. Every ingredient is purchased at fair rates from smallholder women farmers within a 10-kilometer radius.",
+          "By combining immediate nutritional support with fair local procurement and dignified courtyard dining, this cause strengthens both household health and the surrounding rural farm economy."
+        ],
+        "quote": "A warm meal is immediate nourishment, and sharing it together around one neighborhood table restores dignity, health, and community strength.",
+        "location": "Bundelkhand Kitchen Hubs",
+        "timeline": "365 Days a Year",
+        "beneficiaries": "300 families nourished daily",
+        "impactMetrics": [
+          { "value": "1,100+", "label": "Hot Meals Served Daily" },
+          { "value": "100%", "label": "Locally Farmed Ingredients" },
+          { "value": "41%", "label": "Drop in School Absenteeism" }
+        ],
+        "highlights": [
+          "100% of grains, pulses, and greens purchased from local women farmers",
+          "Freshly cooked midday meals served on zero-waste reusable steel thalis",
+          "41% reduction in school absenteeism across partner village clusters",
+          "Fair-wage livelihoods for 18 rural women kitchen coordinators"
+        ],
+        "sections": [
+          {
+            "title": "Harvested from nearby women-led smallholdings",
+            "description": "Every sack of bajra, jowar, tur dal, and fresh spinach entering our kitchen storeroom is sourced directly from women smallholders in neighboring hamlets. This farm-to-table model eliminates middlemen, guarantees chemical-free seasonal produce on every plate, and keeps donor funds circulating inside the local village economy.",
+            "image": "/community-kitchen.jpg"
+          },
+          {
+            "title": "A welcoming courtyard table without barriers",
+            "description": "At noon, school-going children, mothers with toddlers, and senior citizens gather in our shaded courtyard to share a freshly cooked meal together. Managed with warmth and zero stigma by the village women's collective, the kitchen has become the beating social heart of the community.",
+            "image": "/nutrition-program.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "mobile-pediatric-clinic",
+      "title": "Mobile Pediatric Clinic & Vaccines",
+      "category": "Healthcare",
+      "location": "12 Remote Blocks",
+      "impact": "4,200+ Patients Yearly",
+      "supporters": "219 Supporters",
+      "urgency": "Bi-Weekly Route",
+      "image": "/healthcare-clinic.jpg",
+      "imageAlt": "Doctor examining a smiling child at a mobile clinic",
+      "description": "Free pediatric check-ups, immunizations, and essential medicines delivered to remote villages.",
+      "tint": "#EFECE6",
+      "detail": {
+        "lead": "Our solar-equipped medical van travels beyond paved roads to bring a qualified doctor, pediatric nurse, and pharmacy right to remote village courtyards.",
+        "overview": [
+          "For families living in scattered desert hamlets across Barmer, the nearest primary health center is often 35 to 50 kilometers away with limited public transport. A childhood fever, respiratory infection, or routine vaccination frequently forces parents to forfeit two days of wages—causing many families to delay care until minor illnesses become severe.",
+          "The GramSwasthya Mobile Pediatric Clinic bridges that distance by operating on a fixed, dependable bi-weekly schedule across 12 underserved villages. Outfitted with solar-powered cold-chain vaccine storage, point-of-care diagnostics, and an essential generic pharmacy, our medical team delivers hospital-grade primary care right under the village banyan tree.",
+          "Alongside clinical consultations, our nurses train two women in every hamlet as community health guides so families have trusted first-aid and nutrition support every single day."
+        ],
+        "quote": "Closing the distance between a trusted doctor and a rural family transforms childhood health and gives parents peace of mind.",
+        "location": "12 Desert Hamlets, Barmer",
+        "timeline": "Fixed Bi-Weekly Schedule",
+        "beneficiaries": "1,800+ children & mothers",
+        "impactMetrics": [
+          { "value": "12 Hamlets", "label": "Covered Every Fortnight" },
+          { "value": "1,800+", "label": "Children Immunized & Tracked" },
+          { "value": "24 Women", "label": "Trained as Village Health Guides" }
+        ],
+        "highlights": [
+          "Solar cold-chain vaccine storage and rapid diagnostic testing on board",
+          "Free generic medicines and digital pediatric growth monitoring",
+          "24 village women trained and equipped as community health guides",
+          "Seamless hospital referral support for complex pediatric cases"
+        ],
+        "sections": [
+          {
+            "title": "Dependable doorstep care that families can count on",
+            "description": "Because our medical van arrives on the exact same day and hour every fortnight, mothers and elders never have to guess when help will come. Each child receives a digital health card tracking immunization milestones, weight-for-age nutrition curves, and hemoglobin levels across every visit.",
+            "image": "/healthcare-clinic.jpg"
+          },
+          {
+            "title": "Empowering village women as frontline health champions",
+            "description": "Treatment is only half the journey. During every camp, our pediatric nurse and trained village health guides host interactive courtyard sessions on safe drinking water, oral rehydration, iron-rich local recipes, and early symptom recognition.",
+            "image": "/medical-outreach.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "village-reading-libraries",
+      "title": "Open-Air Village Reading Libraries",
+      "category": "Education",
+      "location": "18 Partner Villages",
+      "impact": "450+ Young Readers",
+      "supporters": "164 Supporters",
+      "urgency": "Expanding",
+      "image": "/volunteer-team.jpg",
+      "imageAlt": "Volunteers sharing storybooks with children outdoors",
+      "description": "Bilingual storybooks and local youth mentors turning village courtyards into afternoon libraries.",
+      "tint": "#E6EFEA",
+      "detail": {
+        "lead": "Weather-resistant book chests and trained college fellows transform shaded banyan courtyards into joyful afternoon reading hubs across 18 villages.",
+        "overview": [
+          "In many rural belts, children have never held an illustrated storybook outside of their school textbooks. Without engaging reading material in languages they speak at home, foundational literacy remains mechanical and many students struggle with reading comprehension by grade five.",
+          "Our Open-Air Village Reading Libraries bring 800+ curated bilingual storybooks, picture dictionaries, science comics, and art supplies into 18 village courtyards. Designed with weather-proof steel trunks and woven floor mats, each library opens every afternoon under the shade of community trees.",
+          "Local college students receive youth fellowships to facilitate read-aloud circles, puppet storytelling, and peer mentorship—turning reading into the most anticipated hour of the afternoon."
+        ],
+        "quote": "One storybook read aloud under a village tree can spark a lifelong love for learning and open a window to the wider world.",
+        "location": "Satpura Rural Belt",
+        "timeline": "Daily Afternoon Sessions",
+        "beneficiaries": "450+ children & 36 youth fellows",
+        "impactMetrics": [
+          { "value": "18 Hubs", "label": "Active Open-Air Libraries" },
+          { "value": "450+", "label": "Regular Afternoon Readers" },
+          { "value": "36 Fellows", "label": "Local Youth Mentors Trained" }
+        ],
+        "highlights": [
+          "800+ illustrated bilingual books curated per village cluster",
+          "Facilitated daily by local college students on teaching fellowships",
+          "Weekly storytelling, theatre, art, and foundational literacy games",
+          "Take-home book lending system involving parents and grandparents"
+        ],
+        "sections": [
+          {
+            "title": "Stories that celebrate local culture alongside global curiosity",
+            "description": "Our library shelves feature folk tales from rural India alongside illustrated journeys through space, wildlife, and inventions. When children see their own village life reflected in books, their confidence in reading aloud blossoms rapidly.",
+            "image": "/volunteer-team.jpg"
+          },
+          {
+            "title": "Youth fellows leading change in their own neighborhoods",
+            "description": "We recruit and train two college students from within each hamlet as paid Literacy Fellows. They become approachable older-sibling mentors who guide younger readers, track reading fluency, and help students transition smoothly into secondary school.",
+            "image": "/village-classroom.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "seasonal-nutrition-packs",
+      "title": "Seasonal Nutrition & Ration Kits",
+      "category": "Food & Nutrition",
+      "location": "Northern Valleys",
+      "impact": "400 Households",
+      "supporters": "289 Supporters",
+      "urgency": "Seasonal Drive",
+      "image": "/nutrition-program.jpg",
+      "imageAlt": "Community nutrition and ration distribution",
+      "description": "30-day dry ration boxes and hand-stitched warm quilts for vulnerable mountain families.",
+      "tint": "#F9EBE5",
+      "detail": {
+        "lead": "Before winter frost arrives, our volunteer hubs partner with rural women's cooperatives to deliver warm quilts and 30-day nutrition kits to 400 vulnerable households.",
+        "overview": [
+          "When winter temperatures plunge across high-altitude northern valleys, agricultural work halts for nearly three months and mountain roads become difficult to traverse. Daily-wage families, elderly widows, and households with young children face simultaneous threats of bitter cold and food scarcity.",
+          "Weeks ahead of the first frost, KindredHope mobilizes local youth collectives and women's self-help cooperatives to prepare 400 comprehensive Winter Warmth & Nutrition Kits. Each household receives a 30-day supply of nutrient-dense grains, pulses, cooking oil, and iron-rich jaggery paired with heavy cotton quilts and thermal knitwear.",
+          "By commissioning rural women's tailoring collectives to stitch every quilt, the drive generates fair winter income for local artisans while protecting 400 families from harsh weather."
+        ],
+        "quote": "A winter ration kit offers practical protection against the cold and a warm reminder that your community stands beside you.",
+        "location": "Northern Hill Villages",
+        "timeline": "Annual Winter & Monsoon Drives",
+        "beneficiaries": "400 families & 60 rural artisans",
+        "impactMetrics": [
+          { "value": "400", "label": "Vulnerable Households Reached" },
+          { "value": "1,200", "label": "Hand-Stitched Quilts Delivered" },
+          { "value": "60 Artisans", "label": "Women Tailors Employed" }
+        ],
+        "highlights": [
+          "30-day family ration of millets, lentils, oil, spices, and jaggery",
+          "Heavy double-layered cotton quilts stitched by local women's groups",
+          "Last-mile doorstep delivery coordinated with village youth volunteers",
+          "Priority verification with village elders for senior citizens and single mothers"
+        ],
+        "sections": [
+          {
+            "title": "Crafted with pride by rural women's tailoring cooperatives",
+            "description": "Rather than buying factory blankets from distant cities, we partner with five village tailoring cooperatives. Sixty rural women earn fair piece-rate wages throughout the autumn months stitching durable, extra-warm cotton quilts.",
+            "image": "/nutrition-program.jpg"
+          },
+          {
+            "title": "Dignified doorstep delivery before the first frost",
+            "description": "Our volunteer field crew cross-checks household lists with village panchayats so elderly residents who cannot walk to distribution points receive their ration boxes and quilts directly at their doorstep.",
+            "image": "/community-kitchen.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "maternal-wellness-camps",
+      "title": "Rural Maternal & Wellness Camps",
+      "category": "Healthcare",
+      "location": "Marwar Region",
+      "impact": "1,200+ Mothers Reached",
+      "supporters": "195 Supporters",
+      "urgency": "Monthly Camps",
+      "image": "/medical-outreach.jpg",
+      "imageAlt": "Medical outreach check-up in rural village",
+      "description": "Preventive screenings, iron supplementation, and maternal care led by female doctors.",
+      "tint": "#EFECE6",
+      "detail": {
+        "lead": "Monthly maternal wellness camps bring female doctors, prenatal check-ups, and nutrition kits directly to rural women in underserved blocks.",
+        "overview": [
+          "In rural Marwar, cultural hesitation and long distances to town hospitals mean that many expectant and new mothers go through pregnancy without a single prenatal ultrasound, blood pressure screening, or hemoglobin test. Preventable maternal anemia remains widespread, directly affecting infant birth weight and early childhood development.",
+          "Our Rural Maternal & Wellness Camps create a welcoming, women-led clinical space inside village courtyards once a month. Staffed entirely by female obstetricians, nurses, and local health guides, the camps provide comprehensive prenatal check-ups, point-of-care anemia testing, calcium and iron supplements, and postnatal infant care.",
+          "Every participating mother is paired with a trained village health champion who visits her home between camps to monitor nutrition and coordinate safe institutional delivery."
+        ],
+        "quote": "When mothers are healthy, informed, and cared for with dignity, entire generations grow up stronger.",
+        "location": "Marwar Rural Cluster",
+        "timeline": "Monthly Village Camps",
+        "beneficiaries": "1,200+ women & infants",
+        "impactMetrics": [
+          { "value": "1,200+", "label": "Mothers & Infants Supported" },
+          { "value": "86%", "label": "Reduction in Severe Anemia" },
+          { "value": "100%", "label": "Safe Institutional Deliveries" }
+        ],
+        "highlights": [
+          "Monthly prenatal screenings, blood pressure checks, and hemoglobin testing",
+          "180-day iron, folate, and calcium supplementation with nutrition kits",
+          "Safe-motherhood courtyard circles led by female health guides",
+          "Emergency transport and hospital accompaniment for high-risk pregnancies"
+        ],
+        "sections": [
+          {
+            "title": "A welcoming, all-women medical team close to home",
+            "description": "By staffing every camp with female doctors and nurses from the region, rural women feel comfortable discussing reproductive health, nutrition, and postpartum recovery openly in their own dialect.",
+            "image": "/medical-outreach.jpg"
+          },
+          {
+            "title": "Continuous care from pregnancy through early childhood",
+            "description": "Each mother receives a Maternal Wellness Basket containing iron-rich dates, roasted gram, jaggery, and supplements, along with bi-weekly home follow-ups by her neighborhood health guide until her child turns two.",
+            "image": "/healthcare-clinic.jpg"
+          }
+        ]
+      }
+    }
+  ],
+  "cta": {
+    "eyebrow": "Every Contribution Counts",
+    "title": "Ready to champion a grassroots cause?",
+    "description": "Partner with our field team or sponsor a village initiative today.",
+    "buttonLabel": "Connect With Our Team",
+    "buttonHref": "/contact"
+  }
+}

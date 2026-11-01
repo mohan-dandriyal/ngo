@@ -1,37 +1,68 @@
 {
-    "hero": {
-        "image": "/bg-image.png",
-        "title": "Let's connect"
+  "hero": {
+    "image": "/volunteer-team.jpg",
+    "badge": "Get In Touch",
+    "title": "Let's Connect",
+    "description": "Reach out to support a program, partner with us, or visit a field hub.",
+    "breadcrumbs": [
+      { "label": "Home", "href": "/" },
+      { "label": "Contact Us" }
+    ]
+  },
+  "intro": {
+    "badge": "Contact Our Team",
+    "title": "Let's create lasting change together.",
+    "description": "Connect with our coordination desk for partnerships, visits, or questions."
+  },
+  "contactDetails": [
+    {
+      "icon": "mail",
+      "label": "Email Us",
+      "value": "info@xyz.com",
+      "subtext": "Replies within 24 hours",
+      "href": "mailto:info@xyz.com"
     },
-    "intro": {
-        "badge": "We'd love to hear from you",
-        "title": "Let's make good things happen.",
-        "description": "Whether you want to support the work, partner with us, or simply ask a question, our team is here and ready to listen."
+    {
+      "icon": "phone",
+      "label": "Call Desk",
+      "value": "+1 000000000",
+      "subtext": "Mon – Sat, 9 AM to 6 PM",
+      "href": "tel:+1000000000"
     },
-    "contactDetails": [
-        { "icon": "mail", "label": "Email us", "value": "hello@together.org", "href": "mailto:hello@together.org" },
-        { "icon": "phone", "label": "Call the team", "value": "+1 00000 00000", "href": "tel:+1 00000 00000" },
-        { "icon": "location", "label": "Visit our office", "value": "20 Cooper Square, New York, NY 10003, USA", "href": "#visit" }
-    ],
-    "form": {
-        "eyebrow": "Start a conversation",
-        "title": "Tell us what's on your mind.",
-        "nameLabel": "Your name",
-        "namePlaceholder": "Jane Smith",
-        "emailLabel": "Email address",
-        "emailPlaceholder": "jane@example.com",
-        "reasonLabel": "How can we help?",
-        "reasons": [
-            { "value": "partnership", "label": "I'd like to partner with you" },
-            { "value": "support", "label": "I'd like to support the work" },
-            { "value": "question", "label": "I have a question" },
-            { "value": "other", "label": "Something else" }
-        ],
-        "messageLabel": "Your message",
-        "messagePlaceholder": "Write your message here...",
-        "submitLabel": "Send message",
-        "successTitle": "Message received.",
-        "successDescription": "Thank you for reaching out. Someone from our team will get back to you soon.",
-        "resetLabel": "Send another message"
+    {
+      "icon": "location",
+      "label": "Central Hub",
+      "value": "3170 Rosewood Lane Unit 200 , Beverly Hills, CA 90210",
+      "subtext": "Open for scheduled visits",
+      "href": "#visit"
     }
+  ],
+  "officeHours": {
+    "badge": "Field Visits",
+    "title": "Visit our hubs in person",
+    "schedule": "Monday – Saturday · 9:00 AM – 6:00 PM",
+    "note": "We host monthly supporter walks at our learning hubs and kitchens."
+  },
+  "form": {
+    "eyebrow": "Send A Message",
+    "title": "How can we help?",
+    "description": "Share your details below and our coordinator will reply shortly.",
+    "nameLabel": "Full name",
+    "namePlaceholder": "Ananya Sharma",
+    "emailLabel": "Email address",
+    "emailPlaceholder": "ananya@example.com",
+    "reasonLabel": "Topic",
+    "reasons": [
+      { "value": "support", "label": "Sponsor or fund a program" },
+      { "value": "partnership", "label": "CSR or institutional partnership" },
+      { "value": "visit", "label": "Schedule a field visit" },
+      { "value": "question", "label": "General inquiry" }
+    ],
+    "messageLabel": "Message",
+    "messagePlaceholder": "Tell us how you'd like to collaborate...",
+    "submitLabel": "Send Message",
+    "successTitle": "Message received.",
+    "successDescription": "Thank you for reaching out. Our team will reply within 24 hours.",
+    "resetLabel": "Send another message"
+  }
 }
